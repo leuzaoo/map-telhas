@@ -1,6 +1,6 @@
-import Head from "next/head";
+import Homepage from "./ui/pages/homepage";
 import Navbar from "./ui/navbar";
-import Homepage from "./ui/homepage";
+import Head from "next/head";
 
 export default function Home() {
   return (
