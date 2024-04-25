@@ -1,24 +1,26 @@
 import Head from "next/head";
-import Image from "next/image";
 import Navbar from "./ui/navbar";
-import Center from "./ui/center";
+import Homepage from "./ui/homepage";
 
 export default function Home() {
   return (
-    <div>
+    <>
       <Head>
-        <title>MAP Telhas | Telhas Metálicas | Pintura Eletrostática.</title>
+        <title>
+          Telhas Metálicas | Telhas Termoacústicas | Telha Sanduíche.
+        </title>
         <meta
           name="description"
-          content="Somos uma empresa especializada na fabricação de telhas metálicas e pintura eletrostática desde 1996. Localizada em Campo Limpo Paulista."
+          content="Trabalhamos com diversos tipos de telhas. Além das metálicas simples, temos a telha sanduíche termoacústica, sanduíche tipo forro, semi sanduíche. Galvanizadas, galvalume o coloridas."
           key="desc"
         />
       </Head>
+      <header>
+        <Navbar />
+      </header>
       <main>
-        <header>
-          <Navbar />
-        </header>
+        <Homepage />
       </main>
-    </div>
+    </>
   );
 }
