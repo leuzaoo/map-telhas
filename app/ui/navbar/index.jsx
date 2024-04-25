@@ -32,7 +32,7 @@ export default function Navbar() {
   return (
     <>
       <header className="px-5 flex w-full justify-center items-center h-[80px] bg-primaryRed">
-        <div className="max-w-screen-xl w-full flex justify-between items-center">
+        <div className="max-w-screen-lg w-full flex justify-between items-center">
           <DeviceNavBar open={open} setOpen={setOpen} />
           <Image src="/logo.svg" width={70} height={40} alt="Logo Image" />
           <div
@@ -75,8 +75,8 @@ export default function Navbar() {
             </ul>
           </div>
           <div className="hidden lg:contents">
-            <button className="bg-white hover:bg-gray-200 transition-all duration-200 px-5 py-2 rounded">
-              <Link href="#">Pedir Orçamento</Link>
+            <button className="uppercase font-bold bg-white hover:bg-gray-200 transition-all duration-200 px-5 py-2 rounded">
+              <Link href="/">Pedir Orçamento</Link>
             </button>
           </div>
         </div>
