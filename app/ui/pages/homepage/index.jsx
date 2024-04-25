@@ -1,9 +1,11 @@
 import { MoveUpRight, Phone } from "lucide-react";
-import Center from "../center";
+import Center from "../../center";
 import Image from "next/image";
 import Head from "next/head";
 import Link from "next/link";
 import React from "react";
+import { Button } from "antd";
+import MyButton from "../../button";
 
 const Content = ({ title, secondTitle, description, textColor, textAlign }) => {
   const formatDescription = (desc) => {
@@ -71,17 +73,9 @@ export default function Homepage() {
                 Somos uma empresa especialista há 28 anos na fabricação de
                 telhas e estruturas metálicas, calhas e pintura eletrostática.
               </p>
-              <div className="flex items-center justify-between w-full">
-                <button className="mt-10 py-3 px-5 bg-white border-2 border-white text-primaryRed uppercase text-3xl rounded-xl font-bold">
-                  <Link href="" className="flex gap-3">
-                    Ver Produtos <MoveUpRight />
-                  </Link>
-                </button>
-                <button className="mt-10 py-3 px-5 bg-transparent border-2 text-white uppercase text-3xl rounded-xl font-bold">
-                  <Link href="/" className="flex gap-5 items-center">
-                    Contato <Phone />
-                  </Link>
-                </button>
+              <div className="flex w-full justify-center gap-20 mt-5">
+                <MyButton text="Ver Produtos" style="primary" />
+                <MyButton text="Contato" style="secondary" />
               </div>
             </div>
             <div className="max-w-[360px]">
@@ -112,9 +106,7 @@ export default function Homepage() {
               alt="Produção de Telha"
             />
           </div>
-          <button className="px-5 py-2 md:py-3 bg-primaryRed text-white text-2xl lg:text-[40px] font-bold lg:font-normal rounded mt-5">
-            <Link href="/">Ver mais</Link>
-          </button>
+          <MyButton text="Ver mais" style="red-white" />
         </Center>
       </section>
 
@@ -134,9 +126,7 @@ export default function Homepage() {
               alt="Produção de Telha"
             />
           </div>
-          <button className="px-5 py-2 md:py-3 bg-strongDark text-white text-2xl lg:text-[40px] font-bold lg:font-normal rounded mt-5">
-            <Link href="/">Ver mais</Link>
-          </button>
+          <MyButton text="Ver mais" style="dark-white" />
         </Center>
       </section>
 
@@ -160,9 +150,9 @@ export default function Homepage() {
               alt="Produção de Telha"
             />
           </div>
-          <button className="px-5 py-2 md:py-3 bg-primaryRed text-white text-2xl lg:text-[40px] font-bold lg:font-normal rounded mt-5">
+          <MyButton text="Ver mais" style="red-white">
             <Link href="/">Contato</Link>
-          </button>
+          </MyButton>
         </Center>
       </section>
 
@@ -206,9 +196,7 @@ export default function Homepage() {
                 />
               </div>
             </div>
-            <button className="px-5 py-2 md:py-3 bg-white text-strongDark text-2xl lg:text-[40px] font-bold lg:font-normal rounded mt-5">
-              <Link href="/">Todos os Produtos</Link>
-            </button>
+            <MyButton text="Todos os Produtos" style="dark-white" />
           </Center>
         </article>
       </section>
