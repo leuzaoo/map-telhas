@@ -1,11 +1,9 @@
-import { MoveUpRight, Phone } from "lucide-react";
+import MyButton from "../../button";
 import Center from "../../center";
 import Image from "next/image";
 import Head from "next/head";
 import Link from "next/link";
 import React from "react";
-import { Button } from "antd";
-import MyButton from "../../button";
 
 const Content = ({ title, secondTitle, description, textColor, textAlign }) => {
   const formatDescription = (desc) => {
@@ -64,23 +62,25 @@ export default function Homepage() {
         />
       </Head>
 
-      <section className="hidden lg:flex bg-primaryRed">
+      <section className="hidden lg:flex bg-white">
         <Center>
           <div className="flex items-center justify-between gap-10 py-10">
             <div className="flex flex-col justify-between items-center min-h-max w-full text-white max-w-[620px]">
-              <h1 className="text-8xl font-extrabold uppercase">MAPTelhas</h1>
-              <p className="text-[40px] font-light">
+              <h1 className="text-8xl font-extrabold uppercase text-primaryRed">
+                MAPTelhas
+              </h1>
+              <p className="text-3xl font-light text-strongDark">
                 Somos uma empresa especialista há 28 anos na fabricação de
                 telhas e estruturas metálicas, calhas e pintura eletrostática.
               </p>
-              <div className="flex w-full justify-center gap-20 mt-5">
-                <MyButton text="Ver Produtos" style="primary" />
-                <MyButton text="Contato" style="secondary" />
+              <div className="flex w-full justify-start gap-5 mt-20">
+                <MyButton text="Ver Produtos" style="secondary" />
+                <MyButton text="Contato" style="primary" />
               </div>
             </div>
-            <div className="max-w-[360px]">
+            <div className="max-w-[320px] shadow-md">
               <Image
-                className="rounded-xl shadow-lg"
+                className="rounded-xl"
                 src="/home-1.jpg"
                 width={1000}
                 height={1000}
@@ -106,16 +106,16 @@ export default function Homepage() {
               alt="Produção de Telha"
             />
           </div>
-          <MyButton text="Ver mais" style="red-white" />
+          <MyButton text="Ver Todos os Modelos" style="red-white" />
         </Center>
       </section>
 
-      <section className="py-5 text-center px-5 bg-primaryRed">
+      <section className="py-5 text-center px-5">
         <Center>
           <Content
             title="Pintura Eletrostática"
             description="Criamos uma camada protetora através da aplicação de um pó pigmentado."
-            textColor="white"
+            textColor=""
           />
           <div className="mx-auto mt-5 md:max-w-md lg:max-w-xl">
             <Image
@@ -126,11 +126,11 @@ export default function Homepage() {
               alt="Produção de Telha"
             />
           </div>
-          <MyButton text="Ver mais" style="dark-white" />
+          <MyButton text="Ver mais" style="red-white" />
         </Center>
       </section>
 
-      <section className="py-5 text-center px-5">
+      <section className="py-5 text-center px-5 max-w-3xl mx-auto">
         <Center>
           <Content
             title="Sobre nós"
@@ -141,7 +141,7 @@ export default function Homepage() {
           Contamos com uma equipe qualificada, materiais de alto padrãoe seguimos rigorosamente as normas regulamentadoras para oferecer serviços confiáveis e tranquilidade aos nossos clientes.`}
             textAlign="left"
           />
-          <div className="mx-auto mt-5 md:max-w-md lg:max-w-xl">
+          <div className="mx-auto mt-5 md:max-w-md lg:max-w-3xl">
             <Image
               className="rounded-xl shadow-xl"
               src="/empresa.jpg"
@@ -156,7 +156,7 @@ export default function Homepage() {
         </Center>
       </section>
 
-      <section className="py-5 text-center px-5 bg-primaryRed">
+      <section className="py-5 text-center px-5 max-w-3xl mx-auto">
         <h1 className="hidden">Telhas Metálicas</h1>
         <article>
           <Center>
@@ -166,10 +166,9 @@ export default function Homepage() {
                 secondTitle="Telha Simples"
                 description="Caracterizada pela alta resistência, leveza e economia, as Telhas Metálicas TP 40 vêm ganhando mais espaço a cada dia. 
               Podem ser utilizadas em coberturas ou fechamentos laterais, a instalação pode ser feita em estruturas metálicas ou de madeira."
-                textColor="white"
                 textAlign="left"
               />
-              <div className="max-w-lg mx-auto">
+              <div className="max-w-3xl mx-auto">
                 <Image
                   className="mt-5"
                   src="/telha-simples.svg"
@@ -183,10 +182,9 @@ export default function Homepage() {
               <Content
                 secondTitle="Telha Sanduíche (Termoacústica)"
                 description="Compostas por duas telhas e uma camada de EPS (30mm ou 50mm), são extremamente resistentes e possuem grande eficiência térmica e acústica proporcionadas pelo EPS."
-                textColor="white"
                 textAlign="left"
               />
-              <div className="max-w-lg mx-auto">
+              <div className="max-w-3xl mx-auto">
                 <Image
                   className="mt-5"
                   src="/telha-sanduiche.svg"
@@ -196,7 +194,71 @@ export default function Homepage() {
                 />
               </div>
             </div>
-            <MyButton text="Todos os Produtos" style="dark-white" />
+
+            <div id="Cuumeira">
+              <Content
+                secondTitle="Cuumeira"
+                description="Em casos em que o telhado possui duas
+                quedas, é necessária a instalação de
+                cumeeiras, garantindo a vedação do vão
+                existente entre as duas telhas e possibilitando
+                o caimento da água para ambos os lados."
+                textAlign="left"
+              />
+              <div className="max-w-3xl mx-auto shadow-md rounded-[20px]">
+                <Image
+                  className="mt-5"
+                  src="/cuumeira.svg"
+                  width={1000}
+                  height={1000}
+                  alt="Telha Sanduíche"
+                />
+              </div>
+            </div>
+
+            <div id="Bobina Slitada">
+              <Content
+                secondTitle="Bobina Slitada"
+                description="Um processo contínuo de corte longitudinal
+                (Slitter/Rolo), que pode ser produzido nas
+                espessuras de 0,40mm, 0,50mm e 0,65mm,
+                em material galvanizado, galvalume e chapas
+                pré-pintadas."
+                textAlign="left"
+              />
+              <div className="max-w-3xl mx-auto shadow-md rounded-[20px]">
+                <Image
+                  className="mt-5"
+                  src="/bobina.svg"
+                  width={1000}
+                  height={1000}
+                  alt="Telha Sanduíche"
+                />
+              </div>
+            </div>
+
+            <div id="Parafusos">
+              <Content
+                secondTitle="Parafusos"
+                description="Dispomos de uma extensa gama de parafusos
+                autoperfurantes, popularmente conhecidos
+                como parafusos auto brocantes. Esses parafusos asseguram uma instalação segura
+                das telhas, conferindo um elevado nível de
+                fixação e assegurando uma efetiva vedação
+                para impedir a infiltração de água."
+                textAlign="left"
+              />
+              <div className="max-w-3xl mx-auto shadow-md rounded-[20px]">
+                <Image
+                  className="mt-5"
+                  src="/parafusos.svg"
+                  width={1000}
+                  height={1000}
+                  alt="Telha Sanduíche"
+                />
+              </div>
+            </div>
+            <MyButton text="Todos os Produtos" style="red-white" />
           </Center>
         </article>
       </section>
