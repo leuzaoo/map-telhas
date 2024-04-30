@@ -1,6 +1,6 @@
 import { Mulish } from "next/font/google";
-import "./globals.css";
 import Head from "next/head";
+import "./globals.css";
 
 const mulish = Mulish({
   subsets: ["latin"],
@@ -22,7 +22,9 @@ export default function RootLayout({ children }) {
       </Head>
       <html lang="pt">
         <body id="Telhas Metálicas" className={`${mulish.className} Test`}>
-          <h1 className="hidden">Map Telhas Metálicas e Pintura Eletrostática</h1>
+          <h1 className="hidden">
+            Map Telhas Metálicas e Pintura Eletrostática
+          </h1>
           {children}
         </body>
       </html>
