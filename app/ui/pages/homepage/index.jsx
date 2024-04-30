@@ -195,9 +195,9 @@ export default function Homepage() {
               </div>
             </div>
 
-            <div id="Cuumeira">
+            <div id="Cumeeira">
               <Content
-                secondTitle="Cuumeira"
+                secondTitle="Cumeeira"
                 description="Em casos em que o telhado possui duas
                 quedas, é necessária a instalação de
                 cumeeiras, garantindo a vedação do vão
