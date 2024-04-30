@@ -170,7 +170,7 @@ export default function Homepage() {
               />
               <div className="max-w-3xl mx-auto">
                 <Image
-                  className="mt-5"
+                  className="mt-5 shadow-md rounded-[20px]"
                   src="/telha-simples.svg"
                   alt="Telha Simples"
                   width={1700}
@@ -186,7 +186,7 @@ export default function Homepage() {
               />
               <div className="max-w-3xl mx-auto">
                 <Image
-                  className="mt-5"
+                  className="mt-5 shadow-md rounded-[20px]"
                   src="/telha-sanduiche.svg"
                   width={1000}
                   height={1000}
