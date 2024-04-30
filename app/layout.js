@@ -17,6 +17,7 @@ export default function RootLayout({ children }) {
   return (
     <>
       <Head>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
         <title>{metadata.title}</title>
         <meta name="description" content={metadata.description} />
       </Head>
