@@ -1,4 +1,6 @@
 import { Mulish } from "next/font/google";
+import Navbar from "./ui/navbar";
+import Footer from "./ui/footer";
 import Head from "next/head";
 import "./globals.css";
 
@@ -26,7 +28,13 @@ export default function RootLayout({ children }) {
           <h1 className="hidden">
             Map Telhas Metálicas e Pintura Eletrostática
           </h1>
-          {children}
+          <header>
+            <Navbar />
+          </header>
+          <main>{children}</main>
+          <footer>
+            <Footer />
+          </footer>
         </body>
       </html>
     </>

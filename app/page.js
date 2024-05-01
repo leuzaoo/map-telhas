@@ -1,7 +1,5 @@
 import Homepage from "./ui/pages/homepage";
-import Navbar from "./ui/navbar";
 import Head from "next/head";
-import Footer from "./ui/footer";
 
 export default function Home() {
   return (
@@ -16,15 +14,9 @@ export default function Home() {
           key="desc"
         />
       </Head>
-      <header>
-        <Navbar />
-      </header>
       <main>
         <Homepage />
       </main>
-      <footer>
-        <Footer />
-      </footer>
     </>
   );
 }

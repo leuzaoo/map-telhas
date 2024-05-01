@@ -61,7 +61,7 @@ export default function Navbar() {
           <div className="hidden lg:flex items-center justify-between text-xl text-white">
             <ul className="flex gap-10">
               <li className="min-w-max">
-                <Link href="#">Produtos</Link>
+                <Link href="/products">Produtos</Link>
               </li>
               <li className="min-w-max">
                 <Link href="#">Serviços</Link>
