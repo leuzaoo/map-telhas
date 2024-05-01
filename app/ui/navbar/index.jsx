@@ -34,7 +34,9 @@ export default function Navbar() {
       <header className="px-5 flex w-full justify-center items-center h-[80px] bg-primaryRed">
         <div className="max-w-screen-lg w-full flex justify-between items-center">
           <DeviceNavBar open={open} setOpen={setOpen} />
-          <Image src="/logo.svg" width={70} height={40} alt="Logo Image" />
+          <Link href="/">
+            <Image src="/logo.svg" width={70} height={40} alt="Logo Image" />
+          </Link>
           <div
             className="cursor-pointer z-50 flex w-10 h-6 flex-col justify-between items-center lg:hidden"
             onClick={() => {
