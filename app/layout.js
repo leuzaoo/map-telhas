@@ -6,7 +6,7 @@ import "./globals.css";
 
 const mulish = Mulish({
   subsets: ["latin"],
-  weight: ["200", "400", "700", "900"],
+  weight: ["200", "400", "500", "600", "700", "900"],
 });
 
 export const metadata = {
