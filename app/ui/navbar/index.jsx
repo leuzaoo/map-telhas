@@ -19,6 +19,11 @@ const navItems = [
     name: "Contato",
     link: "/contato",
   },
+  {
+    id: 4,
+    name: "Informações",
+    link: "/informacoes",
+  },
 ];
 
 function DeviceNavBar({ open, setOpen }) {
@@ -47,6 +52,11 @@ function DeviceNavBar({ open, setOpen }) {
           <li>
             <Link onClick={closeNav} href="/contato">
               Contato
+            </Link>
+          </li>
+          <li>
+            <Link onClick={closeNav} href="/informacoes">
+              Informações 
             </Link>
           </li>
         </ul>
@@ -99,7 +109,12 @@ export default function Navbar() {
           </div>
           <div className="hidden lg:contents">
             <button className="uppercase font-bold bg-white hover:bg-gray-200 transition-all duration-200 px-5 py-2 rounded">
-              <Link target="_blank" href="https://api.whatsapp.com/send?phone=5511974344466&text=Ol%C3%A1,%20gostaria%20de%20fazer%20um%20or%C3%A7amento.">Pedir Orçamento</Link>
+              <Link
+                target="_blank"
+                href="https://api.whatsapp.com/send?phone=5511974344466&text=Ol%C3%A1,%20gostaria%20de%20fazer%20um%20or%C3%A7amento."
+              >
+                Pedir Orçamento
+              </Link>
             </button>
           </div>
         </div>

@@ -75,7 +75,7 @@ export default async function ProductPage({ params }) {
             ) : (
               ""
             )}
-            <div>
+            <div className="mx-auto">
               <Link
                 target="_blank"
                 href="https://api.whatsapp.com/send?phone=5511974344466&text=Ol%C3%A1,%20gostaria%20de%20fazer%20um%20or%C3%A7amento."
