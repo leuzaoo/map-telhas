@@ -13,7 +13,7 @@ export default function ProductsPage() {
         <ul className="md:flex flex-wrap gap-5 items-start justify-between">
           {roofTiles.map((product) => (
             <li key={product.id}>
-              <Link href={`/products/${product.slug}`}>
+              <Link href={`/produtos/${product.slug}`}>
                 <ProductCard
                   product_name={product.name}
                   image={product.image}
