@@ -11,38 +11,43 @@ const navItems = [
   },
   {
     id: 2,
-    name: "Serviços",
-    link: "/servicos",
-  },
-  {
-    id: 3,
     name: "Sobre Nós",
     link: "/sobre",
   },
   {
-    id: 4,
+    id: 3,
     name: "Contato",
     link: "/contato",
   },
 ];
 
-function DeviceNavBar({ open }) {
+function DeviceNavBar({ open, setOpen }) {
+  const closeNav = () => {
+    setOpen(false);
+  };
+
   return (
     <div
       className={`absolute z-50 top-0 left-0 h-screen w-screen bg-primaryRed text-[#fff] transform lg:hidden ${
         open ? "-translate-x-0" : "-translate-x-full"
       } transition-transform duration-300 ease-in-out filter drop-shadow-md`}
     >
-      <div className="flex flex-col items-center gap-3 pt-20 text-3xl">
+      <div className="flex flex-col items-left gap-3 px-10 pt-10 text-3xl">
         <ul className="flex flex-col gap-5">
           <li>
-            <a href="#">Links</a>
+            <Link onClick={closeNav} href="/produtos">
+              Produtos
+            </Link>
           </li>
           <li>
-            <a href="#">Links</a>
+            <Link onClick={closeNav} href="/sobre">
+              Sobre Nós
+            </Link>
           </li>
           <li>
-            <a href="#">Links</a>
+            <Link onClick={closeNav} href="/contato">
+              Contato
+            </Link>
           </li>
         </ul>
       </div>
