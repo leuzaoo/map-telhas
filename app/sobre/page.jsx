@@ -1,8 +1,7 @@
-import React from "react";
-import Center from "../ui/center";
-import Image from "next/image";
 import ProductCard from "../ui/product-card";
 import MyButton from "../ui/button";
+import Center from "../ui/center";
+import Image from "next/image";
 import Link from "next/link";
 
 export default function AboutPage() {
