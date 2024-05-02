@@ -14,6 +14,9 @@ export default function MyButton({ text, style }) {
     case "red-white":
       buttonClassName += " bg-primaryRed text-white";
       break;
+    case "blue-white":
+      buttonClassName += " bg-blue-600 text-white";
+      break;
     case "dark-white":
       buttonClassName += " bg-strongDark text-white";
       break;
