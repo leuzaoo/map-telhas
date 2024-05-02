@@ -1,7 +1,7 @@
 import { Facebook, Headset, Instagram, MapPin, Phone } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
-import Center from "../center";
 
 export default function Footer() {
   return (
@@ -21,22 +21,31 @@ export default function Footer() {
           <div className="flex flex-col gap-5">
             <div className="flex items-center gap-3">
               <MapPin />
-              <p>
-                Rua Brás Cubas 60 - Vila Tavares
-                <br />
-                Campo Limpo Paulista/SP - 13230-075
-              </p>
+              <Link
+                href="https://www.google.com/maps/place/Map+Calhas+e+Telhas/@-23.2012925,-46.7966512,17z/data=!3m1!4b1!4m6!3m5!1s0x94cedf228749fb63:0x926d241a8c4754d2!8m2!3d-23.2012925!4d-46.7940763!16s%2Fg%2F11bvt5xr0s?entry=ttu"
+                target="_blank"
+              >
+                <p>
+                  Rua Brás Cubas 60 - Vila Tavares
+                  <br />
+                  Campo Limpo Paulista/SP - 13230-078
+                </p>
+              </Link>
             </div>
           </div>
 
           <div className="flex items-center gap-3">
             <Phone />
-            <p>(11) 9 7434-4466</p>
+            <Link href="tel:11974344466">
+              <p>(11) 9 7434-4466</p>
+            </Link>
           </div>
 
           <div className="flex items-center gap-3">
             <Headset />
-            <p>(11) 4893-0293</p>
+            <Link href="tel:1148930293">
+              <p>(11) 4893-0293</p>
+            </Link>
           </div>
         </div>
         <hr />

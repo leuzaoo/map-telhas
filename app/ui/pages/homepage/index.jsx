@@ -74,8 +74,15 @@ export default function Homepage() {
                 telhas e estruturas metálicas, calhas e pintura eletrostática.
               </p>
               <div className="flex w-full justify-start gap-5 mt-20">
-                <MyButton text="Ver Produtos" style="secondary" />
-                <MyButton text="Contato" style="primary" />
+                <Link href="/produtos">
+                  <MyButton text="Ver Produtos" style="secondary" />
+                </Link>
+                <Link
+                  href="https://api.whatsapp.com/send?phone=5511974344466&text=Ol%C3%A1,%20gostaria%20de%20fazer%20um%20or%C3%A7amento."
+                  target="_blank"
+                >
+                  <MyButton text="Contato" style="primary" />
+                </Link>
               </div>
             </div>
             <div className="max-w-[320px] shadow-md">
