@@ -258,7 +258,9 @@ export default function Homepage() {
                 />
               </div>
             </div>
-            <MyButton text="Todos os Produtos" style="red-white" />
+            <Link href="/produtos">
+              <MyButton text="Todos os Produtos" style="red-white" />
+            </Link>
           </Center>
         </article>
       </section>
