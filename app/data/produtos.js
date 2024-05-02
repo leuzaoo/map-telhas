@@ -1,4 +1,4 @@
-export const roofTiles = [
+export const produtos = [
   {
     id: 1,
     slug: "telha-simples",
@@ -58,5 +58,16 @@ export const roofTiles = [
     application:
       "Utilizadas em conjunto com telhas metálicas para proporcionar iluminação natural em ambientes fechados.",
     image: "/original/telha-translucida.png",
+  },
+  {
+    id: 6,
+    slug: "cumeeira",
+    name: "Cumeeira",
+    model: "",
+    description:
+      "Peça utilizada para fazer o acabamento no topo das telhas, proporcionando vedação e proteção contra interpéries.",
+    material: "Galvanizado, Galvalume, Colorido.",
+    application: "",
+    image: "/original/cumeeira.png",
   },
 ];
