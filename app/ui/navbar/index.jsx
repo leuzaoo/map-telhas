@@ -3,6 +3,29 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
+const navItems = [
+  {
+    id: 1,
+    name: "Produtos",
+    link: "/produtos",
+  },
+  {
+    id: 2,
+    name: "Serviços",
+    link: "/servicos",
+  },
+  {
+    id: 3,
+    name: "Sobre Nós",
+    link: "/sobre",
+  },
+  {
+    id: 4,
+    name: "Contato",
+    link: "/contato",
+  },
+];
+
 function DeviceNavBar({ open }) {
   return (
     <div
@@ -62,18 +85,11 @@ export default function Navbar() {
 
           <div className="hidden lg:flex items-center justify-between text-xl text-white">
             <ul className="flex gap-10">
-              <li className="min-w-max">
-                <Link href="/products">Produtos</Link>
-              </li>
-              <li className="min-w-max">
-                <Link href="#">Serviços</Link>
-              </li>
-              <li className="min-w-max">
-                <Link href="#">Sobre Nós</Link>
-              </li>
-              <li className="min-w-max">
-                <Link href="#">Contato</Link>
-              </li>
+              {navItems.map((item) => (
+                <li key={item.id} className="min-w-max">
+                  <Link href={item.link}>{item.name}</Link>
+                </li>
+              ))}
             </ul>
           </div>
           <div className="hidden lg:contents">
