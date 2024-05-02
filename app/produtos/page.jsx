@@ -11,39 +11,17 @@ export default function ProductsPage() {
         <section id="telhas-metalicas">
           <h1 className="text-[32px] font-bold mt-10">Telhas Metálicas</h1>
           <ul className="md:flex flex-wrap gap-5 items-start justify-between">
-            {produtos
-              .filter((product) => product.name.toLowerCase().includes("telha"))
-              .map((product) => (
-                <li key={product.id}>
-                  <Link href={`/produtos/${product.slug}`}>
-                    <ProductCard
-                      product_name={product.name}
-                      image={product.image}
-                      model={product.model}
-                    />
-                  </Link>
-                </li>
-              ))}
-          </ul>
-        </section>
-
-        <section id="telhas-metalicas">
-          <h1 className="text-[32px] font-bold mt-10">Cumeeira</h1>
-          <ul className="md:flex flex-wrap gap-5 items-start justify-between">
-            {produtos
-              .filter((product) =>
-                product.name.toLowerCase().includes("cumeeira")
-              )
-              .map((product) => (
-                <li key={product.id}>
-                  <Link href={`/produtos/${product.slug}`}>
-                    <ProductCard
-                      product_name={product.name}
-                      image={product.image}
-                    />
-                  </Link>
-                </li>
-              ))}
+            {produtos.map((product) => (
+              <li key={product.id}>
+                <Link href={`/produtos/${product.slug}`}>
+                  <ProductCard
+                    product_name={product.name}
+                    image={product.image}
+                    model={product.model}
+                  />
+                </Link>
+              </li>
+            ))}
           </ul>
         </section>
       </Center>
