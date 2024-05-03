@@ -8,6 +8,7 @@ export default function ProductsPage() {
     <div className="px-5 py-5 text-xl font-medium">
       <Center>
         <h1 className="uppercase">Nossos Produtos</h1>
+        <hr />
         <section id="telhas-metalicas">
           <h1 className="text-[32px] font-bold mt-10">Telhas Metálicas</h1>
           <ul className="md:flex flex-wrap gap-5 items-start justify-between">
