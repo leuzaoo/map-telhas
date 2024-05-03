@@ -62,6 +62,22 @@ export default function Homepage() {
         />
       </Head>
 
+      <Image
+        className="md:hidden mx-auto"
+        src="/original/homepage-1.png"
+        width={1920}
+        height={600}
+        alt="Homepage image"
+      />
+
+      <Image
+        className="hidden md:flex mx-auto"
+        src="/original/homepage-2.png"
+        width={1920}
+        height={600}
+        alt="Homepage image"
+      />
+
       <section className="hidden lg:flex bg-white">
         <Center>
           <div className="flex items-center justify-between gap-10 py-10">
@@ -113,7 +129,7 @@ export default function Homepage() {
               alt="Produção de Telha"
             />
           </div>
-          <MyButton text="Ver Todos os Modelos" style="red-white" />
+          <MyButton text="Todos os Modelos" style="red-white" />
         </Center>
       </section>
 
