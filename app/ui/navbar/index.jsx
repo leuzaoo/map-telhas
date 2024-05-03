@@ -56,7 +56,7 @@ function DeviceNavBar({ open, setOpen }) {
           </li>
           <li>
             <Link onClick={closeNav} href="/informacoes">
-              Informações 
+              Informações
             </Link>
           </li>
         </ul>
@@ -69,7 +69,7 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
   return (
     <>
-      <header className="px-5 flex w-full justify-center items-center h-[80px] bg-primaryRed">
+      <header className="px-5 lg:px-0 flex w-full justify-center items-center h-[80px] bg-primaryRed">
         <div className="max-w-screen-lg w-full flex justify-between items-center">
           <DeviceNavBar open={open} setOpen={setOpen} />
           <Link href="/">
