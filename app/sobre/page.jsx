@@ -1,105 +1,103 @@
-import ProductCard from "../ui/product-card";
-import MyButton from "../ui/button";
 import Center from "../ui/center";
 import Image from "next/image";
-import Link from "next/link";
 
 export default function AboutPage() {
   return (
     <Center>
-      <section className="py-5 text-center">
-        <h1 className="text-[40px] font-semibold">Sobre Nós</h1>
-        <p className="text-left lg:text-2xl">
-          Bem-vindo à Map Telhas, líder em soluções de telhas metálicas de
-          qualidade excepcional. Com uma trajetória de 28 anos de excelência,
-          nós estabelecemos como uma referência confiável e inovadora no setor.
-        </p>
-
-        <Image
-          className="mt-3 rounded-xl shadow-md w-full"
-          src="/original/about-us.jpg"
-          width={1000}
-          height={1000}
-          alt="Sobre nós"
-        />
-
-        <p className="mt-5 text-left lg:text-2xl">
-          Desde 1996, nos dedicamos incansavelmente a fornecer telhas metálicas
-          de alta qualidade e serviços relacionados para uma ampla gama de
-          aplicações. Trabalhamos com os melhores aços disponíveis no mercado,
-          garantindo durabilidade, resistência e desempenho superiores em cada
-          projeto que realizamos.
-        </p>
-        <p className="mt-5 text-left lg:text-2xl">
-          Nossa gama de produtos inclui uma variedade de telhas metálicas,
-          cumeeiras, bobinas slitadas e oferecemos serviços de pintura
-          eletrostática para atender às necessidades específicas de nossos
-          clientes.
-        </p>
-        <p className="mt-5 text-left lg:text-2xl">
-          Na Map Telhas, a qualidade é a nossa prioridade número um. Contamos
-          com uma equipe dedicada de profissionais altamente qualificados e
-          experientes, comprometidos em oferecer produtos e serviços que superem
-          as expectativas de nossos clientes.
-        </p>
-      </section>
-      <hr />
-      <section className="py-5 text-center">
-        <h1 className="text-[40px] font-semibold">Nossos Produtos</h1>
-        <div className="md:grid md:grid-cols-2 gap-10">
-          <div className="mx-auto">
-            <Link href="/produtos/cumeeira">
-              <ProductCard
-                product_name="Cumeeira"
-                image="/original/cumeeira.png"
-              />
-            </Link>
+      <div className="mt-5">
+        <section>
+          <div className="lg:hidden">
+            <h1 className="hidden">Sobre nós</h1>
+            <h1 className="uppercase text-primaryRed text-[40px] font-extrabold text-right">
+              A Empresa
+            </h1>
+            <h1 className="text-right text-3xl">
+              Localizada em Campo Limpo Paulista/SP
+            </h1>
+            <div className="my-3 h-[2px] w-5/6 bg-primaryRed ml-auto" />
           </div>
-          <div className="mx-auto">
-            <Link href="/produtos/telha-sanduiche">
-              <ProductCard
-                product_name="Telha Sanduíche"
-                image="/original/telha-sanduiche.png"
-                model="Trapézio 40/980"
+          <div className="lg:grid grid-cols-2 text-lg gap-10">
+            <div className="my-5 flex flex-col gap-3 lg:text-justify">
+              <Image
+                className="rounded-xl shadow-md"
+                src="/original/about-us-2.jpg"
+                width={1500}
+                height={1000}
+                alt="Sobre nós"
               />
-            </Link>
+              <p>
+                Nossa gama de produtos inclui uma variedade de telhas metálicas,
+                cumeeiras, bobinas slitadas e oferecemos serviços de pintura
+                eletrostática para atender as necessidades específicas de nossos
+                clientes.
+              </p>
+              <p>
+                Na Map Telhas, a qualidade é a nossa prioridade número um.
+                Contamos com uma equipe dedicada de profissionais altamente
+                qualificados e experientes, comprometidos em oferecer produtos e
+                serviços que superem as expectativas de nossos clientes.
+              </p>
+            </div>
+            <div className="lg:text-justify">
+              <div className="hidden lg:contents">
+                <p className="hidden">Sobre nós</p>
+                <p className="uppercase text-primaryRed text-[40px] font-extrabold text-right">
+                  A Empresa
+                </p>
+                <p className="text-right text-3xl">
+                  Localizada em Campo Limpo Paulista/SP
+                </p>
+                <div className="my-3 h-[2px] w-5/6 bg-primaryRed ml-auto" />
+              </div>
+              <p>
+                Desde <span className="font-bold">1996</span>, nos dedicamos
+                incansavelmente a fornecer telhas telhas metálicas de alta
+                qualidade e serviços relacionados para uma ampla gama de
+                aplicações. Trabalhamos com os melhores aços disponíveis no
+                mercado, garantindo durabilidade, resistência e desempenho
+                superiores em cada projeto que realizamos.
+              </p>
+              <div>
+                <Image
+                  className="rounded-xl shadow-md mt-5"
+                  src="/original/about-us-3.png"
+                  width={1000}
+                  height={1000}
+                  alt="Sobre nós"
+                />
+              </div>
+            </div>
           </div>
-
-          <div className="mx-auto">
-            <Link href="/produtos/pintura-eletrostatica">
-              <ProductCard
-                product_name="Pintura Eletrostática"
-                image="/original/pintura-eletrostatica.png"
-              />
-            </Link>
+        </section>
+        <section className="mt-5">
+          <h1 className="uppercase text-primaryRed text-3xl font-extrabold text-center">
+            Junte-se a Nós!
+          </h1>
+          <div className="mt-5 pb-5 flex items-center gap-3 lg:gap-0 justify-between overflow-x-auto">
+            <Image
+              className="rounded-xl shadow-md max-w-80"
+              src="/original/carrousel-1.png"
+              width={2000}
+              height={2000}
+              alt="Sobre nós"
+            />
+            <Image
+              className="rounded-xl shadow-md max-w-80"
+              src="/original/carrousel-2.png"
+              width={2000}
+              height={2000}
+              alt="Sobre nós"
+            />
+            <Image
+              className="rounded-xl shadow-md max-w-80"
+              src="/original/carrousel-3.png"
+              width={2000}
+              height={2000}
+              alt="Sobre nós"
+            />
           </div>
-
-          <div className="mx-auto">
-            <Link href="/produtos/telha-translucida">
-              <ProductCard
-                product_name="Telha Translúcida"
-                image="/original/telha-translucida.png"
-              />
-            </Link>
-          </div>
-        </div>
-        <div className="text-center">
-          <Link href="/produtos">
-            <MyButton text="Ver Produtos" style="red-white" />
-          </Link>
-        </div>
-      </section>
-      <hr />
-      <section className="py-5 text-center">
-        <h1 className="text-[40px] font-semibold">Dúvidas</h1>
-        <p className="text-center lg:text-2xl">
-          Caso ainda tenha alguma dúvida sobre nós ou nossos produtos, entre em
-          contato conosco.
-        </p>
-        <Link href="tel:11974344466">
-          <MyButton text="Contato" style="blue-white" />
-        </Link>
-      </section>
+        </section>
+      </div>
     </Center>
   );
 }
