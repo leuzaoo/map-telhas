@@ -1,9 +1,15 @@
 "use client";
+import { Facebook, Instagram, Phone } from "lucide-react";
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
 const navItems = [
+  {
+    id: 0,
+    name: "Home",
+    link: "/",
+  },
   {
     id: 1,
     name: "Produtos",
@@ -56,7 +62,7 @@ function DeviceNavBar({ open, setOpen }) {
           </li>
           <li>
             <Link onClick={closeNav} href="/informacoes">
-              Informações 
+              Informações
             </Link>
           </li>
         </ul>
@@ -69,11 +75,27 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
   return (
     <>
-      <header className="px-5 flex w-full justify-center items-center h-[80px] bg-primaryRed">
+      <div className="bg-primaryRed text-white w-full hidden lg:flex">
+        <div className="max-w-screen-lg w-full mx-auto flex items-center py-2 justify-between">
+          <div className="flex items-center gap-2">
+            <Instagram />
+            <Facebook />
+            <Phone />
+          </div>
+          <div>(11) 4039-3236 | vendas@maptelhas.com.br</div>
+        </div>
+      </div>
+
+      <header className="px-5 flex w-full justify-center items-center h-[60px] bg-white shadow-xl">
         <div className="max-w-screen-lg w-full flex justify-between items-center">
           <DeviceNavBar open={open} setOpen={setOpen} />
           <Link href="/">
-            <Image src="/logo.svg" width={70} height={40} alt="Logo Image" />
+            <Image
+              src="/original/logo.svg"
+              width={160}
+              height={160}
+              alt="Logo Image"
+            />
           </Link>
           <div
             className="cursor-pointer z-50 flex w-10 h-6 flex-col justify-between items-center lg:hidden"
@@ -82,23 +104,23 @@ export default function Navbar() {
             }}
           >
             <span
-              className={`h-1 w-full bg-white rounded-lg transform transition duration-300 ease-in-out ${
-                open ? "rotate-45 translate-y-2.5" : ""
+              className={`h-1 w-full bg-primaryRed rounded-lg transform transition duration-300 ease-in-out ${
+                open ? "rotate-45 translate-y-2.5 bg-white" : ""
               }`}
             />
             <span
-              className={`h-1 w-full bg-white rounded-lg transition duration-200 ${
+              className={`h-1 w-full bg-primaryRed rounded-lg transition duration-200 ${
                 open ? "opacity-0" : ""
               }`}
             />
             <span
-              className={`h-1 w-full bg-white rounded-lg transform transition duration-300 ease-in-out ${
-                open ? "-rotate-45 -translate-y-2.5" : ""
+              className={`h-1 w-full bg-primaryRed rounded-lg transform transition duration-300 ease-in-out ${
+                open ? "-rotate-45 -translate-y-2.5 bg-white" : ""
               }`}
             />
           </div>
 
-          <div className="hidden lg:flex items-center justify-between text-xl text-white">
+          <div className="hidden lg:flex items-center justify-between text-xl text-primaryRed font-extrabold uppercase">
             <ul className="flex gap-10">
               {navItems.map((item) => (
                 <li key={item.id} className="min-w-max">
@@ -106,16 +128,6 @@ export default function Navbar() {
                 </li>
               ))}
             </ul>
-          </div>
-          <div className="hidden lg:contents">
-            <button className="uppercase font-bold bg-white hover:bg-gray-200 transition-all duration-200 px-5 py-2 rounded">
-              <Link
-                target="_blank"
-                href="https://api.whatsapp.com/send?phone=5511974344466&text=Ol%C3%A1,%20gostaria%20de%20fazer%20um%20or%C3%A7amento."
-              >
-                Pedir Orçamento
-              </Link>
-            </button>
           </div>
         </div>
       </header>
