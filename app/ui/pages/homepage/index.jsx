@@ -62,6 +62,12 @@ export default function Homepage() {
         />
       </Head>
 
+      <Image
+        src="/original/homepage.png"
+        width={1920}
+        height={600}
+        alt="Sobre nós"
+      />
       <section className="hidden lg:flex bg-white">
         <Center>
           <div className="flex items-center justify-between gap-10 py-10">
@@ -164,7 +170,7 @@ export default function Homepage() {
       </section>
 
       <section className="py-5 text-center px-5 max-w-3xl mx-auto">
-        <h1 className="hidden">Telhas Metálicas</h1>
+        <h1 className="hidden">Nossos Produtos</h1>
         <article>
           <Center>
             <div id="Telhas Simples">

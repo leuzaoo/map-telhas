@@ -8,7 +8,7 @@ export default function AboutPage() {
         <section>
           <div className="lg:hidden">
             <h1 className="hidden">Sobre nós</h1>
-            <h1 className="uppercase text-primaryRed text-[40px] font-extrabold text-right">
+            <h1 className="uppercase text-primaryRed text-title font-extrabold text-right">
               A Empresa
             </h1>
             <h1 className="text-right text-3xl">

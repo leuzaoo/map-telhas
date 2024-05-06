@@ -75,14 +75,18 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
   return (
     <>
-      <div className="bg-primaryRed text-white w-full hidden lg:flex">
+      <div className="bg-primaryRed text-white w-full lg:flex">
         <div className="max-w-screen-lg w-full mx-auto flex items-center py-2 justify-between">
-          <div className="flex items-center gap-2">
+          <div className="hidden lg:flex items-center gap-2 ">
             <Instagram />
             <Facebook />
             <Phone />
           </div>
-          <div>(11) 4039-3236 | vendas@maptelhas.com.br</div>
+          <div className="mx-auto lg:mx-0">
+            <Link href="tel:1140393236">
+              (11) 4039-3236 | vendas@maptelhas.com.br
+            </Link>
+          </div>
         </div>
       </div>
 

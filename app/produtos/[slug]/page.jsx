@@ -61,10 +61,14 @@ export default async function ProductPage({ params }) {
             </ul>
           </div>
           <div className="w-full flex flex-col gap-5 text-lg lg:text-xl">
-            <p>
-              <span className="font-bold">Manutenção: </span>
-              {product.maintenance}
-            </p>
+            {product.maintenance ? (
+              <p>
+                <span className="font-bold">Manutenção: </span>
+                {product.maintenance}
+              </p>
+            ) : (
+              ""
+            )}
             {product.personalization ? (
               <>
                 <p>

@@ -24,7 +24,7 @@ export default function RootLayout({ children }) {
         <meta name="description" content={metadata.description} />
       </Head>
       <html lang="pt">
-        <body id="Telhas Metálicas" className={`${mulish.className} Test`}>
+        <body id="Telhas Metálicas" className={`${mulish.className}`}>
           <h1 className="hidden">
             Map Telhas Metálicas e Pintura Eletrostática
           </h1>
