@@ -123,4 +123,17 @@ export const produtos = [
     maintenance: "",
     personalization: "",
   },
+  {
+    id: 9,
+    slug: "bobina-slitada",
+    name: "Bobina Slitada",
+    model: "",
+    description:
+      "Um processo contínuo de corte longitudinal (Slitter/Rolo), que pode ser produzido nas espessuras de 0,40mm, 0,50mm e 0,65mm.",
+    material: "Galvanizado, galvalume e chapas pré-pintadas.",
+    application: "",
+    image: "/bobina.svg",
+    maintenance: "",
+    personalization: "",
+  },
 ];
