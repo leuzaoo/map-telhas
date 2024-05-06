@@ -104,9 +104,36 @@ export const produtos = [
     material: "",
     application:
       "Personalização estética das telhas conforme preferência do cliente.",
-    image: "/original/pintura-eletrostatica.png",
+    image: "/original/pintura-eletrostatica-card.png",
     maintenance:
       "Faça uma limpeza regular das superfícies pintadas com pintura eletrostática para remover poeira, sujeira e outros resíduos. Use água morna e um detergente suave, evitando produtos abrasivos que possam danificar a pintura. Faça inspeções visuais periódicas para verificar se há sinais de desgaste, descamação, corrosão ou danos na pintura. Se encontrar alguma área comprometida, programe reparos imediatamente para evitar danos adicionais.",
+    personalization: "",
+  },
+  {
+    id: 8,
+    slug: "parafusos",
+    name: "Parafusos",
+    model: "",
+    description:
+      "Dispomos de uma extensa gama de parafusos autoperfurantes, popularmente conhecidos como parafusos auto brocantes.",
+    material: "",
+    application:
+      "Esses parafusos asseguram uma instalação segura das telhas, conferindo um elevado nível de fixação e assegurando uma efetiva vedação para impedir a infiltração de água.",
+    image: "/original/parafusos.png",
+    maintenance: "",
+    personalization: "",
+  },
+  {
+    id: 9,
+    slug: "bobina-slitada",
+    name: "Bobina Slitada",
+    model: "",
+    description:
+      "Um processo contínuo de corte longitudinal (Slitter/Rolo), que pode ser produzido nas espessuras de 0,40mm, 0,50mm e 0,65mm.",
+    material: "Galvanizado, galvalume e chapas pré-pintadas.",
+    application: "",
+    image: "/bobina.svg",
+    maintenance: "",
     personalization: "",
   },
 ];

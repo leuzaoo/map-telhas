@@ -27,10 +27,21 @@ export default async function ProductPage({ params }) {
             />
             <ul className="flex flex-col gap-5 mt-3 text-lg lg:text-xl pb-5 lg:pb-0">
               <li>
-                {product.description ? (
+                {product.maintenance ? (
+                  <p>
+                    <span className="font-bold">Manutenção: </span>
+                    {product.maintenance}
+                  </p>
+                ) : (
+                  ""
+                )}
+              </li>
+              <li>
+                {product.application ? (
                   <>
-                    <span className="font-bold">Característica: </span>
-                    {product.description}
+                    <span className="font-bold">Aplicações: </span>
+                    <br />
+                    {product.application}
                   </>
                 ) : (
                   ""
@@ -47,24 +58,19 @@ export default async function ProductPage({ params }) {
                   ""
                 )}
               </li>
-              <li>
-                {product.application ? (
-                  <>
-                    <span className="font-bold">Aplicações: </span>
-                    <br />
-                    {product.application}
-                  </>
-                ) : (
-                  ""
-                )}
-              </li>
             </ul>
           </div>
           <div className="w-full flex flex-col gap-5 text-lg lg:text-xl">
-            <p>
-              <span className="font-bold">Manutenção: </span>
-              {product.maintenance}
-            </p>
+            {product.description ? (
+              <>
+                <p>
+                  <span className="font-bold">Característica: </span>
+                  {product.description}
+                </p>
+              </>
+            ) : (
+              ""
+            )}
             {product.personalization ? (
               <>
                 <p>

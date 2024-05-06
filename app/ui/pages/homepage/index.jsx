@@ -180,7 +180,7 @@ export default function Homepage() {
       </section>
 
       <section className="py-5 text-center px-5 max-w-3xl mx-auto">
-        <h1 className="hidden">Telhas Metálicas</h1>
+        <h1 className="hidden">Nossos Produtos</h1>
         <article>
           <Center>
             <div id="Telhas Simples">
