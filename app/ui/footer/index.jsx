@@ -26,7 +26,7 @@ export default function Footer() {
                 target="_blank"
               >
                 <p>
-                  Rua Brás Cubas 60 - Vila Tavares
+                  Rua Brás Cubas 160 - Vila Tavares
                   <br />
                   Campo Limpo Paulista/SP - 13230-078
                 </p>
@@ -35,9 +35,14 @@ export default function Footer() {
           </div>
 
           <div className="flex items-center gap-3">
-            <Phone />
-            <Link href="tel:11974344466">
-              <p>(11) 9 7434-4466</p>
+            <Image
+              src="/whatsapp-icon-white.svg"
+              width={24}
+              height={24}
+              alt="Whatsapp icon"
+            />
+            <Link href="http://wa.me/551140393236">
+              <p>(11) 4039-3236</p>
             </Link>
           </div>
 

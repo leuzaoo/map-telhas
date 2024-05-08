@@ -79,13 +79,31 @@ export default function Navbar() {
         <div className="bg-primaryRed text-white w-full lg:flex h-10">
           <div className="max-w-screen-lg w-full mx-auto flex items-center py-2 justify-between">
             <div className="hidden lg:flex items-center gap-2 ">
-              <Instagram />
-              <Facebook />
-              <Phone />
+              <Link href="https://www.instagram.com/maptelhas/" target="_blank">
+                <Instagram />
+              </Link>
+              <Link
+                href="https://www.facebook.com/profile.php?id=61558732025330"
+                target="_blank"
+              >
+                <Facebook />
+              </Link>
+              <Link href="http://wa.me/551140393236" target="_blank">
+                <Image
+                  src="/whatsapp-icon-white.svg"
+                  width={24}
+                  height={24}
+                  alt="Whatsapp icon"
+                />
+              </Link>
             </div>
             <div className="mx-auto lg:mx-0">
-              <Link href="tel:1140393236">
-                (11) 4039-3236 | vendas@maptelhas.com.br
+              <Link href="http://wa.me/551140393236" target="_blank">
+                (11) 4039-3236
+              </Link>{" "}
+              | {""}
+              <Link href="mailto:vendas@maptelhas.com.br">
+                vendas@maptelhas.com.br
               </Link>
             </div>
           </div>
