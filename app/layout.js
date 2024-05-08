@@ -31,7 +31,7 @@ export default function RootLayout({ children }) {
           <header>
             <Navbar />
           </header>
-          <main>{children}</main>
+          <main className="pt-[100px]">{children}</main>
           <footer>
             <Footer />
           </footer>
