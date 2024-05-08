@@ -72,8 +72,8 @@ export default function Homepage() {
 
       <Image
         className="hidden md:flex mx-auto"
-        src="/original/homepage-2.png"
-        width={1920}
+        src="/original/homepage-3.png"
+        width={3840}
         height={600}
         alt="Homepage image"
       />
@@ -87,7 +87,8 @@ export default function Homepage() {
               </h1>
               <p className="text-3xl font-light text-strongDark">
                 Somos uma empresa especialista há 28 anos na fabricação de
-                telhas e estruturas metálicas, calhas e pintura eletrostática.
+                telhas metálicas, cumeeiras, bobinas slitadas e pintura
+                eletrostática.
               </p>
               <div className="flex w-full justify-start gap-5 mt-20">
                 <Link href="/produtos">
