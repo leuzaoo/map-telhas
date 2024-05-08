@@ -55,8 +55,15 @@ export default function Footer() {
         </div>
         <hr />
         <div className="flex items-center justify-center gap-20 py-5 text-white">
-          <Facebook />
-          <Instagram />
+          <Link
+            href="https://www.facebook.com/profile.php?id=61558732025330"
+            target="_blank"
+          >
+            <Facebook />
+          </Link>
+          <Link href="https://www.instagram.com/maptelhas/" target="_blank">
+            <Instagram />
+          </Link>
         </div>
         <span className="flex justify-center text-white text-xs">
           ©️ 2024 MAP Telhas. Todos os direitos reservados.{" "}

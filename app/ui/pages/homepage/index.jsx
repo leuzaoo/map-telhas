@@ -35,6 +35,7 @@ const Content = ({ title, secondTitle, description, textColor, textAlign }) => {
           {secondTitle}
         </h2>
       )}
+
       <p
         className={`mt-4 mx-auto ${
           textColor === "white" ? "text-white" : "text-strongDark"
@@ -94,10 +95,7 @@ export default function Homepage() {
                 <Link href="/produtos">
                   <MyButton text="Ver Produtos" style="secondary" />
                 </Link>
-                <Link
-                  href="https://api.whatsapp.com/send?phone=5511974344466&text=Ol%C3%A1,%20gostaria%20de%20fazer%20um%20or%C3%A7amento."
-                  target="_blank"
-                >
+                <Link href="http://wa.me/551140393236" target="_blank">
                   <MyButton text="Contato" style="primary" />
                 </Link>
               </div>
@@ -130,7 +128,9 @@ export default function Homepage() {
               alt="Produção de Telha"
             />
           </div>
-          <MyButton text="Todos os Modelos" style="red-white" />
+          <Link href="/produtos">
+            <MyButton text="Todos os Modelos" style="red-white" />
+          </Link>
         </Center>
       </section>
 
@@ -141,16 +141,18 @@ export default function Homepage() {
             description="Criamos uma camada protetora através da aplicação de um pó pigmentado."
             textColor=""
           />
-          <div className="mx-auto mt-5 md:max-w-md lg:max-w-xl">
+          <div className="mx-auto mt-5 md:max-w-md">
             <Image
-              className="rounded-xl shadow-xl"
-              src="/telha-pintada.jpg"
+              className="rounded-xl shadow-xl max-w-md"
+              src="/original/pintura-eletrostatica-card.png"
               width={1000}
               height={1000}
               alt="Produção de Telha"
             />
           </div>
-          <MyButton text="Ver mais" style="red-white" />
+          <Link href="http://localhost:3000/produtos/pintura-eletrostatica">
+            <MyButton text="Ver mais" style="red-white" />
+          </Link>
         </Center>
       </section>
 
@@ -174,9 +176,11 @@ export default function Homepage() {
               alt="Produção de Telha"
             />
           </div>
-          <MyButton text="Ver mais" style="red-white">
-            <Link href="/">Contato</Link>
-          </MyButton>
+          <Link href="/sobre">
+            <MyButton text="Mais Informações" style="red-white">
+              Contato
+            </MyButton>
+          </Link>
         </Center>
       </section>
 

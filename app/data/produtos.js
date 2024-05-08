@@ -81,18 +81,16 @@ export const produtos = [
   },
   {
     id: 6,
-    slug: "cumeeira",
-    name: "Cumeeira",
+    slug: "bobina-slitada",
+    name: "Bobina Slitada",
     model: "",
     description:
-      "Peça utilizada para fazer o acabamento no topo das telhas, proporcionando vedação e proteção contra interpéries. As chapas usadas são revestidas com alumínio, zinco e silício, garantindo resistência à corrosão. A telha galvalume, devido à sua composição, é altamente resistente à corrosão e durável, com vida útil de até 50 anos.",
-    material: "Galvanizado, Galvalume, Colorido.",
+      "Um processo contínuo de corte longitudinal (Slitter/Rolo), que pode ser produzido nas espessuras de 0,40mm, 0,50mm e 0,65mm.",
+    material: "Galvanizado, galvalume e chapas pré-pintadas.",
     application: "",
-    image: "/original/cumeeira.png",
-    maintenance:
-      "Enquanto os telhados metálicos são mantidos, são feitos processos como detecção e classificação do dano na área, higienização da superfície a ser consertada, retirada de detritos ou oxidação, recuperação da região afetada ou, em algumas situações, troca da peça danificada.",
-    personalization:
-      "Além, de maior segurança e durabilidade, ela pode receber a pintura eletrostática, mantendo a aparência ao longo do tempo preservada e contribuindo para valorização do imóvel. A pintura eletrostática é um dos processos mais modernos e avançados de pinturas e revestimentos para peças que necessitam de proteção e um alto nível de acabamento, seu processo diferenciado por meio de cargas elétricas para a fixação da tinta garantem a durabilidade de mais de cinco anos, deixando o acabamento espelhado, sem bolhas ou gotejamento, liso e sem manchas.",
+    image: "/bobina.svg",
+    maintenance: "",
+    personalization: "",
   },
   {
     id: 7,
@@ -111,6 +109,21 @@ export const produtos = [
   },
   {
     id: 8,
+    slug: "cumeeira",
+    name: "Cumeeira",
+    model: "",
+    description:
+      "Peça utilizada para fazer o acabamento no topo das telhas, proporcionando vedação e proteção contra interpéries. As chapas usadas são revestidas com alumínio, zinco e silício, garantindo resistência à corrosão. A telha galvalume, devido à sua composição, é altamente resistente à corrosão e durável, com vida útil de até 50 anos.",
+    material: "Galvanizado, Galvalume, Colorido.",
+    application: "",
+    image: "/original/cumeeira.png",
+    maintenance:
+      "Enquanto os telhados metálicos são mantidos, são feitos processos como detecção e classificação do dano na área, higienização da superfície a ser consertada, retirada de detritos ou oxidação, recuperação da região afetada ou, em algumas situações, troca da peça danificada.",
+    personalization:
+      "Além, de maior segurança e durabilidade, ela pode receber a pintura eletrostática, mantendo a aparência ao longo do tempo preservada e contribuindo para valorização do imóvel. A pintura eletrostática é um dos processos mais modernos e avançados de pinturas e revestimentos para peças que necessitam de proteção e um alto nível de acabamento, seu processo diferenciado por meio de cargas elétricas para a fixação da tinta garantem a durabilidade de mais de cinco anos, deixando o acabamento espelhado, sem bolhas ou gotejamento, liso e sem manchas.",
+  },
+  {
+    id: 9,
     slug: "parafusos",
     name: "Parafusos",
     model: "",
@@ -120,19 +133,6 @@ export const produtos = [
     application:
       "Esses parafusos asseguram uma instalação segura das telhas, conferindo um elevado nível de fixação e assegurando uma efetiva vedação para impedir a infiltração de água.",
     image: "/original/parafusos.png",
-    maintenance: "",
-    personalization: "",
-  },
-  {
-    id: 9,
-    slug: "bobina-slitada",
-    name: "Bobina Slitada",
-    model: "",
-    description:
-      "Um processo contínuo de corte longitudinal (Slitter/Rolo), que pode ser produzido nas espessuras de 0,40mm, 0,50mm e 0,65mm.",
-    material: "Galvanizado, galvalume e chapas pré-pintadas.",
-    application: "",
-    image: "/bobina.svg",
     maintenance: "",
     personalization: "",
   },
