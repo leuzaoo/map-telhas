@@ -8,7 +8,7 @@ export default function ProductsPage() {
     <div className="px-5 py-10 text-xl font-medium">
       <Center>
         <h1 className="uppercase font-extrabold text-title text-primaryRed">
-          Nossos Produtos
+          Produtos
         </h1>
         <div className="my-3 h-[2px] w-full md:w-2/4 bg-primaryRed mr-auto" />
         <section id="telhas-metalicas">
