@@ -150,7 +150,7 @@ export default function Homepage() {
               alt="Produção de Telha"
             />
           </div>
-          <Link href="http://localhost:3000/produtos/pintura-eletrostatica">
+          <Link href="/produtos/pintura-eletrostatica">
             <MyButton text="Ver mais" style="red-white" />
           </Link>
         </Center>
