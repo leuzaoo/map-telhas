@@ -15,7 +15,7 @@ export default function Footer() {
           alt="Logo image"
         />
         <p className="text-center py-5 text-white uppercase font-bold">
-          Contatos
+          Saiba Mais
         </p>
         <div className="max-w-screen-lg mx-auto pb-5 flex flex-col lg:flex-row lg:justify-between text-white gap-5">
           <div className="flex flex-col gap-5">
@@ -41,15 +41,8 @@ export default function Footer() {
               height={24}
               alt="Whatsapp icon"
             />
-            <Link href="http://wa.me/551140393236">
+            <Link href="http://wa.me/551140393236" target="_blank">
               <p>(11) 4039-3236</p>
-            </Link>
-          </div>
-
-          <div className="flex items-center gap-3">
-            <Headset />
-            <Link href="tel:1148930293">
-              <p>(11) 4893-0293</p>
             </Link>
           </div>
         </div>

@@ -1,5 +1,5 @@
 "use client";
-import { Facebook, Instagram, Phone } from "lucide-react";
+import { Facebook, FacebookIcon, Instagram, Phone } from "lucide-react";
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -43,7 +43,7 @@ function DeviceNavBar({ open, setOpen }) {
         open ? "-translate-x-0" : "-translate-x-full"
       } transition-transform duration-300 ease-in-out filter drop-shadow-md`}
     >
-      <div className="flex flex-col items-left gap-3 px-10 pt-10 text-3xl">
+      <div className="flex flex-col items-left justify-between gap-20 px-10 pt-10 text-3xl">
         <ul className="flex flex-col gap-5">
           <li>
             <Link onClick={closeNav} href="/produtos">
@@ -66,6 +66,25 @@ function DeviceNavBar({ open, setOpen }) {
             </Link>
           </li>
         </ul>
+        <div className="flex items-center justify-center gap-20">
+          <Link
+            href="https://www.facebook.com/profile.php?id=61558732025330"
+            target="_blank"
+          >
+            <Facebook />
+          </Link>
+          <Link href="https://www.instagram.com/maptelhas/" target="_blank">
+            <Instagram />
+          </Link>
+          <Link href="http://wa.me/551140393236" target="_blank">
+            <Image
+              src="/whatsapp-icon-white.svg"
+              width={24}
+              height={24}
+              alt="Whatsapp icon"
+            />
+          </Link>
+        </div>
       </div>
     </div>
   );
