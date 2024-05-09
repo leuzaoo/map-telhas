@@ -104,7 +104,7 @@ export const produtos = [
     material: "",
     application:
       "Personalização estética das telhas conforme preferência do cliente.",
-    image: "/original/pintura-eletrostatica-card.png",
+    image: "/original/pintura-eletrostatica-home.png",
     maintenance:
       "Faça uma limpeza regular das superfícies pintadas com pintura eletrostática para remover poeira, sujeira e outros resíduos. Use água morna e um detergente suave, evitando produtos abrasivos que possam danificar a pintura. Faça inspeções visuais periódicas para verificar se há sinais de desgaste, descamação, corrosão ou danos na pintura. Se encontrar alguma área comprometida, programe reparos imediatamente para evitar danos adicionais.",
     personalization: (
