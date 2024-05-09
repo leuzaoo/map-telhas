@@ -141,9 +141,9 @@ export default function Homepage() {
             description="Criamos uma camada protetora através da aplicação de um pó pigmentado."
             textColor=""
           />
-          <div className="mx-auto mt-5 md:max-w-md">
+          <div className="mt-5 text-center w-full">
             <Image
-              className="rounded-xl shadow-xl max-w-md"
+              className="rounded-xl shadow-xl md:max-w-sm mx-auto"
               src="/original/pintura-eletrostatica-card.png"
               width={1000}
               height={1000}
