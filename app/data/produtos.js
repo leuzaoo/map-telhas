@@ -85,11 +85,13 @@ export const produtos = [
     name: "Bobina Slitada",
     model: "",
     description:
-      "Um processo contínuo de corte longitudinal (Slitter/Rolo), que pode ser produzido nas espessuras de 0,40mm, 0,50mm e 0,65mm.",
+      "Um processo contínuo de corte longitudinal (Slitter/Rolo), que pode ser produzido nas espessuras de 0,40mm, 0,50mm. Também são conhecidas como bobininhas slitadas para calheiros.",
     material: "Galvanizado, galvalume e chapas pré-pintadas.",
-    application: "",
+    application:
+      "Amplamente utilizada em uma variedade de setores, incluindo construção civil, indústria automotiva, fabricação de eletrodomésticos, entre outros.",
     image: "/bobina.svg",
-    maintenance: "",
+    maintenance:
+      "Requer manutenção mínima devido ao revestimento de proteção aplicado durante o processo de fabricação, mas pode necessitar de inspeções regulares para garantir a integridade do revestimento e prevenir a corrosão.",
     personalization: "",
   },
   {
@@ -105,7 +107,55 @@ export const produtos = [
     image: "/original/pintura-eletrostatica-card.png",
     maintenance:
       "Faça uma limpeza regular das superfícies pintadas com pintura eletrostática para remover poeira, sujeira e outros resíduos. Use água morna e um detergente suave, evitando produtos abrasivos que possam danificar a pintura. Faça inspeções visuais periódicas para verificar se há sinais de desgaste, descamação, corrosão ou danos na pintura. Se encontrar alguma área comprometida, programe reparos imediatamente para evitar danos adicionais.",
-    personalization: "",
+    personalization: (
+      <span className="flex flex-col gap-3">
+        Disponível nas cores abaixo.
+        <span className="flex items-center gap-3">
+          <span className="w-6 h-6 shadow-md rounded-full bg-neutral-300" />
+          <span>Natural (Cor de Alumínio)</span>
+        </span>
+        <span className="flex items-center gap-3">
+          <span className="w-6 h-6 shadow-md rounded-full bg-neutral-600" />
+          <span>Cinza Claro/Escuro</span>
+        </span>
+        <span className="flex items-center gap-3">
+          <span className="w-6 h-6 shadow-md rounded-full bg-amber-200" />
+          <span>Bege</span>
+        </span>
+        <span className="flex items-center gap-3">
+          <span className="w-6 h-6 shadow-md rounded-full bg-black" />
+          <span>Preto Semi-Brilho</span>
+        </span>
+        <span className="flex items-center gap-3">
+          <span className="w-6 h-6 shadow-md rounded-full bg-orange-600" />
+          <span>Laranja</span>
+        </span>
+        <span className="flex items-center gap-3">
+          <span className="w-6 h-6 shadow-md rounded-full bg-neutral-100" />
+          <span>Branco</span>
+        </span>
+        <span className="flex items-center gap-3">
+          <span className="w-6 h-6 shadow-md rounded-full bg-amber-800" />
+          <span>Marrom</span>
+        </span>
+        <span className="flex items-center gap-3">
+          <span className="w-6 h-6 shadow-md rounded-full bg-primaryRed" />
+          <span>Vermelho</span>
+        </span>
+        <span className="flex items-center gap-3">
+          <span className="w-6 h-6 shadow-md rounded-full bg-green-500" />
+          <span>Verde Claro/Escuro</span>
+        </span>
+        <span className="flex items-center gap-3">
+          <span className="w-6 h-6 shadow-md rounded-full bg-yellow-300" />
+          <span>Amarelo</span>
+        </span>
+        <span className="flex items-center gap-3">
+          <span className="w-6 h-6 shadow-md rounded-full bg-blue-700" />
+          <span>Azul</span>
+        </span>
+      </span>
+    ),
   },
   {
     id: 8,
