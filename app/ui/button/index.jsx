@@ -2,7 +2,7 @@ import React from "react";
 
 export default function MyButton({ text, style }) {
   let buttonClassName =
-    "mt-5 py-3 px-5 uppercase text-xl lg:text-3xl rounded-xl font-bold transition-all duration-200  hover:opacity-80";
+    "mt-10 py-3 px-5 uppercase text-xl lg:text-3xl rounded-xl font-bold transition-all duration-200  hover:opacity-80";
 
   switch (style) {
     case "primary":
