@@ -30,21 +30,12 @@ export default async function ProductPage({ params }) {
               />
               <ul className="flex flex-col gap-5 mt-3 text-lg lg:text-xl pb-5 lg:pb-0">
                 <li>
-                  {product.maintenance ? (
-                    <p>
-                      <span className="font-bold">Manutenção: </span>
-                      {product.maintenance}
-                    </p>
-                  ) : (
-                    ""
-                  )}
-                </li>
-                <li>
-                  {product.application ? (
+                  {product.description ? (
                     <>
-                      <span className="font-bold">Aplicações: </span>
-                      <br />
-                      {product.application}
+                      <p>
+                        <span className="font-bold">Característica: </span>
+                        {product.description}
+                      </p>
                     </>
                   ) : (
                     ""
@@ -63,27 +54,40 @@ export default async function ProductPage({ params }) {
                 </li>
               </ul>
             </div>
-            <div className="w-full flex flex-col gap-5 text-lg lg:text-xl">
-              {product.description ? (
-                <>
+            <ul className="w-full flex flex-col gap-5 text-lg lg:text-xl">
+              <li>
+                {product.maintenance ? (
                   <p>
-                    <span className="font-bold">Característica: </span>
-                    {product.description}
+                    <span className="font-bold">Manutenção: </span>
+                    {product.maintenance}
                   </p>
-                </>
-              ) : (
-                ""
-              )}
-              {product.personalization ? (
-                <>
-                  <p>
-                    <span className="font-bold">Personalização: </span>
-                    {product.personalization}
-                  </p>
-                </>
-              ) : (
-                ""
-              )}
+                ) : (
+                  ""
+                )}
+              </li>
+              <li>
+                {product.application ? (
+                  <>
+                    <span className="font-bold">Aplicações: </span>
+                    <br />
+                    {product.application}
+                  </>
+                ) : (
+                  ""
+                )}
+              </li>
+              <li>
+                {product.personalization ? (
+                  <>
+                    <p>
+                      <span className="font-bold">Personalização: </span>
+                      {product.personalization}
+                    </p>
+                  </>
+                ) : (
+                  ""
+                )}
+              </li>
               <div className="mx-auto">
                 <Link
                   target="_blank"
@@ -93,7 +97,7 @@ export default async function ProductPage({ params }) {
                 </Link>
                 <h1 className="hidden">Orçamento</h1>
               </div>
-            </div>
+            </ul>
           </div>
           <hr className="mt-5 mb-5" />
           <footer className="pb-5 text-lg lg:text-xl">

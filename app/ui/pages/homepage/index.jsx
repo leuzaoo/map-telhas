@@ -196,9 +196,9 @@ export default function Homepage() {
               Podem ser utilizadas em coberturas ou fechamentos laterais, a instalação pode ser feita em estruturas metálicas ou de madeira."
                 textAlign="left"
               />
-              <div className="max-w-3xl mx-auto">
+              <div className="max-w-3xl mx-auto rounded-xl">
                 <Image
-                  className="mt-5"
+                  className="mt-5 rounded-xl"
                   src="/telha-simples.svg"
                   alt="Telha Simples"
                   width={1700}
@@ -212,9 +212,9 @@ export default function Homepage() {
                 description="Compostas por duas telhas e uma camada de EPS (30mm ou 50mm), são extremamente resistentes e possuem grande eficiência térmica e acústica proporcionadas pelo EPS."
                 textAlign="left"
               />
-              <div className="max-w-3xl mx-auto">
+              <div className="max-w-3xl mx-auto rounded-xl">
                 <Image
-                  className="mt-5"
+                  className="mt-5 rounded-xl"
                   src="/telha-sanduiche.svg"
                   width={1000}
                   height={1000}
@@ -233,9 +233,9 @@ export default function Homepage() {
                 o caimento da água para ambos os lados."
                 textAlign="left"
               />
-              <div className="max-w-3xl mx-auto shadow-md rounded-[20px]">
+              <div className="max-w-3xl mx-auto shadow-md rounded-xl">
                 <Image
-                  className="mt-5"
+                  className="mt-5 rounded-xl"
                   src="/cuumeira.svg"
                   width={1000}
                   height={1000}
@@ -254,9 +254,9 @@ export default function Homepage() {
                 pré-pintadas."
                 textAlign="left"
               />
-              <div className="max-w-3xl mx-auto shadow-md rounded-[20px]">
+              <div className="max-w-3xl mx-auto shadow-md rounded-xl">
                 <Image
-                  className="mt-5"
+                  className="mt-5 rounded-xl"
                   src="/bobina.svg"
                   width={1000}
                   height={1000}
@@ -276,9 +276,9 @@ export default function Homepage() {
                 para impedir a infiltração de água."
                 textAlign="left"
               />
-              <div className="max-w-3xl mx-auto shadow-md rounded-[20px]">
+              <div className="max-w-3xl mx-auto shadow-md rounded-xl">
                 <Image
-                  className="mt-5"
+                  className="mt-5 rounded-xl"
                   src="/parafusos.svg"
                   width={1000}
                   height={1000}
