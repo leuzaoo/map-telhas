@@ -128,7 +128,7 @@ export const produtos = [
         </span>
         <span className="flex items-center gap-3">
           <span className="w-6 h-6 shadow-md rounded-full bg-orange-600" />
-          <span>Laranja</span>
+          <span>Marrom Cerâmica</span>
         </span>
         <span className="flex items-center gap-3">
           <span className="w-6 h-6 shadow-md rounded-full bg-neutral-100" />
@@ -136,7 +136,7 @@ export const produtos = [
         </span>
         <span className="flex items-center gap-3">
           <span className="w-6 h-6 shadow-md rounded-full bg-amber-800" />
-          <span>Marrom</span>
+          <span>Marrom Tabaco</span>
         </span>
         <span className="flex items-center gap-3">
           <span className="w-6 h-6 shadow-md rounded-full bg-primaryRed" />
