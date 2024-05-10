@@ -1,3 +1,4 @@
+import HomeProductCard from "../../home-product-card";
 import MyButton from "../../button";
 import Center from "../../center";
 import Image from "next/image";
@@ -88,8 +89,7 @@ export default function Homepage() {
               </h1>
               <p className="text-3xl font-light text-strongDark">
                 Somos uma empresa especialista há 28 anos na fabricação de
-                telhas metálicas, cumeeiras, bobinas slitadas e pintura
-                eletrostática.
+                telhas metálicas, bobina slitada e pintura eletrostática.
               </p>
               <div className="flex w-full justify-start gap-5 mt-20">
                 <Link href="/produtos">
@@ -128,9 +128,11 @@ export default function Homepage() {
               alt="Produção de Telha"
             />
           </div>
-          <Link href="/produtos">
-            <MyButton text="Todos os Modelos" style="red-white" />
-          </Link>
+          <div className="mt-5">
+            <Link href="/produtos">
+              <MyButton text="Todos os Modelos" style="red-white" />
+            </Link>
+          </div>
         </Center>
       </section>
 
@@ -139,7 +141,6 @@ export default function Homepage() {
           <Content
             title="Pintura Eletrostática"
             description="Criamos uma camada protetora através da aplicação de um pó pigmentado."
-            textColor=""
           />
           <div className="mt-5 text-center w-full">
             <Image
@@ -150,148 +151,110 @@ export default function Homepage() {
               alt="Produção de Telha"
             />
           </div>
-          <Link href="/produtos/pintura-eletrostatica">
-            <MyButton text="Ver mais" style="red-white" />
-          </Link>
-        </Center>
-      </section>
-
-      <section className="py-5 text-center px-5 max-w-3xl mx-auto">
-        <Center>
-          <Content
-            title="Sobre nós"
-            description={`Somos uma empresa especializada há 28 anos na fabricação de telhas metálicas, calhas, estruturas metálicas e pintura eletrostática.
-          
-          Nosso compromisso se baseia em tradição, qualidade e durabilidade, garantindo a satisfação dos clientes.
-          
-          Contamos com uma equipe qualificada, materiais de alto padrãoe seguimos rigorosamente as normas regulamentadoras para oferecer serviços confiáveis e tranquilidade aos nossos clientes.`}
-            textAlign="left"
-          />
-          <div className="mx-auto mt-5 md:max-w-md lg:max-w-3xl">
-            <Image
-              className="rounded-xl shadow-xl"
-              src="/empresa.jpg"
-              width={1000}
-              height={1000}
-              alt="Produção de Telha"
-            />
-          </div>
-          <Link href="/sobre">
-            <MyButton text="Mais Informações" style="red-white">
-              Contato
-            </MyButton>
-          </Link>
-        </Center>
-      </section>
-
-      <section className="py-5 text-center px-5 max-w-3xl mx-auto">
-        <h1 className="hidden">Nossos Produtos</h1>
-        <article>
-          <Center>
-            <div id="Telhas Simples">
-              <Content
-                title="Produtos"
-                secondTitle="Telha Simples"
-                description="Caracterizada pela alta resistência, leveza e economia, as Telhas Metálicas TP 40 vêm ganhando mais espaço a cada dia. 
-              Podem ser utilizadas em coberturas ou fechamentos laterais, a instalação pode ser feita em estruturas metálicas ou de madeira."
-                textAlign="left"
-              />
-              <div className="max-w-3xl mx-auto rounded-xl">
-                <Image
-                  className="mt-5 rounded-xl"
-                  src="/telha-simples.svg"
-                  alt="Telha Simples"
-                  width={1700}
-                  height={1000}
-                />
-              </div>
-            </div>
-            <div id="Telha Sanduíche">
-              <Content
-                secondTitle="Telha Sanduíche (Termoacústica)"
-                description="Compostas por duas telhas e uma camada de EPS (30mm ou 50mm), são extremamente resistentes e possuem grande eficiência térmica e acústica proporcionadas pelo EPS."
-                textAlign="left"
-              />
-              <div className="max-w-3xl mx-auto rounded-xl">
-                <Image
-                  className="mt-5 rounded-xl"
-                  src="/telha-sanduiche.svg"
-                  width={1000}
-                  height={1000}
-                  alt="Telha Sanduíche"
-                />
-              </div>
-            </div>
-
-            <div id="Cumeeira">
-              <Content
-                secondTitle="Cumeeira"
-                description="Em casos em que o telhado possui duas
-                quedas, é necessária a instalação de
-                cumeeiras, garantindo a vedação do vão
-                existente entre as duas telhas e possibilitando
-                o caimento da água para ambos os lados."
-                textAlign="left"
-              />
-              <div className="max-w-3xl mx-auto shadow-md rounded-xl">
-                <Image
-                  className="mt-5 rounded-xl"
-                  src="/cuumeira.svg"
-                  width={1000}
-                  height={1000}
-                  alt="Telha Sanduíche"
-                />
-              </div>
-            </div>
-
-            <div id="Bobina Slitada">
-              <Content
-                secondTitle="Bobina Slitada"
-                description="Um processo contínuo de corte longitudinal
-                (Slitter/Rolo), que pode ser produzido nas
-                espessuras de 0,40mm, 0,50mm e 0,65mm,
-                em material galvanizado, galvalume e chapas
-                pré-pintadas."
-                textAlign="left"
-              />
-              <div className="max-w-3xl mx-auto shadow-md rounded-xl">
-                <Image
-                  className="mt-5 rounded-xl"
-                  src="/bobina.svg"
-                  width={1000}
-                  height={1000}
-                  alt="Telha Sanduíche"
-                />
-              </div>
-            </div>
-
-            <div id="Parafusos">
-              <Content
-                secondTitle="Parafusos"
-                description="Dispomos de uma extensa gama de parafusos
-                autoperfurantes, popularmente conhecidos
-                como parafusos auto brocantes. Esses parafusos asseguram uma instalação segura
-                das telhas, conferindo um elevado nível de
-                fixação e assegurando uma efetiva vedação
-                para impedir a infiltração de água."
-                textAlign="left"
-              />
-              <div className="max-w-3xl mx-auto shadow-md rounded-xl">
-                <Image
-                  className="mt-5 rounded-xl"
-                  src="/parafusos.svg"
-                  width={1000}
-                  height={1000}
-                  alt="Telha Sanduíche"
-                />
-              </div>
-            </div>
-            <Link href="/produtos">
-              <MyButton text="Todos os Produtos" style="red-white" />
+          <div className="mt-5">
+            <Link href="/produtos/pintura-eletrostatica">
+              <MyButton text="Ver mais" style="red-white" />
             </Link>
-          </Center>
-        </article>
+          </div>
+        </Center>
       </section>
+
+      <section className="py-5 text-center px-5 mx-auto">
+        <h1 className="font-bold text-title lg:text-[60px] uppercase">
+          Produtos
+        </h1>
+        <Center>
+          <article>
+            <div className="md:grid md:grid-cols-2 lg:grid-cols-3">
+              <HomeProductCard
+                title="Telha Simples"
+                image="/original/telha-simples.png"
+                link="/produtos/telha-simples"
+              />
+              <HomeProductCard
+                title="Telha Sanduíche"
+                image="/original/telha-sanduiche.png"
+                link="/produtos/telha-sanduiche"
+              />
+              <HomeProductCard
+                title="Pintura Eletrostática"
+                image="/original/pintura-eletrostatica-home.png"
+                link="/produtos/pintura-eletrostatica"
+              />
+              <HomeProductCard
+                title="Bobina Slitada"
+                image="/bobina.svg"
+                link="/produtos/bobina-slitada"
+              />
+              <HomeProductCard
+                title="Cumeeira"
+                image="/original/cumeeira.png"
+                link="/produtos/cumeeira"
+              />
+              <HomeProductCard
+                title="Parafusos"
+                image="/original/parafusos.png"
+                link="/produtos/parafusos"
+              />
+            </div>
+            <div className="mt-5">
+              <Link href="/produtos">
+                <MyButton text="Todos os Produtos" style="red-white" />
+              </Link>
+            </div>
+          </article>
+        </Center>
+      </section>
+      <section className="py-5 text-center px-5 mx-auto">
+        <Center>
+          <h1 className="text-title lg:text-[60px] uppercase font-bold">
+            Sobre Nós
+          </h1>
+          <div className="mt-5 lg:grid grid-cols-2 gap-10 items-center text-center mx-auto">
+            <div className="text-xl text-left flex flex-col gap-3">
+              <p>
+                Somos uma empresa especializada há 28 anos na fabricação de
+                telhas metálicas, bobina slitada, cumeeiras e pintura
+                eletrostática.
+              </p>
+              <p>
+                Nosso compromisso se baseia em tradição, qualidade e
+                durabilidade, garantindo a satisfação dos clientes.
+              </p>
+              <p>
+                Contamos com uma equipe qualificada, materiais de alto padrão e
+                seguimos rigorosamente as normas regulamentadoras para oferecer
+                serviços confiáveis e tranquilidade aos nossos clientes.
+              </p>
+            </div>
+            <div>
+              <div className="mx-auto mt-5">
+                <Image
+                  className="rounded-xl shadow-xl"
+                  src="/empresa.jpg"
+                  width={1000}
+                  height={1000}
+                  alt="Produção de Telha"
+                />
+              </div>
+            </div>
+          </div>
+          <div className="mt-5">
+            <Link href="/sobre">
+              <MyButton text="Mais Informações" style="red-white">
+                Contato
+              </MyButton>
+            </Link>
+          </div>
+        </Center>
+      </section>
+      <Image
+        className="pb-5 lg:my-10"
+        src="/original/footer.png"
+        width={3840}
+        height={600}
+        alt="Image"
+      />
     </>
   );
 }

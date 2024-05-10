@@ -104,7 +104,7 @@ export const produtos = [
     material: "",
     application:
       "Personalização estética das telhas conforme preferência do cliente.",
-    image: "/original/pintura-eletrostatica-card.png",
+    image: "/original/pintura-eletrostatica-home.png",
     maintenance:
       "Faça uma limpeza regular das superfícies pintadas com pintura eletrostática para remover poeira, sujeira e outros resíduos. Use água morna e um detergente suave, evitando produtos abrasivos que possam danificar a pintura. Faça inspeções visuais periódicas para verificar se há sinais de desgaste, descamação, corrosão ou danos na pintura. Se encontrar alguma área comprometida, programe reparos imediatamente para evitar danos adicionais.",
     personalization: (
@@ -128,7 +128,7 @@ export const produtos = [
         </span>
         <span className="flex items-center gap-3">
           <span className="w-6 h-6 shadow-md rounded-full bg-orange-600" />
-          <span>Laranja</span>
+          <span>Marrom Cerâmica</span>
         </span>
         <span className="flex items-center gap-3">
           <span className="w-6 h-6 shadow-md rounded-full bg-neutral-100" />
@@ -136,7 +136,7 @@ export const produtos = [
         </span>
         <span className="flex items-center gap-3">
           <span className="w-6 h-6 shadow-md rounded-full bg-amber-800" />
-          <span>Marrom</span>
+          <span>Marrom Tabaco</span>
         </span>
         <span className="flex items-center gap-3">
           <span className="w-6 h-6 shadow-md rounded-full bg-primaryRed" />
