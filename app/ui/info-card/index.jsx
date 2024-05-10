@@ -3,7 +3,7 @@ import React from "react";
 
 export default function InfoCard({ title, desc, image }) {
   return (
-    <div className="flex flex-col justify-between min-w-xs max-w-xs min-h-[340px] max-h-[340px] bg-neutral-50 rounded-xl shadow-md">
+    <div className="mx-auto flex flex-col justify-between min-w-xs max-w-xs min-h-[340px] max-h-[340px] bg-neutral-50 rounded-xl shadow-md">
       <Image
         className="rounded-xl max-h-44 object-cover"
         src={image}
