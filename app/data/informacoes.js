@@ -39,7 +39,7 @@ export const informacoes = [
     id: 7,
     title: "Telha para Cobertura",
     desc: "Oferecemos telhas especialmente projetadas para coberturas de diferentes tipos de edificações, garantindo proteção e estética para o seu projeto.",
-    image: "/original/telha-casa.png",
+    image: "/original/telha-cobertura.png",
   },
   {
     id: 8,

@@ -88,7 +88,7 @@ export const produtos = [
       "Um processo contínuo de corte longitudinal (Slitter/Rolo), que pode ser produzido nas espessuras de 0,40mm, 0,50mm. Também são conhecidas como bobininhas slitadas para calheiros.",
     material: "Galvanizado, galvalume e chapas pré-pintadas.",
     application:
-      "Amplamente utilizada em uma variedade de setores, incluindo construção civil, indústria automotiva, fabricação de eletrodomésticos, entre outros.",
+      "Amplamente utilizada em uma variedade de setores, incluindo construção civil, indústria automotiva, fabricação de eletrodomésticos, entre outros. ⁠Pode ser empregada em telhados, fachadas, painéis de parede, sistemas de ventilação, calhas, rufos, condutores dutos, componentes estruturais, e muito mais.",
     image: "/bobina.svg",
     maintenance:
       "Requer manutenção mínima devido ao revestimento de proteção aplicado durante o processo de fabricação, mas pode necessitar de inspeções regulares para garantir a integridade do revestimento e prevenir a corrosão.",
