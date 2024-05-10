@@ -30,7 +30,7 @@ const List = [
         </span>
         <span className="flex items-center gap-3">
           <Phone />
-          (11) 4893-0293
+          (11) 4039-3236
         </span>
       </p>
     ),
