@@ -89,8 +89,7 @@ export default function Homepage() {
               </h1>
               <p className="text-3xl font-light text-strongDark">
                 Somos uma empresa especialista há 28 anos na fabricação de
-                telhas metálicas, cumeeiras, bobinas slitadas e pintura
-                eletrostática.
+                telhas metálicas, bobina slitada e pintura eletrostática.
               </p>
               <div className="flex w-full justify-start gap-5 mt-20">
                 <Link href="/produtos">
@@ -129,9 +128,11 @@ export default function Homepage() {
               alt="Produção de Telha"
             />
           </div>
-          <Link href="/produtos">
-            <MyButton text="Todos os Modelos" style="red-white" />
-          </Link>
+          <div className="mt-5">
+            <Link href="/produtos">
+              <MyButton text="Todos os Modelos" style="red-white" />
+            </Link>
+          </div>
         </Center>
       </section>
 
@@ -140,7 +141,6 @@ export default function Homepage() {
           <Content
             title="Pintura Eletrostática"
             description="Criamos uma camada protetora através da aplicação de um pó pigmentado."
-            textColor=""
           />
           <div className="mt-5 text-center w-full">
             <Image
@@ -151,9 +151,11 @@ export default function Homepage() {
               alt="Produção de Telha"
             />
           </div>
-          <Link href="/produtos/pintura-eletrostatica">
-            <MyButton text="Ver mais" style="red-white" />
-          </Link>
+          <div className="mt-5">
+            <Link href="/produtos/pintura-eletrostatica">
+              <MyButton text="Ver mais" style="red-white" />
+            </Link>
+          </div>
         </Center>
       </section>
 
@@ -195,9 +197,11 @@ export default function Homepage() {
                 link="/produtos/parafusos"
               />
             </div>
-            <Link href="/produtos">
-              <MyButton text="Todos os Produtos" style="red-white" />
-            </Link>
+            <div className="mt-5">
+              <Link href="/produtos">
+                <MyButton text="Todos os Produtos" style="red-white" />
+              </Link>
+            </div>
           </article>
         </Center>
       </section>
@@ -210,7 +214,7 @@ export default function Homepage() {
             <div className="text-xl text-left flex flex-col gap-3">
               <p>
                 Somos uma empresa especializada há 28 anos na fabricação de
-                telhas metálicas, calhas, estruturas metálicas e pintura
+                telhas metálicas, bobina slitada, cumeeiras e pintura
                 eletrostática.
               </p>
               <p>
@@ -218,7 +222,7 @@ export default function Homepage() {
                 durabilidade, garantindo a satisfação dos clientes.
               </p>
               <p>
-                Contamos com uma equipe qualificada, materiais de alto padrãoe
+                Contamos com uma equipe qualificada, materiais de alto padrão e
                 seguimos rigorosamente as normas regulamentadoras para oferecer
                 serviços confiáveis e tranquilidade aos nossos clientes.
               </p>
@@ -235,13 +239,22 @@ export default function Homepage() {
               </div>
             </div>
           </div>
-          <Link href="/sobre">
-            <MyButton text="Mais Informações" style="red-white">
-              Contato
-            </MyButton>
-          </Link>
+          <div className="mt-5">
+            <Link href="/sobre">
+              <MyButton text="Mais Informações" style="red-white">
+                Contato
+              </MyButton>
+            </Link>
+          </div>
         </Center>
       </section>
+      <Image
+        className="pb-5 lg:my-10"
+        src="/original/footer.png"
+        width={3840}
+        height={600}
+        alt="Image"
+      />
     </>
   );
 }

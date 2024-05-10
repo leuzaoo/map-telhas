@@ -28,76 +28,72 @@ export default async function ProductPage({ params }) {
                 width={1000}
                 height={1000}
               />
-              <ul className="flex flex-col gap-5 mt-3 text-lg lg:text-xl pb-5 lg:pb-0">
-                <li>
-                  {product.description ? (
-                    <>
-                      <p>
-                        <span className="font-bold">Característica: </span>
-                        {product.description}
-                      </p>
-                    </>
-                  ) : (
-                    ""
-                  )}
-                </li>
-                <li>
-                  {product.material ? (
-                    <>
-                      <span className="font-bold">Opções de Material: </span>
-                      <br />
-                      {product.material}
-                    </>
-                  ) : (
-                    ""
-                  )}
-                </li>
-              </ul>
-            </div>
-            <ul className="w-full flex flex-col gap-5 text-lg lg:text-xl">
-              <li>
-                {product.maintenance ? (
-                  <p>
-                    <span className="font-bold">Manutenção: </span>
-                    {product.maintenance}
-                  </p>
-                ) : (
-                  ""
-                )}
-              </li>
-              <li>
-                {product.application ? (
-                  <>
-                    <span className="font-bold">Aplicações: </span>
-                    <br />
-                    {product.application}
-                  </>
-                ) : (
-                  ""
-                )}
-              </li>
-              <li>
-                {product.personalization ? (
+              <div className="flex flex-col gap-5 mt-3 text-lg lg:text-xl pb-5 lg:pb-0">
+                {product.description ? (
                   <>
                     <p>
-                      <span className="font-bold">Personalização: </span>
-                      {product.personalization}
+                      <span className="font-bold">Característica: </span>
+                      {product.description}
                     </p>
                   </>
                 ) : (
                   ""
                 )}
-              </li>
-              <div className="mx-auto">
-                <Link
-                  target="_blank"
-                  href="https://api.whatsapp.com/send?phone=551140393236&text=Ol%C3%A1,%20gostaria%20de%20fazer%20um%20or%C3%A7amento."
-                >
-                  <MyButton style="red-white" text="Orçamento" />
-                </Link>
-                <h1 className="hidden">Orçamento</h1>
+                {product.material ? (
+                  <>
+                    <p>
+                      <span className="font-bold">Opções de Material: </span>
+                      <br />
+                      {product.material}
+                    </p>
+                  </>
+                ) : (
+                  ""
+                )}
               </div>
-            </ul>
+            </div>
+            <div className="w-full flex flex-col gap-5 text-lg lg:text-xl">
+              {product.maintenance ? (
+                <>
+                  <p>
+                    <span className="font-bold">Manutenção: </span>
+                    {product.maintenance}
+                  </p>
+                </>
+              ) : (
+                ""
+              )}
+              {product.application ? (
+                <>
+                  <p>
+                    <span className="font-bold">Aplicações: </span>
+                    <br />
+                    {product.application}
+                  </p>
+                </>
+              ) : (
+                ""
+              )}
+              {product.personalization ? (
+                <>
+                  <p>
+                    <span className="font-bold">Personalização: </span>
+                    {product.personalization}
+                  </p>
+                </>
+              ) : (
+                ""
+              )}
+
+              <Link
+                className="mt-0 mx-auto"
+                target="_blank"
+                href="https://api.whatsapp.com/send?phone=551140393236&text=Ol%C3%A1,%20gostaria%20de%20fazer%20um%20or%C3%A7amento."
+              >
+                <MyButton style="red-white" text="Orçamento" />
+              </Link>
+              <h1 className="hidden">Orçamento</h1>
+            </div>
           </div>
           <hr className="mt-5 mb-5" />
           <footer className="pb-5 text-lg lg:text-xl">
