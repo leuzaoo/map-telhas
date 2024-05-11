@@ -69,7 +69,7 @@ export default function Homepage() {
         src="/original/homepage-1.png"
         width={1920}
         height={600}
-        alt="Homepage image"
+        alt="Telhas Metálicas, Pintura Eletrostática e Bobina Slitada."
       />
 
       <Image
@@ -77,7 +77,7 @@ export default function Homepage() {
         src="/original/homepage-3.png"
         width={3840}
         height={600}
-        alt="Homepage image"
+        alt="Telhas Metálicas, Pintura Eletrostática e Bobina Slitada."
       />
 
       <section className="hidden lg:flex bg-white">
@@ -106,7 +106,7 @@ export default function Homepage() {
                 src="/home-1.jpg"
                 width={1000}
                 height={1000}
-                alt="Homepage"
+                alt="Telhas Metálicas"
               />
             </div>
           </div>
@@ -253,7 +253,7 @@ export default function Homepage() {
         src="/original/footer.png"
         width={3840}
         height={600}
-        alt="Image"
+        alt="Fabricadas nos melhores aços disponíveis no mercado."
       />
     </>
   );
