@@ -20,16 +20,16 @@ const Content = ({ title, secondTitle, description, textColor, textAlign }) => {
     <>
       {title && (
         <h1
-          className={`font-bold ${
+          className={`font-bold px-5 text-3xl text-center uppercase lg:text-[60px] ${
             textColor === "white" ? "text-white" : "text-strongDark"
-          } text-[40px] uppercase lg:text-[60px]`}
+          } `}
         >
           {title}
         </h1>
       )}
       {secondTitle && (
         <h2
-          className={`mt-5 text-2xl lg:text-4xl text-left uppercase font-bold ${
+          className={`mt-3 text-2xl lg:text-4xl text-left uppercase font-bold ${
             textColor === "white" ? "text-white" : "text-strongDark"
           }`}
         >
@@ -38,11 +38,11 @@ const Content = ({ title, secondTitle, description, textColor, textAlign }) => {
       )}
 
       <p
-        className={`mt-4 mx-auto ${
+        className={`mt-3 px-5 mx-auto ${
           textColor === "white" ? "text-white" : "text-strongDark"
         } ${
           textAlign === "left" ? "text-left" : "text-center"
-        } lg:text-xl lg:mt-0`}
+        } lg:text-xl`}
       >
         {formatDescription(description)}
       </p>
@@ -104,8 +104,8 @@ export default function Homepage() {
               <Image
                 className="rounded-xl"
                 src="/home-1.jpg"
-                width={1000}
-                height={1000}
+                width={3000}
+                height={3000}
                 alt="Telhas Metálicas"
               />
             </div>
@@ -113,54 +113,50 @@ export default function Homepage() {
         </Center>
       </section>
 
-      <section className="py-5 text-center px-5">
-        <Center>
-          <Content
-            title="Telhas Metálicas"
-            description="Compromisso baseado na tradição, qualidade e durabilidade há 28 anos."
+      <section className="text-center mt-5 lg:mt-10">
+        <Content
+          title="Telhas Metálicas"
+          description="Compromisso baseado na tradição, qualidade e durabilidade há 28 anos."
+        />
+        <div className="mx-auto mt-5">
+          <Image
+            className="max-h-[500px] object-cover shadow-md"
+            src="/homepage/telha-metalica.jpg"
+            width={3000}
+            height={3000}
+            alt="Produção de Telha"
           />
-          <div className="mx-auto mt-5 md:max-w-md lg:max-w-xl">
-            <Image
-              className="rounded-xl shadow-xl"
-              src="/telha-producao.jpg"
-              width={1000}
-              height={1000}
-              alt="Produção de Telha"
-            />
-          </div>
-          <div className="mt-5">
-            <Link href="/produtos">
-              <MyButton text="Todos os Modelos" style="red-white" />
-            </Link>
-          </div>
-        </Center>
+        </div>
+        <div className="mt-5">
+          <Link href="/produtos">
+            <MyButton text="Todos os Modelos" style="red-white" />
+          </Link>
+        </div>
       </section>
 
-      <section className="py-5 text-center px-5">
-        <Center>
-          <Content
-            title="Pintura Eletrostática"
-            description="Criamos uma camada protetora através da aplicação de um pó pigmentado."
+      <section className="text-center mt-5 lg:mt-10">
+        <Content
+          title="Pintura Eletrostática"
+          description="Criamos uma camada protetora através da aplicação de um pó pigmentado."
+        />
+        <div className="mx-auto mt-5">
+          <Image
+            className="max-h-[500px] object-cover shadow-md"
+            src="/homepage/pintura.jpg"
+            width={3000}
+            height={3000}
+            alt="Pintura Eletrostática"
           />
-          <div className="mt-5 text-center w-full">
-            <Image
-              className="rounded-xl shadow-xl md:max-w-sm mx-auto"
-              src="/original/pintura-eletrostatica-card.png"
-              width={1000}
-              height={1000}
-              alt="Produção de Telha"
-            />
-          </div>
-          <div className="mt-5">
-            <Link href="/produtos/pintura-eletrostatica">
-              <MyButton text="Ver mais" style="red-white" />
-            </Link>
-          </div>
-        </Center>
+        </div>
+        <div className="mt-5">
+          <Link href="/produtos/pintura-eletrostatica">
+            <MyButton text="Ver mais" style="red-white" />
+          </Link>
+        </div>
       </section>
 
-      <section className="py-5 text-center px-5 mx-auto">
-        <h1 className="font-bold text-title lg:text-[60px] uppercase">
+      <section className="mt-5 lg:mt-10 text-center px-5 mx-auto">
+        <h1 className="font-bold text-3xl lg:text-[60px] uppercase">
           Produtos
         </h1>
         <Center>
@@ -205,13 +201,13 @@ export default function Homepage() {
           </article>
         </Center>
       </section>
-      <section className="py-5 text-center px-5 mx-auto">
+      <section className="mt-5 lg:mt-10 text-center mx-auto">
         <Center>
-          <h1 className="text-title lg:text-[60px] uppercase font-bold">
+          <h1 className="text-3xl lg:text-[60px] uppercase font-bold">
             Sobre Nós
           </h1>
-          <div className="mt-5 lg:grid grid-cols-2 gap-10 items-center text-center mx-auto">
-            <div className="text-xl text-left flex flex-col gap-3">
+          <div className="lg:grid grid-cols-2 gap-10 items-center text-center mx-auto lg:mt-5">
+            <div className="text-xl text-left flex flex-col gap-3 mx-auto">
               <p>
                 Somos uma empresa especializada há 28 anos na fabricação de
                 telhas metálicas, bobina slitada, cumeeiras e pintura
@@ -227,26 +223,22 @@ export default function Homepage() {
                 serviços confiáveis e tranquilidade aos nossos clientes.
               </p>
             </div>
-            <div>
-              <div className="mx-auto mt-5">
-                <Image
-                  className="rounded-xl shadow-xl"
-                  src="/empresa.jpg"
-                  width={1000}
-                  height={1000}
-                  alt="Produção de Telha"
-                />
-              </div>
+            <div className="mx-auto mt-5 lg:mt-0">
+              <Image
+                className="shadow-md rounded-xl mx-auto"
+                src="/empresa.jpg"
+                width={3000}
+                height={3000}
+                alt="Sobre nós"
+              />
             </div>
           </div>
-          <div className="mt-5">
-            <Link href="/sobre">
-              <MyButton text="Mais Informações" style="red-white">
-                Contato
-              </MyButton>
-            </Link>
-          </div>
         </Center>
+        <div className="my-5">
+          <Link href="/sobre">
+            <MyButton text="Mais Informações" style="red-white" />
+          </Link>
+        </div>
       </section>
       <Image
         className="pb-5 lg:my-10"
