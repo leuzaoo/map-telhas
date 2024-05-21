@@ -89,14 +89,16 @@ export default function Homepage() {
             height={2000}
             alt="Produção de Telha"
           />
-          <div className="px-5 bg-primaryRed text-white py-3 text-lg">
-            <ul className="flex items-center gap-10 lg:gap-20 justify-center lg:text-xl">
-              <li className="hidden md:flex">
-                • Padrão internacional de qualidade
-              </li>
-              <li>• Fabricação sob medida</li>
-              <li>• Agilidade na entrega</li>
-            </ul>
+          <div className="bg-primaryRed text-white py-3 text-lg">
+            <Center>
+              <ul className="flex items-center gap-10 lg:gap-20 justify-between lg:text-xl">
+                <li className="hidden md:flex">
+                  • Padrão internacional de qualidade
+                </li>
+                <li>• Fabricação sob medida</li>
+                <li>• Agilidade na entrega</li>
+              </ul>
+            </Center>
           </div>
         </div>
       </section>
