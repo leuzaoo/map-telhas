@@ -1,5 +1,5 @@
 "use client";
-import { Facebook, FacebookIcon, Instagram, Phone } from "lucide-react";
+import { Facebook, Instagram } from "lucide-react";
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -95,7 +95,7 @@ export default function Navbar() {
   return (
     <>
       <div className="fixed w-full z-50">
-        <div className="bg-primaryRed text-white w-full lg:flex h-10">
+        <div className="bg-strongDark text-white w-full lg:flex h-10">
           <div className="max-w-screen-lg w-full mx-auto flex items-center py-2 justify-between">
             <div className="hidden lg:flex items-center gap-2 ">
               <Link href="https://www.instagram.com/maptelhas/" target="_blank">
@@ -146,23 +146,23 @@ export default function Navbar() {
               }}
             >
               <span
-                className={`h-1 w-full bg-primaryRed rounded-lg transform transition duration-300 ease-in-out ${
+                className={`h-1 w-full bg-black rounded-lg transform transition duration-300 ease-in-out ${
                   open ? "rotate-45 translate-y-2.5 bg-white" : ""
                 }`}
               />
               <span
-                className={`h-1 w-full bg-primaryRed rounded-lg transition duration-200 ${
+                className={`h-1 w-full bg-black rounded-lg transition duration-200 ${
                   open ? "opacity-0" : ""
                 }`}
               />
               <span
-                className={`h-1 w-full bg-primaryRed rounded-lg transform transition duration-300 ease-in-out ${
+                className={`h-1 w-full bg-black rounded-lg transform transition duration-300 ease-in-out ${
                   open ? "-rotate-45 -translate-y-2.5 bg-white" : ""
                 }`}
               />
             </div>
 
-            <div className="hidden lg:flex items-center justify-between text-xl text-primaryRed font-extrabold uppercase">
+            <div className="hidden lg:flex items-center justify-between text-xl text-strongDark font-extrabold uppercase">
               <ul className="flex gap-10">
                 {navItems.map((item) => (
                   <li key={item.id} className="min-w-max">
