@@ -2,7 +2,7 @@ import React from "react";
 
 export default function MyButton({ text, style }) {
   let buttonClassName =
-    "py-3 px-5 uppercase text-xl lg:text-3xl rounded-xl font-bold transition-all duration-200  hover:opacity-80";
+    "py-3 px-5 uppercase text-xl lg:text-3xl rounded-xl font-bold transition-all duration-200  hover:opacity-90";
 
   switch (style) {
     case "primary":
@@ -22,7 +22,7 @@ export default function MyButton({ text, style }) {
       break;
     default:
       // Se nenhum estilo correspondente for encontrado, aplicar estilo padrão
-      buttonClassName += " bg-primaryRed hover:opacity-80";
+      buttonClassName += " bg-primaryRed hover:opacity-90";
   }
   return (
     <button className={buttonClassName}>
