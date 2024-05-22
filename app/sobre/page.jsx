@@ -8,7 +8,7 @@ export default function AboutPage() {
         <section>
           <div className="lg:hidden">
             <h1 className="hidden">Sobre nós</h1>
-            <h1 className="uppercase text-primaryRed text-title font-extrabold text-right">
+            <h1 className="uppercase text-primaryRed text-title font-bold text-right">
               A Empresa
             </h1>
             <h1 className="text-right text-3xl">
@@ -41,7 +41,7 @@ export default function AboutPage() {
             <div className="lg:text-justify">
               <div className="hidden lg:contents">
                 <p className="hidden">Sobre nós</p>
-                <p className="uppercase text-primaryRed text-[40px] font-extrabold text-right">
+                <p className="uppercase text-primaryRed text-[40px] font-bold text-right">
                   A Empresa
                 </p>
                 <p className="text-right text-3xl">
@@ -70,7 +70,7 @@ export default function AboutPage() {
           </div>
         </section>
         <section className="mt-5">
-          <h1 className="uppercase text-primaryRed text-3xl font-extrabold text-center">
+          <h1 className="uppercase text-primaryRed text-3xl font-bold text-center">
             Junte-se a Nós!
           </h1>
           <div className="mt-5 pb-5 flex items-center gap-3 lg:gap-0 justify-between overflow-x-auto">

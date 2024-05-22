@@ -1,32 +1,33 @@
 import MyButton from "../button";
 import Image from "next/image";
-import Link from "next/link";
-import React from "react";
 import Center from "../center";
+import Link from "next/link";
 
-const SectionContent = ({ title, button, image, link }) => {
+const SectionContent = ({ title, image, desc, link, buttonText }) => {
   return (
-    <div>
-      <Center>
-        <h1 className="bg-strongDark p-2 lg:p-5 max-w-max text-white text-3xl md:text-title lg:text-[60px] uppercase font-bold">
-          {title}
-        </h1>
-      </Center>
-      <div className="mx-auto">
-        <Image
-          className="max-h-[500px] object-cover shadow-md"
-          src={image}
-          width={3000}
-          height={3000}
-          alt={title}
-        />
+    <Center>
+      <div className="bg-white w-full md:grid md:grid-cols-2 gap-10 items-center justify-between">
+        <div className="text-left p-3">
+          <h1 className="text-title uppercase font-bold mb-3">{title}</h1>
+          <div className="bg-black w-3/4 h-[2px]" />
+          <p className="text-xl my-3">{desc}</p>
+          <div className="text-center">
+            <Link href={link}>
+              <MyButton text={buttonText} style="red-white" />
+            </Link>
+          </div>
+        </div>
+        <div className="h-full mt-2 md:mt-0">
+          <Image
+            className="w-full h-full object-cover object-left"
+            src={image}
+            width={4000}
+            height={3000}
+            alt={title}
+          />
+        </div>
       </div>
-      <div className="mt-5 w-full absolute bottom-10 z-10">
-        <Link href={link}>
-          <MyButton text={button} style="red-white" />
-        </Link>
-      </div>
-    </div>
+    </Center>
   );
 };
 

@@ -6,7 +6,7 @@ export default function InformationPage() {
   return (
     <div className="py-10 px-5 text-xl font-medium">
       <Center>
-        <h1 className="uppercase text-[40px] text-primaryRed font-extrabold">
+        <h1 className="uppercase text-[40px] text-primaryRed font-bold">
           Informações
         </h1>
         <div className="h-[2px] w-full md:w-5/6 bg-primaryRed mt-5 mr-auto" />

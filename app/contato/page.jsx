@@ -62,7 +62,7 @@ export default function ContactPage() {
   return (
     <div className="py-10">
       <Center>
-        <h1 className="text-title uppercase font-extrabold text-primaryRed">
+        <h1 className="text-title uppercase font-bold text-primaryRed">
           Entre em Contato
         </h1>
         <div className="h-[2px] w-full md:w-5/6 bg-primaryRed" />
@@ -75,7 +75,7 @@ export default function ContactPage() {
                   <span className="bg-primaryRed p-2 rounded-full text-white">
                     {item.icon}
                   </span>
-                  <h1 className="text-2xl lg:text-3xl uppercase font-extrabold text-strongDark">
+                  <h1 className="text-2xl lg:text-3xl uppercase font-bold text-strongDark">
                     {item.title}
                   </h1>
                 </div>

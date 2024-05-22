@@ -37,7 +37,7 @@ export default function ProductsGridCard() {
           link="/produtos/parafusos"
         />
       </div>
-      <div className="mt-5">
+      <div className="my-10">
         <Link href="/produtos">
           <MyButton text="Todos os Produtos" style="red-white" />
         </Link>
