@@ -1,12 +1,11 @@
-import HomeProductCard from "../../home-product-card";
 import SectionContent from "../../section-content";
 import ProductsGridCard from "./ProductsGridCard";
-import MyButton from "../../button";
+import KnowAboutUs from "../../know-about-us";
 import Center from "../../center";
 import Image from "next/image";
 import Head from "next/head";
-import Link from "next/link";
 import React from "react";
+import Slider from "../../slider";
 
 export default function Homepage() {
   return (
@@ -38,92 +37,37 @@ export default function Homepage() {
         alt="Telhas Metálicas, Pintura Eletrostática e Bobina Slitada."
       />
 
-      <section className="bg-white">
-        <Center>
-          <div className="flex flex-col lg:flex-row items-center justify-between gap-10 py-10">
-            <div className="flex flex-col justify-between gap-3 items-start min-h-max w-full text-white max-w-[620px]">
-              <h1 className="hidden">MAPTelhas</h1>
-              <h1 className="uppercase text-primaryRed text-title font-extrabold">
-                Conheça a Map Telhas
-              </h1>
-              <p className="text-2xl text-strongDark">
-                Somos uma empresa especializada há{" "}
-                <span className="font-bold">28 anos</span> na fabricação de
-                telhas metálicas, bobina slitada, cumeeiras e pintura
-                eletrostatica.
-              </p>
-              <p className="text-2xl text-strongDark">
-                Nosso compromisso se baseia em tradição, qualidade e
-                durabilidade, garantindo a satisfação dos clientes.
-              </p>
-              <p className="text-2xl text-strongDark">
-                Contamos com uma equipe qualificada, materiais de alto padrão e
-                seguimos rigorosamente as normas regulamentadoras para oferecer
-                serviços confiáveis e tranquilidade aos nossos clientes.
-              </p>
-              <div className="flex w-full justify-start gap-5">
-                <Link href="/sobre">
-                  <MyButton text="Mais Informações" style="secondary" />
-                </Link>
-                <Link href="/contato">
-                  <MyButton text="Contato" style="primary" />
-                </Link>
-              </div>
-            </div>
-            <div className="shadow-md rounded-xl">
-              <Image
-                className="lg:max-w-[360px] rounded-xl"
-                src="/original/about-us-2.jpg"
-                width={3000}
-                height={3000}
-                alt="Telhas Metálicas"
-              />
-            </div>
-          </div>
-        </Center>
-        <div>
-          <Image
-            className="h-[280px] object-cover"
-            src="/homepage/telha-metalica.jpg"
-            width={3000}
-            height={2000}
-            alt="Produção de Telha"
-          />
-          <div className="bg-primaryRed text-white py-3 text-lg">
-            <Center>
-              <ul className="flex items-center gap-10 lg:gap-20 justify-between lg:text-xl">
-                <li className="hidden md:flex">
-                  • Padrão internacional de qualidade
-                </li>
-                <li>• Fabricação sob medida</li>
-                <li>• Agilidade na entrega</li>
-              </ul>
-            </Center>
-          </div>
-        </div>
+      <section>
+        <KnowAboutUs />
       </section>
 
-      <section className="relative text-center mt-10 lg:mt-10">
+      <section className="relative text-center mt-10 lg:mt-20">
         <SectionContent
           title="Telhas Metálicas"
+          desc="As telhas metálicas estão se destacando cada vez mais devido à sua
+          alta resistência, leveza e eficiência econômica. Fabricadas com os
+          melhores aços disponíveis, como Galvalume ou galvanizado, e seguindo
+          rigorosos padrões internacionais de qualidade, elas se adaptam às
+          necessidades específicas de cada projeto."
           image="/homepage/telha-metalica-2.jpg"
-          button="Ver Modelos"
+          buttonText="Ver Modelos"
           link="/produtos"
         />
       </section>
 
-      <section className="relative text-center mt-10">
+      <section className="relative text-center mt-10 lg:mt-20">
         <SectionContent
           title="Pintura Eletrostática"
+          desc="A pintura eletrostática é um método de revestimento que utiliza eletricidade para aplicar tinta de forma uniforme sobre uma superfície. As partículas de tinta são carregadas eletricamente e atraídas pela peça a ser pintada, resultando em uma cobertura uniforme e durável."
           image="/homepage/pintura.jpg"
-          button="Ver Mais"
+          buttonText="Ver Mais"
           link="/produtos/pintura-eletrostatica"
         />
       </section>
 
-      <section className="mt-10 text-center mx-auto">
+      <section className="mt-10 lg:mt-28 text-center mx-auto">
         <Center>
-          <h1 className="mb-5 font-extrabold text-primaryRed text-left text-3xl md:text-title lg:text-[60px] uppercase">
+          <h1 className="mb-5 font-bold text-primaryRed text-left text-3xl md:text-title lg:text-[60px] uppercase">
             Nossos Produtos
           </h1>
           <article id="produtos">
@@ -132,12 +76,15 @@ export default function Homepage() {
         </Center>
       </section>
       <Image
-        className="my-5"
-        src="/original/footer.png"
+        className="my-10 hidden lg:block"
+        src="/homepage/footer.png"
         width={3840}
         height={2000}
-        alt="Fabricadas nos melhores aços disponíveis no mercado."
+        alt="Faça um orçamento conosco."
       />
+      <footer>
+        <Slider />
+      </footer>
     </>
   );
 }

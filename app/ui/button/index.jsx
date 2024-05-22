@@ -20,6 +20,9 @@ export default function MyButton({ text, style }) {
     case "dark-white":
       buttonClassName += " bg-strongDark text-white";
       break;
+    case "transparent":
+      buttonClassName += " bg-transparent text-primaryRed";
+      break;
     default:
       // Se nenhum estilo correspondente for encontrado, aplicar estilo padrão
       buttonClassName += " bg-primaryRed hover:opacity-90";

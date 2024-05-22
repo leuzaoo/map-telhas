@@ -162,7 +162,7 @@ export default function Navbar() {
               />
             </div>
 
-            <div className="hidden lg:flex items-center justify-between text-xl text-strongDark font-extrabold uppercase">
+            <div className="hidden lg:flex items-center justify-between text-xl text-strongDark font-bold uppercase">
               <ul className="flex gap-10">
                 {navItems.map((item) => (
                   <li key={item.id} className="min-w-max">
