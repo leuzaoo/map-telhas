@@ -20,6 +20,7 @@ module.exports = {
         softDark: "#4C4B50",
         strongDark: "#2A292B",
         white: "#fff",
+        darkWhite: "#EDEDED",
       },
     },
   },

@@ -1,10 +1,10 @@
-import { Mulish } from "next/font/google";
+import { Poppins } from "next/font/google";
 import Navbar from "./ui/navbar";
 import Footer from "./ui/footer";
 import Head from "next/head";
 import "./globals.css";
 
-const mulish = Mulish({
+const poppins = Poppins({
   subsets: ["latin"],
   weight: ["200", "400", "500", "600", "700", "900"],
 });
@@ -24,7 +24,7 @@ export default function RootLayout({ children }) {
         <meta name="description" content={metadata.description} />
       </Head>
       <html lang="pt">
-        <body id="Telhas Metálicas" className={`${mulish.className}`}>
+        <body id="Telhas Metálicas" className={`${poppins.className}`}>
           <h1 className="hidden">
             Map Telhas Metálicas e Pintura Eletrostática
           </h1>
