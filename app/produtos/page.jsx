@@ -7,7 +7,7 @@ export default function ProductsPage() {
   return (
     <div className="px-5 py-10 text-xl font-medium">
       <Center>
-        <h1 className="leading-10 uppercase font-extrabold text-title text-primaryRed">
+        <h1 className="leading-10 uppercase font-bold text-title text-primaryRed">
           Nossos Produtos
         </h1>
         <div className="my-3 h-[2px] w-full md:w-2/4 bg-primaryRed mr-auto" />
