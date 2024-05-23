@@ -31,9 +31,9 @@ export default function Homepage() {
 
       <Image
         className="hidden md:flex mx-auto"
-        src="/original/homepage-3.png"
+        src="/homepage/banner.png"
         width={3840}
-        height={600}
+        height={1000}
         alt="Telhas Metálicas, Pintura Eletrostática e Bobina Slitada."
       />
 

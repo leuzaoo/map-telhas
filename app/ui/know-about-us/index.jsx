@@ -8,8 +8,8 @@ export default function KnowAboutUs() {
   return (
     <>
       <Center>
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-10 my-24">
-          <div className="flex flex-col justify-between gap-3 items-start min-h-max w-full max-w-[620px]">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-5 lg:gap-10 my-10 md:my-16 lg:my-24">
+          <div className="flex flex-col justify-between gap-3 items-start min-h-max w-full lg:max-w-[620px]">
             <h1 className="hidden">MAPTelhas</h1>
             <h1 className="uppercase text-primaryRed text-title font-bold">
               Conheça a Map Telhas
@@ -28,7 +28,7 @@ export default function KnowAboutUs() {
               seguimos rigorosamente as normas regulamentadoras para oferecer
               serviços confiáveis e tranquilidade aos nossos clientes.
             </p>
-            <div className="flex w-full justify-start gap-5">
+            <div className="flex w-full justify-center gap-5">
               <Link href="/sobre">
                 <MyButton text="Informações" style="red-white" />
               </Link>
