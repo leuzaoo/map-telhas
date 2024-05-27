@@ -2,10 +2,10 @@ import SectionContent from "../../section-content";
 import ProductsGridCard from "./ProductsGridCard";
 import KnowAboutUs from "../../know-about-us";
 import Center from "../../center";
+import Slider from "../../slider";
 import Image from "next/image";
 import Head from "next/head";
 import React from "react";
-import Slider from "../../slider";
 
 export default function Homepage() {
   return (
