@@ -11,8 +11,9 @@ export default function AboutPage() {
             <h1 className="uppercase text-primaryRed text-title font-bold text-right">
               A Empresa
             </h1>
-            <h1 className="text-right text-3xl">
-              Localizada em Campo Limpo Paulista/SP
+            <h1 className="text-right text-3xl font-light">
+              Localizada em{" "}
+              <span className="font-medium">Campo Limpo Paulista/SP </span>
             </h1>
             <div className="my-3 h-[2px] w-5/6 bg-primaryRed ml-auto" />
           </div>
@@ -44,10 +45,11 @@ export default function AboutPage() {
                 <p className="uppercase text-primaryRed text-[40px] font-bold text-right">
                   A Empresa
                 </p>
-                <p className="text-right text-3xl">
-                  Localizada em Campo Limpo Paulista/SP
+                <p className="text-right text-3xl font-light mt-2">
+                  Localizada em{" "}
+                  <span className="font-medium">Campo Limpo Paulista/SP</span>
                 </p>
-                <div className="my-3 h-[2px] w-5/6 bg-primaryRed ml-auto" />
+                <div className="my-2 h-[2px] w-5/6 bg-primaryRed ml-auto" />
               </div>
               <p>
                 Desde <span className="font-bold">1996</span>, nos dedicamos
