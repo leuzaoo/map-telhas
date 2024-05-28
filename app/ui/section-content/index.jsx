@@ -6,7 +6,7 @@ import Link from "next/link";
 const SectionContent = ({ title, image, desc, link, buttonText }) => {
   return (
     <Center>
-      <div className="bg-white w-full md:grid md:grid-cols-2 gap-10 items-center justify-between">
+      <div className="bg-white rounded-xl w-full md:grid md:grid-cols-2 gap-10 items-center justify-between">
         <div className="text-left p-3">
           <h1 className="text-title uppercase font-bold mb-3">{title}</h1>
           <div className="bg-black w-3/4 h-[2px]" />
@@ -19,7 +19,7 @@ const SectionContent = ({ title, image, desc, link, buttonText }) => {
         </div>
         <div className="h-full mt-2 md:mt-0">
           <Image
-            className="w-full h-full object-cover object-left"
+            className="w-full h-full rounded-tr-xl rounded-br-xl object-cover object-left"
             src={image}
             width={4000}
             height={3000}
