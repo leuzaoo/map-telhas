@@ -13,9 +13,9 @@ export default function ProductsPage() {
         <div className="my-3 h-[2px] w-full md:w-2/4 bg-primaryRed mr-auto" />
         <section id="telhas-metalicas">
           <h1 className="hidden">Telhas Metálicas</h1>
-          <ul className="md:flex flex-wrap gap-5 items-start justify-between">
+          <ul className="flex flex-wrap gap-5 items-start justify-between">
             {produtos.map((product) => (
-              <li key={product.id}>
+              <li key={product.id} className="mx-auto md:mx-0">
                 <Link href={`/produtos/${product.slug}`}>
                   <ProductCard
                     product_name={product.name}
