@@ -1,4 +1,5 @@
 "use client";
+import { BiSolidStar, BiSolidStarHalf } from "react-icons/bi";
 import { ArrowLeft, ArrowRight, Dot } from "lucide-react";
 import React, { useState } from "react";
 import Center from "../center";
@@ -41,9 +42,21 @@ export default function Slider() {
   return (
     <div className="hidden md:block">
       <Center>
-        <h1 className="text-primaryRed text-3xl lg:text-[60px] font-bold uppercase">
-          Depoimentos
-        </h1>
+        <div className="flex justify-between">
+          <h1 className="text-primaryRed text-3xl lg:text-[60px] font-bold uppercase">
+            Depoimentos
+          </h1>{" "}
+          <div className="flex items-end justify-center gap-4">
+            <p className="font-semibold text-xl">Avaliações: </p>
+            <div className="flex items-center">
+              <BiSolidStar size={40} color="orange" />
+              <BiSolidStar size={40} color="orange" />
+              <BiSolidStar size={40} color="orange" />
+              <BiSolidStar size={40} color="orange" />
+              <BiSolidStarHalf size={40} color="orange" />
+            </div>
+          </div>
+        </div>
         <div className="md:w-[658px] md:h-[150px] mt-5 lg:mt-10 mb-20 m-auto relative group">
           <div
             style={{ backgroundImage: `url(${slides[currentIndex].url})` }}
