@@ -42,11 +42,11 @@ export default function Slider() {
   return (
     <div className="hidden md:block">
       <Center>
-        <div className="flex justify-between">
+        <div className="flex justify-between items-center">
           <h1 className="text-primaryRed text-3xl lg:text-[60px] font-bold uppercase">
             Depoimentos
           </h1>{" "}
-          <div className="flex items-end justify-center gap-4">
+          <div className="px-4 py-2 bg-white flex items-center rounded-xl justify-center gap-4">
             <p className="font-semibold text-xl">Avaliações: </p>
             <div className="flex items-center">
               <BiSolidStar size={40} color="orange" />
@@ -62,16 +62,14 @@ export default function Slider() {
             style={{ backgroundImage: `url(${slides[currentIndex].url})` }}
             className="w-full h-full rounded-2xl duration-500"
           />
-          {/* Left Arrow */}
           <div className="lg:hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl rounded-full p-2 bg-black/80 text-white cursor-pointer">
             <ArrowLeft onClick={prevSlide} size={30} />
           </div>
-          {/* Right Arrow */}
           <div className="lg:hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] right-5 text-2xl rounded-full p-2 bg-black/80 text-white cursor-pointer">
             <ArrowRight onClick={nextSlide} size={30} />
           </div>
           <div className="flex top-4 justify-center py-2">
-            {slides.map((slide, slideIndex) => (
+            {slides.map((slideIndex) => (
               <div
                 key={slideIndex}
                 onClick={() => goToSlide(slideIndex)}
