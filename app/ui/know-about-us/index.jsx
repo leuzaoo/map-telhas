@@ -48,15 +48,6 @@ export default function KnowAboutUs() {
           </div>
         </div>
       </Center>
-      <div>
-        <Image
-          className="h-[240px] lg:h-[440px] object-cover"
-          src="/homepage/telhas-produzidas.jpg"
-          width={3000}
-          height={2000}
-          alt="Produção de Telha"
-        />
-      </div>
     </>
   );
 }
