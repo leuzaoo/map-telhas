@@ -41,7 +41,7 @@ export default function Homepage() {
         <KnowAboutUs />
       </section>
 
-      <section className="my-10 mx-auto text-center">
+      <section className=" mx-auto text-center">
         <h1 className="hidden">Vídeo</h1>
         <Center>
           <video
@@ -64,10 +64,7 @@ export default function Homepage() {
         <SectionContent
           title="Telhas Metálicas"
           desc="As telhas metálicas estão se destacando cada vez mais devido à sua
-          alta resistência, leveza e eficiência econômica. Fabricadas com os
-          melhores aços disponíveis, como Galvalume ou galvanizado, e seguindo
-          rigorosos padrões internacionais de qualidade, elas se adaptam às
-          necessidades específicas de cada projeto."
+          alta resistência, leveza e eficiência econômica"
           image="/homepage/telha-metalica-2.jpg"
           buttonText="Ver Modelos"
           link="/produtos"
@@ -77,7 +74,7 @@ export default function Homepage() {
       <section className="relative text-center mt-10 lg:mt-20">
         <SectionContent
           title="Pintura Eletrostática"
-          desc="A pintura eletrostática é um método de revestimento que utiliza eletricidade para aplicar tinta de forma uniforme sobre uma superfície. As partículas de tinta são carregadas eletricamente e atraídas pela peça a ser pintada, resultando em uma cobertura uniforme e durável."
+          desc="A pintura eletrostática é um método de revestimento que utiliza eletricidade para aplicar tinta de forma uniforme sobre uma superfície."
           image="/homepage/pintura.jpg"
           buttonText="Ver Mais"
           link="/produtos/pintura-eletrostatica"

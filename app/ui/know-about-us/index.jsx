@@ -8,7 +8,7 @@ export default function KnowAboutUs() {
   return (
     <>
       <Center>
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-5 lg:gap-10 my-10 md:my-16 lg:my-24">
+        <div className="flex flex-col lg:flex-row items-center justify-between lg:gap-10 my-10 md:my-16 lg:my-24">
           <div className="flex flex-col justify-between gap-3 items-start min-h-max w-full lg:max-w-[620px]">
             <h1 className="hidden">MAPTelhas</h1>
             <h1 className="uppercase text-primaryRed text-title font-bold">
@@ -39,7 +39,7 @@ export default function KnowAboutUs() {
           </div>
           <div className="shadow-md rounded-xl">
             <Image
-              className="lg:max-w-[360px] rounded-xl"
+              className="hidden lg:flex lg:max-w-[360px] rounded-xl"
               src="/original/about-us-2.jpg"
               width={3000}
               height={3000}
