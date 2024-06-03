@@ -41,6 +41,24 @@ export default function Homepage() {
         <KnowAboutUs />
       </section>
 
+      <section className="my-10 mx-auto text-center">
+        <Center>
+          <video
+            className=" rounded-xl shadow-md"
+            width="100%"
+            height="auto"
+            controls
+            autoPlay
+            loop
+            muted
+            playsInline
+          >
+            <source src="/videos/video2.mp4" type="video/mp4" />
+            Seu navegador não suporta a tag de vídeo.
+          </video>
+        </Center>
+      </section>
+
       <section className="relative text-center mt-10 lg:mt-20">
         <SectionContent
           title="Telhas Metálicas"
