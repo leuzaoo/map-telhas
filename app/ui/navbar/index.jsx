@@ -1,5 +1,5 @@
 "use client";
-import { Facebook, Instagram } from "lucide-react";
+import { Facebook, Instagram, Mail, MapPin } from "lucide-react";
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -94,41 +94,41 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
   return (
     <>
-      <div className="fixed w-full z-50">
-        <div className="bg-strongDark text-white w-full lg:flex h-10">
-          <div className="max-w-screen-lg w-full mx-auto flex items-center py-2 justify-between">
+      <div className="fixed w-full text-sm z-50">
+        <div className="bg-strongDark text-white w-full lg:flex h-16">
+          <div className="max-w-screen-lg h-full w-full mx-auto flex items-center py-2 justify-between">
             <div className="hidden lg:flex items-center gap-2 ">
-              <Link href="https://www.instagram.com/maptelhas/" target="_blank">
-                <Instagram />
-              </Link>
+              <MapPin size={20} />
+              <p>
+                Rua Brás Cubas, 160 - Vila Tavares - Campo Limpo Paulista/SP
+              </p>
+            </div>
+            <div className="flex items-center gap-8 mx-auto lg:mx-0">
               <Link
-                href="https://www.facebook.com/profile.php?id=61558732025330"
+                className="flex items-center gap-2"
+                href="http://wa.me/551140393236"
                 target="_blank"
               >
-                <Facebook />
-              </Link>
-              <Link href="http://wa.me/551140393236" target="_blank">
                 <Image
                   src="/whatsapp-icon-white.svg"
-                  width={24}
-                  height={24}
+                  width={20}
+                  height={20}
                   alt="Whatsapp icon"
                 />
-              </Link>
-            </div>
-            <div className="mx-auto lg:mx-0">
-              <Link href="http://wa.me/551140393236" target="_blank">
-                (11) 4039-3236
+                <p>(11) 4039-3236 </p>
               </Link>{" "}
-              | {""}
-              <Link href="mailto:vendas@maptelhas.com.br">
+              <Link
+                className="flex items-center gap-2"
+                href="mailto:vendas@maptelhas.com.br"
+              >
+                <Mail size={20} />
                 vendas@maptelhas.com.br
               </Link>
             </div>
           </div>
         </div>
 
-        <header className="px-5 flex w-full justify-center items-center h-[60px] bg-white shadow-xl">
+        <header className="px-5 flex w-full justify-center items-center h-20 bg-white shadow-xl">
           <div className="max-w-screen-lg w-full flex justify-between items-center">
             <DeviceNavBar open={open} setOpen={setOpen} />
             <Link href="/">

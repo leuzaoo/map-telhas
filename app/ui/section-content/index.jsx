@@ -1,34 +1,27 @@
 import MyButton from "../button";
 import Image from "next/image";
-import Center from "../center";
 import Link from "next/link";
 
 const SectionContent = ({ title, image, desc, link, buttonText }) => {
   return (
-    <Center>
-      <div className="bg-white rounded-xl w-full md:grid md:grid-cols-2 gap-5 items-center justify-between">
-        <div className="h-full mt-2 md:mt-0">
-          <Image
-            className="w-full h-full rounded-tr-xl rounded-tl-xl md:rounded-tr-none md:rounded-br-none md:rounded-bl-xl object-cover object-left"
-            src={image}
-            width={4000}
-            height={3000}
-            alt={title}
-          />
-        </div>
-        <div className="text-left p-5 md:py-5 md:pr-5">
-          <h1 className="text-title text-primaryRed uppercase font-bold mb-3">
-            {title}
-          </h1>
-          <p className="text-xl my-3">{desc}</p>
-          <div className="text-center py-5">
-            <Link href={link}>
-              <MyButton text={buttonText} style="red-white" />
-            </Link>
-          </div>
-        </div>
+    <div className="max-w-md pb-5 rounded-xl flex items-center mx-auto lg:mx-0 text-center bg-white">
+      <div>
+        <Image
+          className="rounded-xl"
+          src={image}
+          width={6000}
+          height={3000}
+          alt={title}
+        />
+        <h1 className="text-primaryRed text-4xl lg:text-5xl uppercase font-bold text-left pl-5 pt-5">
+          {title}
+        </h1>
+        <p className="mb-5 mt-5 text-xl text-left px-5">{desc}</p>
+        <Link href={link}>
+          <MyButton text={buttonText} style="red-white" />
+        </Link>
       </div>
-    </Center>
+    </div>
   );
 };
 
