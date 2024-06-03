@@ -19,7 +19,7 @@ const SectionContent = ({ title, image, desc, link, buttonText }) => {
         </div>
         <div className="h-full mt-2 md:mt-0">
           <Image
-            className="w-full h-full rounded-tr-xl rounded-br-xl object-cover object-left"
+            className="w-full h-full rounded-br-xl rounded-bl-xl md:rounded-bl-none md:rounded-tr-xl md:rounded-br-xl object-cover object-left"
             src={image}
             width={4000}
             height={3000}

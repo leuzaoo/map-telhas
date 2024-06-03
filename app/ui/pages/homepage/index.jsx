@@ -44,7 +44,7 @@ export default function Homepage() {
       <section className="my-10 mx-auto text-center">
         <Center>
           <video
-            className=" rounded-xl shadow-md"
+            className="rounded-xl shadow-md"
             width="100%"
             height="auto"
             controls
