@@ -42,6 +42,7 @@ export default function Homepage() {
       </section>
 
       <section className="my-10 mx-auto text-center">
+        <h1 className="hidden">Vídeo</h1>
         <Center>
           <video
             className="rounded-xl shadow-md"
