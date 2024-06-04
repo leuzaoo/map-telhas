@@ -96,8 +96,8 @@ export default function Navbar() {
     <>
       <div className="fixed w-full text-sm z-50">
         <div className="bg-strongDark text-white w-full lg:flex h-16">
-          <div className="max-w-screen-lg h-full w-full mx-auto flex items-center py-2 justify-between">
-            <div className="hidden lg:flex items-center gap-2">
+          <div className="max-w-screen-lg mx-auto h-full w-full flex items-center py-2 justify-between">
+            <div className="hidden w-full lg:flex items-center gap-2">
               <MapPin size={20} />
               <p>
                 Rua Brás Cubas, 160 - Vila Tavares - Campo Limpo Paulista/SP
