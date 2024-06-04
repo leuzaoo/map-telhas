@@ -14,7 +14,7 @@ export default async function ProductPage({ params }) {
 
   return (
     <>
-      <div className="py-5">
+      <div className="mt-10 py-5">
         <Center>
           <h1 className="mt-3 mb-5 text-3xl lg:text-title font-bold text-primaryRed uppercase">
             {product.name}
