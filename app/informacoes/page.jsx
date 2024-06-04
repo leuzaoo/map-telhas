@@ -4,12 +4,12 @@ import InfoCard from "../ui/info-card";
 
 export default function InformationPage() {
   return (
-    <div className="py-10 px-5 text-xl font-medium">
+    <div className="mt-10 py-10 px-5 text-xl font-medium">
       <Center>
         <h1 className="uppercase text-[40px] text-primaryRed font-bold">
           Informações
         </h1>
-        <div className="h-[2px] w-full md:w-5/6 bg-primaryRed mt-5 mr-auto" />
+        <div className="h-[2px] w-full md:w-5/6 bg-primaryRed mt-3 mr-auto" />
         <section className="mt-5">
           <ul className="flex flex-col md:flex-row md:flex-wrap gap-5 justify-between">
             {informacoes.map((product) => (

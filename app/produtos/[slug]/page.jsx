@@ -88,7 +88,7 @@ export default async function ProductPage({ params }) {
               <Link
                 className="mt-0 mx-auto"
                 target="_blank"
-                href="https://api.whatsapp.com/send?phone=551140393236&text=Ol%C3%A1,%20gostaria%20de%20fazer%20um%20or%C3%A7amento."
+                href="https://api.whatsapp.com/send?phone=5511974344466&text=Ol%C3%A1,%20gostaria%20de%20fazer%20um%20or%C3%A7amento."
               >
                 <MyButton style="red-white" text="Orçamento" />
               </Link>

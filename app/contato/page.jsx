@@ -18,20 +18,7 @@ const List = [
     title: "Telefones",
     desc: (
       <p className="flex flex-col gap-3 lg:flex-row lg:gap-10 md:pl-12">
-        <span className="flex items-center gap-3">
-          <Image
-            className=""
-            src="/whatsapp-icon.svg"
-            alt="whatsapp icon"
-            width={24}
-            height={24}
-          />
-          (11) 9 7434-4466
-        </span>
-        <span className="flex items-center gap-3">
-          <Phone />
-          (11) 4039-3236
-        </span>
+        <span className="flex items-center gap-3">(11) 97434-4466</span>
       </p>
     ),
   },
@@ -60,7 +47,7 @@ const List = [
 
 export default function ContactPage() {
   return (
-    <div className="py-10">
+    <div className="mt-10 py-10">
       <Center>
         <h1 className="text-title uppercase font-bold text-primaryRed">
           Entre em Contato

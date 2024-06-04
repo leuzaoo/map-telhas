@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function AboutPage() {
   return (
     <Center>
-      <div className="py-10">
+      <div className="mt-10 py-10">
         <section>
           <div className="lg:hidden">
             <h1 className="hidden">Sobre nós</h1>
@@ -15,7 +15,7 @@ export default function AboutPage() {
               Localizada em{" "}
               <span className="font-medium">Campo Limpo Paulista/SP </span>
             </h1>
-            <div className="my-3 h-[2px] w-5/6 bg-primaryRed ml-auto" />
+            <div className="h-[2px] w-5/6 bg-primaryRed ml-auto" />
           </div>
           <div className="lg:grid grid-cols-2 text-lg gap-10">
             <div className="my-5 flex flex-col gap-3 lg:text-justify">

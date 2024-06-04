@@ -5,12 +5,12 @@ import Link from "next/link";
 
 export default function ProductsPage() {
   return (
-    <div className="px-5 py-10 text-xl font-medium">
+    <div className="mt-10 px-5 py-10 text-xl font-medium">
       <Center>
         <h1 className="leading-10 uppercase font-bold text-title text-primaryRed">
           Nossos Produtos
         </h1>
-        <div className="my-3 h-[2px] w-full md:w-2/4 bg-primaryRed mr-auto" />
+        <div className="h-[2px] w-full md:w-5/6 bg-primaryRed mr-auto" />
         <section id="telhas-metalicas">
           <h1 className="hidden">Telhas Metálicas</h1>
           <ul className="flex flex-wrap gap-5 items-start justify-between">

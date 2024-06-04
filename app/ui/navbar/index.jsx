@@ -76,7 +76,7 @@ function DeviceNavBar({ open, setOpen }) {
           <Link href="https://www.instagram.com/maptelhas/" target="_blank">
             <Instagram />
           </Link>
-          <Link href="http://wa.me/551140393236" target="_blank">
+          <Link href="http://wa.me/5511974344466" target="_blank">
             <Image
               src="/whatsapp-icon-white.svg"
               width={24}
@@ -106,7 +106,7 @@ export default function Navbar() {
             <div className="flex items-center gap-8 mx-auto lg:mx-0">
               <Link
                 className="flex items-center gap-2"
-                href="http://wa.me/551140393236"
+                href="http://wa.me/5511974344466"
                 target="_blank"
               >
                 <Image
@@ -115,7 +115,7 @@ export default function Navbar() {
                   height={20}
                   alt="Whatsapp icon"
                 />
-                <p>(11) 4039-3236 </p>
+                <p>(11) 97434-4466</p>
               </Link>{" "}
               <Link
                 className="flex items-center gap-2"

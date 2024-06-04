@@ -41,8 +41,8 @@ export default function Footer() {
               height={24}
               alt="Whatsapp icon"
             />
-            <Link href="http://wa.me/551140393236" target="_blank">
-              <p>(11) 4039-3236</p>
+            <Link href="http://wa.me/11974344466" target="_blank">
+              <p>(11) 97434-4466</p>
             </Link>
           </div>
         </div>
