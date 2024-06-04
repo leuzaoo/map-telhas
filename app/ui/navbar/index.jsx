@@ -3,6 +3,7 @@ import { Facebook, Instagram, Mail, MapPin } from "lucide-react";
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import Center from "../center";
 
 const navItems = [
   {
@@ -97,34 +98,37 @@ export default function Navbar() {
       <div className="fixed w-full text-sm z-50">
         <div className="bg-strongDark text-white w-full lg:flex h-16">
           <div className="max-w-screen-lg h-full w-full mx-auto flex items-center py-2 justify-between">
-            <div className="hidden lg:flex items-center gap-2 ">
-              <MapPin size={20} />
-              <p>
-                Rua Brás Cubas, 160 - Vila Tavares - Campo Limpo Paulista/SP
-              </p>
-            </div>
-            <div className="flex items-center gap-8 mx-auto lg:mx-0">
-              <Link
-                className="flex items-center gap-2"
-                href="http://wa.me/5511974344466"
-                target="_blank"
-              >
-                <Image
-                  src="/whatsapp-icon-white.svg"
-                  width={20}
-                  height={20}
-                  alt="Whatsapp icon"
-                />
-                <p>(11) 97434-4466</p>
-              </Link>{" "}
-              <Link
-                className="flex items-center gap-2"
-                href="mailto:vendas@maptelhas.com.br"
-              >
-                <Mail size={20} />
-                vendas@maptelhas.com.br
-              </Link>
-            </div>
+            <Center>
+              <div className="hidden lg:flex items-center gap-2">
+                <MapPin size={20} />
+                <p>
+                  Rua Brás Cubas, 160 - Vila Tavares - Campo Limpo Paulista/SP
+                </p>
+              </div>
+              <div className="flex items-center justify-between w-full lg:mx-0">
+                <Link
+                  className="flex items-center gap-2"
+                  href="http://wa.me/5511974344466"
+                  target="_blank"
+                >
+                  <Image
+                    className="hidden xs:flex"
+                    src="/whatsapp-icon-white.svg"
+                    width={20}
+                    height={20}
+                    alt="Whatsapp icon"
+                  />
+                  <p>(11) 97434-4466</p>
+                </Link>{" "}
+                <Link
+                  className="flex items-center gap-2"
+                  href="mailto:vendas@maptelhas.com.br"
+                >
+                  <Mail size={20} className="hidden xs:flex" />
+                  vendas@maptelhas.com.br
+                </Link>
+              </div>
+            </Center>
           </div>
         </div>
 

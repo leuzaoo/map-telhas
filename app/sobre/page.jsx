@@ -53,7 +53,7 @@ export default function AboutPage() {
               </div>
               <p>
                 Desde <span className="font-bold">1996</span>, nos dedicamos
-                incansavelmente a fornecer telhas telhas metálicas de alta
+                incansavelmente a fornecer telhas metálicas de alta
                 qualidade e serviços relacionados para uma ampla gama de
                 aplicações. Trabalhamos com os melhores aços disponíveis no
                 mercado, garantindo durabilidade, resistência e desempenho
