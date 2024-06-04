@@ -23,7 +23,7 @@ export default function Homepage() {
         />
       </Head>
 
-      <Link target="_blank" href="http://wa.me/551140393236">
+      <Link target="_blank" href="http://wa.me/5511974344466">
         <Image
           className="mx-auto pt-10"
           src="/homepage/banner1.png"
@@ -103,7 +103,7 @@ export default function Homepage() {
             <SectionContent
               title="Telhas Metálicas"
               desc="As telhas metálicas estão se destacando cada vez mais devido à sua
-            alta resistência, leveza e eficiência econômica"
+            alta resistência, leveza e eficiência econômica."
               image="/homepage/telha-metalica-2.jpg"
               buttonText="Ver Modelos"
               link="/produtos"
@@ -138,7 +138,24 @@ export default function Homepage() {
         alt="Faça um orçamento conosco."
       />
       <footer>
-        <Slider />
+        <div className="flex flex-col w-full mb-10 text-center">
+          <Slider />
+          <Center>
+            <iframe
+              className="w-full min-h-[400px] rounded-xl mb-10 shadow-lg"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29337.180465741003!2d-46.832185125683644!3d-23.20129249999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cedf228749fb63%3A0x926d241a8c4754d2!2sMap%20Calhas%20e%20Telhas!5e0!3m2!1spt-BR!2sbr!4v1715182976809!5m2!1spt-BR!2sbr"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            />
+            <Link
+              target="_blank"
+              className="bg-blue-600 hover:opacity-80 rounded-xl text-center text-white px-6 py-3 lg:text-xl"
+              href="https://www.google.com/maps/place/Map+Calhas+e+Telhas/@-23.2012925,-46.7966512,17z/data=!3m1!4b1!4m6!3m5!1s0x94cedf228749fb63:0x926d241a8c4754d2!8m2!3d-23.2012925!4d-46.7940763!16s%2Fg%2F11bvt5xr0s?entry=ttu"
+            >
+              Ir para Google Maps
+            </Link>
+          </Center>
+        </div>
       </footer>
     </>
   );
