@@ -1,7 +1,8 @@
+"use client";
 import { Headset, Map, MapPin, Phone } from "lucide-react";
 import Center from "../ui/center";
-import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 
 const List = [
   {
@@ -46,32 +47,99 @@ const List = [
 ];
 
 export default function ContactPage() {
-  return (
-    <div className="mt-10 py-10">
-      <Center>
-        <h1 className="text-title uppercase font-bold text-primaryRed">
-          Entre em Contato
-        </h1>
-        <div className="h-[2px] w-full md:w-5/6 bg-primaryRed" />
+  const [fullname, setFullname] = useState("");
+  const [message, setMessage] = useState("");
+  const [email, setEmail] = useState("");
 
-        <section className="pt-5">
-          <ul className="flex flex-col gap-5">
-            {List.map((item) => (
-              <li className="flex flex-col gap-2" key={item.title}>
-                <div className="flex items-center gap-2">
-                  <span className="bg-primaryRed p-2 rounded-full text-white">
-                    {item.icon}
-                  </span>
-                  <h1 className="text-2xl lg:text-3xl uppercase font-bold text-strongDark">
-                    {item.title}
-                  </h1>
-                </div>
-                <div className="text-lg text-softDark">{item.desc}</div>
-              </li>
-            ))}
-          </ul>
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    console.log("Fullname: ", fullname);
+    console.log("email: ", email);
+    console.log("message: ", message);
+  };
+
+  return (
+    <>
+      <div className="mt-10 py-10">
+        <Center>
+          <h1 className="text-title uppercase font-bold text-primaryRed">
+            Entre em Contato
+          </h1>
+          <div className="h-[2px] w-full md:w-5/6 bg-primaryRed" />
+
+          <section className="pt-5">
+            <ul className="flex flex-col gap-5">
+              {List.map((item) => (
+                <li className="flex flex-col gap-2" key={item.title}>
+                  <div className="flex items-center gap-2">
+                    <span className="bg-primaryRed p-2 rounded-full text-white">
+                      {item.icon}
+                    </span>
+                    <h1 className="text-2xl lg:text-3xl uppercase font-bold text-strongDark">
+                      {item.title}
+                    </h1>
+                  </div>
+                  <div className="text-lg text-softDark">{item.desc}</div>
+                </li>
+              ))}
+            </ul>
+          </section>
+        </Center>
+
+        <section className="mt-5">
+          <Center>
+            <h1 className="text-4xl uppercase text-primaryRed font-bold">
+              Contate-nos
+            </h1>
+            <div className="w-full lg:w-5/6 h-[2px] bg-primaryRed" />
+            <form onSubmit={handleSubmit} className="mt-5">
+              <div>
+                <label htmlFor="fullname">Nome e Sobrenome</label>
+                <input
+                  onChange={(e) => setFullname(e.target.value)}
+                  value={fullname}
+                  type="text"
+                  id="fullname"
+                  placeholder="José Antônio"
+                />
+              </div>
+
+              <div>
+                <label htmlFor="email">Email</label>
+                <input
+                  onChange={(e) => setEmail(e.target.value)}
+                  value={email}
+                  type="text"
+                  id="email"
+                  placeholder="joseantonio@gmail.com"
+                />
+              </div>
+
+              <div>
+                <label htmlFor="message">Mensagem</label>
+                <textarea
+                  onChange={(e) => setMessage(e.target.value)}
+                  value={message}
+                  className="h-32"
+                  id="message"
+                  placeholder="Digite aqui sua mensagem"
+                />
+              </div>
+
+              <button
+                className="w-full my-5 bg-green-700 p-3 rounded-md text-white font-medium text-lg"
+                type="submit"
+              >
+                Enviar
+              </button>
+            </form>
+            <div className="bg-slate-100 flex flex-col">
+              <div className="text-red-600 px-5 py-2">Mensagem de Erro</div>
+            </div>
+          </Center>
         </section>
-      </Center>
-    </div>
+      </div>
+    </>
   );
 }
