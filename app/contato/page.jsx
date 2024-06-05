@@ -1,8 +1,8 @@
 "use client";
-import { Headset, Map, MapPin, Phone } from "lucide-react";
+import { Headset, Map, MapPin } from "lucide-react";
 import Center from "../ui/center";
-import Link from "next/link";
 import { useState } from "react";
+import Link from "next/link";
 
 const List = [
   {
@@ -54,10 +54,6 @@ export default function ContactPage() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    console.log("Fullname: ", fullname);
-    console.log("email: ", email);
-    console.log("message: ", message);
 
     const res = await fetch("api/contato", {
       method: "POST",
