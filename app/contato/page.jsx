@@ -48,15 +48,31 @@ const List = [
 
 export default function ContactPage() {
   const [fullname, setFullname] = useState("");
-  const [message, setMessage] = useState("");
   const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [error, setError] = useState([]);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     console.log("Fullname: ", fullname);
     console.log("email: ", email);
     console.log("message: ", message);
+
+    const res = await fetch("api/contato", {
+      method: "POST",
+      headers: {
+        "Content-type": "application/json",
+      },
+      body: JSON.stringify({
+        fullname,
+        email,
+        message,
+      }),
+    });
+
+    const { msg } = await res.json();
+    setError(msg);
   };
 
   return (
