@@ -1,11 +1,28 @@
+import Contact from "@/app/models/contact";
 import { NextResponse } from "next/server";
+import connectDB from "@/app/lib/mongodb";
 
 export async function POST(req) {
   const { fullname, email, message } = await req.json();
 
-  console.log("Fullname: ", fullname);
-  console.log("email: ", email);
-  console.log("message: ", message);
+  try {
+    await connectDB();
+    await Contact.create({ fullname, email, message });
 
-  return NextResponse.json({ msg: ["hi from contact route"] });
+    return NextResponse.json({
+      msg: ["Mensagem enviada com sucesso."],
+      success: true,
+    });
+  } catch (error) {
+    if (error instanceof mongoose.Error.ValidationError) {
+      let errorList = [];
+      for (let e in error.errors) {
+        errorList.push(e.message);
+      }
+
+      return NextResponse.json({ msg: errorList });
+    } else {
+      return NextResponse.json(error);
+    }
+  }
 }
