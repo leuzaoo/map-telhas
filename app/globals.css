@@ -5,3 +5,12 @@
 body {
   @apply bg-darkWhite text-strongDark leading-tight;
 }
+
+form > div {
+  @apply flex flex-col mb-3;
+}
+
+input,
+textarea {
+  @apply shadow-md p-2 border border-slate-300 rounded-md;
+}
