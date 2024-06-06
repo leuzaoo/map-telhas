@@ -1,11 +1,12 @@
 "use client";
+import { usePathname } from "next/navigation";
 import { Poppins } from "next/font/google";
-import { useRouter } from "next/navigation";
-import { metadata } from "./lib/metadata";
 import Navbar from "./ui/navbar";
 import Footer from "./ui/footer";
 import Head from "next/head";
+
 import "./globals.css";
+import { metadata } from "./lib/metadata";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -13,9 +14,8 @@ const poppins = Poppins({
 });
 
 export default function RootLayout({ children }) {
-  const router = useRouter();
-  const isAdminRoute = router.pathname?.startsWith("/admin");
-
+  const router = usePathname();
+  const adminRoute = router.includes("/admin");
   return (
     <>
       <Head>
@@ -28,9 +28,9 @@ export default function RootLayout({ children }) {
           <h1 className="hidden">
             Map Telhas Metálicas e Pintura Eletrostática
           </h1>
-          <header>{!isAdminRoute && <Navbar />}</header>
+          <header>{adminRoute ? "" : <Navbar />}</header>
           <main>{children}</main>
-          <footer>{!isAdminRoute && <Footer />}</footer>
+          <footer>{adminRoute ? "" : <Footer />}</footer>
         </body>
       </html>
     </>
