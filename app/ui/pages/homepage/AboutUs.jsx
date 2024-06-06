@@ -13,7 +13,7 @@ export default function AboutUs() {
         <div className="lg:grid grid-cols-2 gap-10 items-center text-center mx-auto lg:mt-5">
           <div className="text-xl text-left flex flex-col gap-3 mx-auto">
             <p>
-              Somos uma empresa especializada há 28 anos na fabricação de telhas
+              Somos uma empresa especializada há 26 anos na fabricação de telhas
               metálicas, bobina slitada, cumeeiras e pintura eletrostática.
             </p>
             <p>

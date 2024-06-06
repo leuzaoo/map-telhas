@@ -100,7 +100,7 @@ export default async function ProductPage({ params }) {
             <h1 className="text-[40px] pb-5 font-semibold">Sobre Nós</h1>
             <p>
               Líder em soluções de telhas metálicas de qualidade excepcional.
-              Com uma trajetória de 28 anos de excelência, nós estabelecemos
+              Com uma trajetória de 26 anos de excelência, nós estabelecemos
               como uma referência confiável e inovadora no setor.
             </p>
             <br />
