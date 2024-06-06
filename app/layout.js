@@ -16,6 +16,7 @@ const poppins = Poppins({
 export default function RootLayout({ children }) {
   const router = usePathname();
   const adminRoute = router.includes("/admin");
+  const dashboardRoute = router.includes("/dashboard");
   return (
     <>
       <Head>
@@ -28,9 +29,9 @@ export default function RootLayout({ children }) {
           <h1 className="hidden">
             Map Telhas Metálicas e Pintura Eletrostática
           </h1>
-          <header>{adminRoute ? "" : <Navbar />}</header>
+          <header>{adminRoute || dashboardRoute ? "" : <Navbar />}</header>
           <main>{children}</main>
-          <footer>{adminRoute ? "" : <Footer />}</footer>
+          <footer>{adminRoute || dashboardRoute ? "" : <Footer />}</footer>
         </body>
       </html>
     </>
