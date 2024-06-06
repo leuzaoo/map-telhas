@@ -25,7 +25,7 @@ export default function Homepage() {
 
       <Link target="_blank" href="http://wa.me/5511974344466">
         <Image
-          className="mx-auto pt-10"
+          className="mx-auto pt-36 md:pt-28 lg:pt-36"
           src="/homepage/banner1.png"
           width={3840}
           height={1600}

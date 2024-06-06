@@ -4,7 +4,7 @@ import InfoCard from "../ui/info-card";
 
 export default function InformationPage() {
   return (
-    <div className="mt-10 py-10 px-5 text-xl font-medium">
+    <div className="pt-44 pb-10 px-5 text-xl font-medium">
       <Center>
         <h1 className="uppercase text-[40px] text-primaryRed font-bold">
           Informações

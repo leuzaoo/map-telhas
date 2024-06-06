@@ -89,7 +89,7 @@ export default function ContactPage() {
 
   return (
     <>
-      <div className="mt-10 py-10">
+      <div className="pt-44 pb-5">
         <Center>
           <h1 className="text-title uppercase font-bold text-primaryRed">
             Entre em Contato

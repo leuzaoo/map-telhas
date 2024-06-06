@@ -1,4 +1,7 @@
+"use client";
 import { Poppins } from "next/font/google";
+import { useRouter } from "next/navigation";
+import { metadata } from "./lib/metadata";
 import Navbar from "./ui/navbar";
 import Footer from "./ui/footer";
 import Head from "next/head";
@@ -9,13 +12,10 @@ const poppins = Poppins({
   weight: ["200", "400", "500", "600", "700", "900"],
 });
 
-export const metadata = {
-  title: "MAP Telhas Metálicas e Pintura Eletrostática",
-  description:
-    "Somos uma empresa especializada na fabricação de telhas metálicas e pintura eletrostática desde 1996. Localizada em Campo Limpo Paulista.",
-};
-
 export default function RootLayout({ children }) {
+  const router = useRouter();
+  const isAdminRoute = router.pathname?.startsWith("/admin");
+
   return (
     <>
       <Head>
@@ -28,13 +28,9 @@ export default function RootLayout({ children }) {
           <h1 className="hidden">
             Map Telhas Metálicas e Pintura Eletrostática
           </h1>
-          <header>
-            <Navbar />
-          </header>
-          <main className="pt-[100px]">{children}</main>
-          <footer>
-            <Footer />
-          </footer>
+          <header>{!isAdminRoute && <Navbar />}</header>
+          <main>{children}</main>
+          <footer>{!isAdminRoute && <Footer />}</footer>
         </body>
       </html>
     </>

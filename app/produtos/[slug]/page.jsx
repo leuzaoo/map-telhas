@@ -14,9 +14,9 @@ export default async function ProductPage({ params }) {
 
   return (
     <>
-      <div className="mt-10 py-5">
+      <div className="pt-44">
         <Center>
-          <h1 className="mt-3 mb-5 text-3xl lg:text-title font-bold text-primaryRed uppercase">
+          <h1 className="mb-5 text-3xl lg:text-title font-bold text-primaryRed uppercase">
             {product.name}
           </h1>
           <div className="lg:flex items-start gap-20">
