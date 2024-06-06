@@ -6,7 +6,7 @@ const contactSchema = new Schema({
     required: [true, "Nome precisa ser preenchido."],
     trim: true,
     minLength: [2, "Nome deve conter no mínimo 2 caracteres."],
-    maxLenght: [50, "Nome deve conter no máximo 50 caracteres."],
+    maxLength: [50, "Nome deve conter no máximo 50 caracteres."],
   },
   email: {
     type: String,
