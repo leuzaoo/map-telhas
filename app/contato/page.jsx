@@ -1,7 +1,7 @@
 "use client";
 import { Headset, Map, MapPin } from "lucide-react";
 import Center from "../ui/center";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 
 const List = [
@@ -51,6 +51,9 @@ export default function ContactPage() {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [error, setError] = useState([]);
+  const [success, setSuccess] = useState(false);
+  const [notification, setNotification] = useState("");
+  const [isVisible, setIsVisible] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -67,8 +70,21 @@ export default function ContactPage() {
       }),
     });
 
-    const { msg } = await res.json();
+    const { msg, success } = await res.json();
     setError(msg);
+    setSuccess(success);
+
+    if (success) {
+      setFullname("");
+      setEmail("");
+      setMessage("");
+      setNotification("Dados enviados com sucesso!");
+      setIsVisible(true);
+
+      setTimeout(() => {
+        setIsVisible(false);
+      }, 5000);
+    }
   };
 
   return (
@@ -99,33 +115,35 @@ export default function ContactPage() {
           </section>
         </Center>
 
-        <section className="mt-5">
+        <section className="mt-10">
           <Center>
             <h1 className="text-4xl uppercase text-primaryRed font-bold">
               Contate-nos
             </h1>
             <div className="w-full lg:w-5/6 h-[2px] bg-primaryRed" />
             <form onSubmit={handleSubmit} className="mt-5">
-              <div>
-                <label htmlFor="fullname">Nome e Sobrenome</label>
-                <input
-                  onChange={(e) => setFullname(e.target.value)}
-                  value={fullname}
-                  type="text"
-                  id="fullname"
-                  placeholder="José Antônio"
-                />
-              </div>
+              <div className="lg:grid lg:grid-cols-2 lg:gap-20 w-full">
+                <div className="flex flex-col mb-3 lg:mb-0">
+                  <label htmlFor="fullname">Nome e Sobrenome</label>
+                  <input
+                    onChange={(e) => setFullname(e.target.value)}
+                    value={fullname}
+                    type="text"
+                    id="fullname"
+                    placeholder="José Antônio"
+                  />
+                </div>
 
-              <div>
-                <label htmlFor="email">Email</label>
-                <input
-                  onChange={(e) => setEmail(e.target.value)}
-                  value={email}
-                  type="text"
-                  id="email"
-                  placeholder="joseantonio@gmail.com"
-                />
+                <div className="flex flex-col">
+                  <label htmlFor="email">Email</label>
+                  <input
+                    onChange={(e) => setEmail(e.target.value)}
+                    value={email}
+                    type="text"
+                    id="email"
+                    placeholder="joseantonio@gmail.com"
+                  />
+                </div>
               </div>
 
               <div>
@@ -146,12 +164,26 @@ export default function ContactPage() {
                 Enviar
               </button>
             </form>
-            <div className="bg-slate-100 flex flex-col">
-              <div className="text-red-600 px-5 py-2">Mensagem de Erro</div>
+            <div className="bg-slate-100 flex flex-col rounded-md border-slate-300 border shadow-md">
+              {error &&
+                error.map((e) => (
+                  <div key={e} className="text-red-600 px-5 py-2">
+                    {e}
+                  </div>
+                ))}
             </div>
           </Center>
         </section>
       </div>
+      {notification && (
+        <div
+          className={`fixed bottom-5 right-5 bg-white border border-gray-300 rounded-md shadow-lg p-4 transition-opacity duration-1000 ${
+            isVisible ? "opacity-100" : "opacity-0"
+          }`}
+        >
+          <p className="text-green-700">{notification}</p>
+        </div>
+      )}
     </>
   );
 }
