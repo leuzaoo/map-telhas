@@ -13,7 +13,7 @@ export const produtos = [
       </div>
     ),
     application:
-      "A telha metálica sanduíche tipo forro amadeirado é frequentemente utilizada em aplicações residenciais e comerciais como coberturas para galpões, áreas industriais, instalações agrícolas, entre outros. Além disso, devido ao seu acabamento amadeirado, também pode ser empregada em projetos que buscam um visual mais rústico ou natural.",
+      "A telha forro amadeirado é frequentemente utilizada em aplicações residenciais e comerciais. Além disso, devido ao seu acabamento amadeirado, também pode ser empregada em projetos que buscam um visual mais rústico ou natural.",
     image: "/original/telha-sanduiche-amadeirada.png",
     maintenance:
       "Geralmente, telhas metálicas requerem pouca manutenção, principalmente quando fabricadas com materiais como galvanizado ou galvalume, que são resistentes à corrosão. Limpezas periódicas podem ser necessárias para garantir a durabilidade e a estética da telha.",
