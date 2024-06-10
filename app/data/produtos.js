@@ -1,7 +1,7 @@
 export const produtos = [
   {
     id: 0,
-    slug: "telha-simples",
+    slug: "telha-amadeirada",
     name: "Telha Sanduíche Tipo Forro Amadeirada",
     model: "Trapézio 40/980",
     description:
