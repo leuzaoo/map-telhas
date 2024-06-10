@@ -5,15 +5,20 @@ export const produtos = [
     name: "Telha Sanduíche Tipo Forro Amadeirada",
     model: "Trapézio 40/980",
     description:
-      "Telha metálica simples, de perfil trapézio, com medidas de 40mm de altura e 980mm de largura. Nossas telhas galvalume passam por um rigoroso processo de perfilação. Feitas com uma chapa revestida de alumínio, zinco e silício, garantem alta resistência à corrosão, combinando durabilidade e proteção. Com essa composição, têm uma vida útil de até 50 anos.",
-    material: "Galvanizado, Galvalume, Colorido.",
+      "A telha metálica TP 40 sanduíche tipo forro amadeirado possui uma estrutura composta por duas camadas metálicas externas e um núcleo isolante interno, proporcionando isolamento térmico e acústico.",
+    material: (
+      <div className="flex flex-col">
+        <p>Superior: Galvanizado, galvalume e colorido.</p>
+        <p>Inferior: Galvanizada amadeirada.</p>
+      </div>
+    ),
     application:
-      "Ideal para coberturas industriais, comerciais e residenciais.",
+      "A telha metálica sanduíche tipo forro amadeirado é frequentemente utilizada em aplicações residenciais e comerciais como coberturas para galpões, áreas industriais, instalações agrícolas, entre outros. Além disso, devido ao seu acabamento amadeirado, também pode ser empregada em projetos que buscam um visual mais rústico ou natural.",
     image: "/original/telha-sanduiche-amadeirada.png",
     maintenance:
-      "Na manutenção de telhados metálicos, procedimentos incluem identificação da avaria, limpeza da área afetada, remoção de detritos ou ferrugem, restauração ou substituição da peça danificada, conforme necessário.",
+      "Geralmente, telhas metálicas requerem pouca manutenção, principalmente quando fabricadas com materiais como galvanizado ou galvalume, que são resistentes à corrosão. Limpezas periódicas podem ser necessárias para garantir a durabilidade e a estética da telha.",
     personalization:
-      "Além de proporcionar maior segurança e durabilidade, as telhas podem receber pintura eletrostática, mantendo sua aparência preservada ao longo do tempo e contribuindo para a valorização do imóvel. Esse processo moderno e avançado garante proteção e alto acabamento, utilizando cargas elétricas para fixação da tinta, resultando em durabilidade de mais de cinco anos, com acabamento espelhado, liso e sem falhas.",
+      "A personalização dessa telha pode variar de acordo com as necessidades do cliente e as especificações do projeto. Opções de personalização podem incluir diferentes cores e acabamentos para se adequar ao design arquitetônico desejado.",
   },
   {
     id: 1,
