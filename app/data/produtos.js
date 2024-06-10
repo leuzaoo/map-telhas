@@ -1,5 +1,21 @@
 export const produtos = [
   {
+    id: 0,
+    slug: "telha-simples",
+    name: "Telha Sanduíche Tipo Forro Amadeirada",
+    model: "Trapézio 40/980",
+    description:
+      "Telha metálica simples, de perfil trapézio, com medidas de 40mm de altura e 980mm de largura. Nossas telhas galvalume passam por um rigoroso processo de perfilação. Feitas com uma chapa revestida de alumínio, zinco e silício, garantem alta resistência à corrosão, combinando durabilidade e proteção. Com essa composição, têm uma vida útil de até 50 anos.",
+    material: "Galvanizado, Galvalume, Colorido.",
+    application:
+      "Ideal para coberturas industriais, comerciais e residenciais.",
+    image: "/original/telha-sanduiche-amadeirada.png",
+    maintenance:
+      "Na manutenção de telhados metálicos, procedimentos incluem identificação da avaria, limpeza da área afetada, remoção de detritos ou ferrugem, restauração ou substituição da peça danificada, conforme necessário.",
+    personalization:
+      "Além de proporcionar maior segurança e durabilidade, as telhas podem receber pintura eletrostática, mantendo sua aparência preservada ao longo do tempo e contribuindo para a valorização do imóvel. Esse processo moderno e avançado garante proteção e alto acabamento, utilizando cargas elétricas para fixação da tinta, resultando em durabilidade de mais de cinco anos, com acabamento espelhado, liso e sem falhas.",
+  },
+  {
     id: 1,
     slug: "telha-simples",
     name: "Telha Simples",
