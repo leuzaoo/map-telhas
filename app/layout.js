@@ -9,8 +9,8 @@ const poppins = Poppins({
   weight: ["200", "400", "500", "600", "700", "900"],
 });
 
-const metadata = {
-  title: "MAP Telhas Metálicas e Pintura Eletrostática",
+export const metadata = {
+  title: "MAP Telhas Metálicas | Telhas Termoacústicas | Telha Sanduíche",
   description:
     "Somos uma empresa especializada na fabricação de telhas metálicas e pintura eletrostática desde 1996. Localizada em Campo Limpo Paulista.",
 };
