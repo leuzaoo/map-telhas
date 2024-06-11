@@ -8,7 +8,7 @@ export default function DashboardPage({ children }) {
       <div className="flex">
         <AuthProvider>
           <Sidebar />
-          {children}
+          <div className="w-full h-full p-5">{children}</div>
         </AuthProvider>
       </div>
     </>
