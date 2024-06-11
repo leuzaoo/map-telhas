@@ -1,9 +1,9 @@
-"use client";
-import Head from "next/head";
-import { useEffect, useState } from "react";
-import React from "react";
+"use client"
 
-export default function MessagesPage() {
+import { useEffect, useState } from "react";
+import Head from "next/head";
+
+export default function AdminMessagesPage() {
   const [messages, setMessages] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -11,9 +11,9 @@ export default function MessagesPage() {
   useEffect(() => {
     const fetchMessages = async () => {
       try {
-        const response = await fetch("/api/mensagens");
+        const response = await fetch("/api/contact/messages");
         if (!response.ok) {
-          throw new Error("Erro ao buscar mensagens");
+          throw new Error("Erro ao buscar mensagssssens");
         }
         const data = await response.json();
         setMessages(data);
@@ -35,12 +35,14 @@ export default function MessagesPage() {
       <Head>
         <title>Painel de Administração - Mensagens</title>
       </Head>
-      <div>
-        <h1>Painel de Administração - Mensagens de Contato</h1>
+      <div className="pt-44 pb-5">
+        <h1 className="text-title uppercase font-bold text-primaryRed">
+          Mensagens de Contato
+        </h1>
         {messages.length > 0 ? (
-          <ul>
+          <ul className="mt-5">
             {messages.map((message) => (
-              <li key={message._id}>
+              <li key={message._id} className="mb-4">
                 <strong>{message.fullname}</strong> - {message.email}
                 <p>{message.message}</p>
                 <small>{new Date(message.date).toLocaleString()}</small>
@@ -48,7 +50,7 @@ export default function MessagesPage() {
             ))}
           </ul>
         ) : (
-          <p>Nenhuma mensagem encontrada</p>
+          <p className="mt-5">Nenhuma mensagem encontrada</p>
         )}
       </div>
     </>
