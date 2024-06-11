@@ -41,7 +41,6 @@ export default function Sidebar() {
                     className={`p-2 rounded-lg text-lg flex items-center gap-2 ${
                       pathname === link.link ? "bg-softDark text-white" : ""
                     }`}
-                    key={link.id}
                   >
                     <span>{link.icon}</span>
                     <p>{link.name}</p>
