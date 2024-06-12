@@ -7,8 +7,10 @@ export default function DashboardPage({ children }) {
     <>
       <div className="flex">
         <AuthProvider>
-          <Sidebar />
-          <div className="w-full h-full p-5">{children}</div>
+          <div className="fixed top-0 h-full w-[320px]">
+            <Sidebar />
+          </div>
+          <div className="ml-[320px] w-full h-full p-5 overflow-y-auto">{children}</div>
         </AuthProvider>
       </div>
     </>
