@@ -1,58 +1,28 @@
-"use client"
+import { fetchMessages } from "@/app/api/mensagens/route";
+import formatDate from "@/app/lib/formatDate";
 
-import { useEffect, useState } from "react";
-import Head from "next/head";
-
-export default function AdminMessagesPage() {
-  const [messages, setMessages] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
-
-  useEffect(() => {
-    const fetchMessages = async () => {
-      try {
-        const response = await fetch("/api/contact/messages");
-        if (!response.ok) {
-          throw new Error("Erro ao buscar mensagssssens");
-        }
-        const data = await response.json();
-        setMessages(data);
-        setLoading(false);
-      } catch (err) {
-        setError(err.message);
-        setLoading(false);
-      }
-    };
-
-    fetchMessages();
-  }, []);
-
-  if (loading) return <p>Carregando...</p>;
-  if (error) return <p>{error}</p>;
+export default async function AdminMessagesPage() {
+  const { messages, messageCount } = await fetchMessages();
 
   return (
-    <>
-      <Head>
-        <title>Painel de Administração - Mensagens</title>
-      </Head>
-      <div className="pt-44 pb-5">
-        <h1 className="text-title uppercase font-bold text-primaryRed">
-          Mensagens de Contato
-        </h1>
-        {messages.length > 0 ? (
-          <ul className="mt-5">
-            {messages.map((message) => (
-              <li key={message._id} className="mb-4">
-                <strong>{message.fullname}</strong> - {message.email}
-                <p>{message.message}</p>
-                <small>{new Date(message.date).toLocaleString()}</small>
-              </li>
-            ))}
-          </ul>
-        ) : (
-          <p className="mt-5">Nenhuma mensagem encontrada</p>
-        )}
+    <div>
+      <div className="bg-blue-100 border border-blue-300 rounded-md shadow-lg p-4 mb-4">
+        <h2 className="text-lg font-semibold">Total de Mensagens</h2>
+        <p className="text-2xl font-bold">{messageCount}</p>
       </div>
-    </>
+      <div className="grid grid-cols-1 gap-4">
+        {messages.map((message) => (
+          <div
+            key={message._id}
+            className="bg-white border border-gray-300 rounded-md shadow-md p-4"
+          >
+            <h2 className="text-xl font-semibold">{message.fullname}</h2>
+            <p>Email: {message.email}</p>
+            <p>Mensagem: {message.message}</p>
+            <p>Data: {formatDate(message.date)}.</p>
+          </div>
+        ))}
+      </div>
+    </div>
   );
 }

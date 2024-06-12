@@ -33,22 +33,22 @@ export default function Sidebar() {
               <span className="font-semibold">{session?.user?.name}</span>.
             </p>
           </div>
-          <ul className="flex flex-col gap-2 mt-5">
+          <div className="flex flex-col gap-2 mt-5">
             {navItems.map((link) => (
               <>
-                <Link href={link.link}>
-                  <li
+                <Link key={navItems.id} href={link.link}>
+                  <div
                     className={`p-2 rounded-lg text-lg flex items-center gap-2 ${
                       pathname === link.link ? "bg-softDark text-white" : ""
                     }`}
                   >
                     <span>{link.icon}</span>
                     <p>{link.name}</p>
-                  </li>
+                  </div>
                 </Link>
               </>
             ))}
-          </ul>
+          </div>
         </div>
         <button
           className="rounded-xl bg-primaryRed text-white hover:opacity-85 transition-all duration-200 text-xl max-w-max mx-auto px-5 py-0 flex justify-center items-center"
