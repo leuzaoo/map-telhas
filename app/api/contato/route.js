@@ -8,7 +8,13 @@ export async function POST(req) {
 
   try {
     await connectDB();
-    await Contact.create({ fullname, email, message });
+    await Contact.create({
+      fullname,
+      email,
+      message,
+      isRead: false,
+      contacted: false,
+    });
 
     return NextResponse.json({
       success: true,
