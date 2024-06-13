@@ -36,10 +36,12 @@ export default function Sidebar() {
           <div className="flex flex-col gap-2 mt-5">
             {navItems.map((link) => (
               <>
-                <Link key={navItems.id} href={link.link}>
+                <Link key={link.id} href={link.link}>
                   <div
                     className={`p-2 rounded-lg text-lg flex items-center gap-2 ${
-                      pathname === link.link ? "bg-softDark text-white" : ""
+                      pathname === link.link
+                        ? "bg-softDark text-white"
+                        : ""
                     }`}
                   >
                     <span>{link.icon}</span>

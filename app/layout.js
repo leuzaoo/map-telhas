@@ -17,6 +17,7 @@ export default function RootLayout({ children }) {
   const router = usePathname();
   const adminRoute = router.includes("/admin");
   const dashboardRoute = router.includes("/dashboard");
+  
   return (
     <>
       <Head>

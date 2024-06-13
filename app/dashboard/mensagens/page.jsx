@@ -1,5 +1,6 @@
 import { fetchMessages } from "@/app/api/mensagens/route";
 import formatDate from "@/app/lib/formatDate";
+import Link from "next/link";
 
 export default async function AdminMessagesPage() {
   const { messages, messageCount } = await fetchMessages();
@@ -12,15 +13,16 @@ export default async function AdminMessagesPage() {
       </div>
       <div className="grid grid-cols-1 gap-4">
         {messages.map((message) => (
-          <div
-            key={message._id}
-            className="bg-white border border-gray-300 rounded-md shadow-md p-4"
-          >
-            <h2 className="text-xl font-semibold">{message.fullname}</h2>
-            <p>Email: {message.email}</p>
-            <p>Mensagem: {message.message}</p>
-            <p>Data: {formatDate(message.date)}.</p>
-          </div>
+          <>
+            <Link key={message.id} href={`/dashboard/mensagens/${message.id}`}>
+              <div className="bg-white border border-gray-300 rounded-md shadow-md p-4">
+                <h2 className="text-xl font-semibold">{message.fullname}</h2>
+                <p>Email: {message.email}</p>
+                <p>Mensagem: {message.message}</p>
+                <p>Data: {formatDate(message.date)}.</p>
+              </div>
+            </Link>
+          </>
         ))}
       </div>
     </div>
