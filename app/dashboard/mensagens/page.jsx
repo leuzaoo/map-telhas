@@ -4,6 +4,7 @@ import Link from "next/link";
 
 export default async function AdminMessagesPage() {
   const { messages, messageCount } = await fetchMessages();
+  console.log(messages)
 
   return (
     <div>
@@ -20,6 +21,8 @@ export default async function AdminMessagesPage() {
                 <p>Email: {message.email}</p>
                 <p>Mensagem: {message.message}</p>
                 <p>Data: {formatDate(message.date)}.</p>
+                <p>Status: {message.isRead ? "Lido" : "Não Lido"}</p>
+                <p>Respondido: {message.contacted ? "Sim" : "Não"}</p>
               </div>
             </Link>
           </>

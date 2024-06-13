@@ -1,7 +1,7 @@
 "use client";
 import { Headset, Map, MapPin } from "lucide-react";
 import Center from "../ui/center";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Link from "next/link";
 
 const List = [
