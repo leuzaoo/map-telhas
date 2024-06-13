@@ -12,3 +12,14 @@ export const fetchMessages = async () => {
     throw new Error("Falha ao tentar encontrar as mensagens.");
   }
 };
+
+export const fetchSingleMessage = async (id) => {
+  try {
+    connectDB();
+    const singleMessage = await Contact.findById(id);
+    return singleMessage;
+  } catch (error) {
+    console.log(error);
+    throw new Error("Falaha ao buscar a mensagem selecionada.");
+  }
+};
