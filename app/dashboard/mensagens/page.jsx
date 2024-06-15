@@ -4,7 +4,6 @@ import Link from "next/link";
 
 export default async function AdminMessagesPage() {
   const { messages, messageCount } = await fetchMessages();
-  console.log(messages)
 
   return (
     <div>
@@ -16,13 +15,29 @@ export default async function AdminMessagesPage() {
         {messages.map((message) => (
           <>
             <Link key={message.id} href={`/dashboard/mensagens/${message.id}`}>
-              <div className="bg-white border border-gray-300 rounded-md shadow-md p-4">
-                <h2 className="text-xl font-semibold">{message.fullname}</h2>
-                <p>Email: {message.email}</p>
-                <p>Mensagem: {message.message}</p>
-                <p>Data: {formatDate(message.date)}.</p>
-                <p>Status: {message.isRead ? "Lido" : "Não Lido"}</p>
-                <p>Respondido: {message.contacted ? "Sim" : "Não"}</p>
+              <div className="bg-white border border-gray-300 rounded-md shadow-md p-4 hover:bg-gray-100 transition-all duration-300">
+                <h2 className="text-xl font-semibold mb-2">
+                  {message.fullname}
+                </h2>
+                <ul className="text-gray-700 space-y-1">
+                  <li>
+                    <strong>Mensagem:</strong> {message.message}
+                  </li>
+                  <li>
+                    <strong>Email:</strong> {message.email}
+                  </li>
+                  <li>
+                    <strong>Data:</strong> {formatDate(message.date)}
+                  </li>
+                  <li>
+                    <strong>Status:</strong>{" "}
+                    {message.isRead ? "Lido" : "Não Lido"}
+                  </li>
+                  <li>
+                    <strong>Respondido:</strong>{" "}
+                    {message.contacted ? "Sim" : "Não"}
+                  </li>
+                </ul>
               </div>
             </Link>
           </>
