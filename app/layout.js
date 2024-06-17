@@ -4,6 +4,7 @@ import Footer from "./ui/footer";
 import Head from "next/head";
 import "./globals.css";
 import Script from "next/script";
+import Image from "next/image";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -54,11 +55,12 @@ export default function RootLayout({ children }) {
             }}
           />
           <noscript>
-            <img
-              height="1"
-              width="1"
-              style="display:none"
+            <Image
+              height={1}
+              width={1}
+              style={{ display: "none" }}
               src="https://www.facebook.com/tr?id=1155733015746543&ev=PageView&noscript=1"
+              alt="Facebook Pixel"
             />
           </noscript>
           <noscript>
@@ -66,7 +68,7 @@ export default function RootLayout({ children }) {
               src="https://www.googletagmanager.com/ns.html?id=GTM-MZ977R2Z"
               height="0"
               width="0"
-              style="display:none;visibility:hidden"
+              style={{ display: "none" }}
             ></iframe>
           </noscript>
           <h1 className="hidden">
