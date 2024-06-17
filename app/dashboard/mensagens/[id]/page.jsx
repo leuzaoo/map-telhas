@@ -2,7 +2,6 @@ import { fetchSingleMessage } from "@/app/api/mensagens/route";
 import formatDate from "@/app/lib/formatDate";
 import { BookOpen, Clock, MessageCircleReply } from "lucide-react";
 
-// Função para obter a mensagem por ID
 export default async function SingleMessagePage({ params }) {
   const { id } = params;
   const message = await fetchSingleMessage(id);
