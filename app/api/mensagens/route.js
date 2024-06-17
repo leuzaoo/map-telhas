@@ -1,5 +1,8 @@
+"use server";
 import connectDB from "@/app/lib/mongodb";
 import Contact from "@/app/models/contact";
+import { revalidatePath } from "next/cache";
+import { redirect } from "next/navigation";
 
 export const fetchMessages = async () => {
   try {
@@ -22,4 +25,23 @@ export const fetchSingleMessage = async (id) => {
     console.log(error);
     throw new Error("Falaha ao buscar a mensagem selecionada.");
   }
+};
+
+export const updateMessage = async (formData) => {
+  const { id, isRead } = Object.fromEntries(formData);
+
+  try {
+    connectDB();
+    const updatedFields = {
+      isRead,
+    };
+
+    await Contact.findByIdAndUpdate(id, updatedFields);
+  } catch (err) {
+    console.log(err);
+    throw new Error("Falha ao atualizar a campanha.");
+  }
+
+  revalidatePath("/dashboard/mensagens");
+  redirect("/dashboard/mensagens");
 };

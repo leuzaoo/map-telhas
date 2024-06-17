@@ -1,11 +1,10 @@
-import { fetchSingleMessage } from "@/app/api/mensagens/route";
-import formatDate from "@/app/lib/formatDate";
 import { BookOpen, Clock, MessageCircleReply } from "lucide-react";
+import { fetchSingleMessage, updateMessage } from "@/app/api/mensagens/route";
+import formatDate from "@/app/lib/formatDate";
 
 export default async function SingleMessagePage({ params }) {
   const { id } = params;
   const message = await fetchSingleMessage(id);
-  console.log(message);
 
   return (
     <div className="max-w-7xl mx-auto p-6 space-y-6">
@@ -57,7 +56,8 @@ export default async function SingleMessagePage({ params }) {
             </span>
           </p>
         </div>
-        <form action="">
+        <form action={updateMessage}>
+          <input type="hidden" name="id" value={message.id} />
           <select name="isRead" id="isRead">
             <option value={true} selected={message.isRead}>
               Sim
@@ -66,6 +66,7 @@ export default async function SingleMessagePage({ params }) {
               Não
             </option>
           </select>
+          <button type="submit">Atualizar</button>
         </form>
       </div>
     </div>

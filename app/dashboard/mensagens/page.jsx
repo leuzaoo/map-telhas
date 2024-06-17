@@ -7,11 +7,21 @@ export default async function AdminMessagesPage() {
 
   return (
     <div>
-      <div className="bg-blue-100 border border-blue-300 rounded-md shadow-lg p-4 mb-4">
-        <h2 className="text-lg font-semibold">Total de Mensagens</h2>
-        <p className="text-2xl font-bold">{messageCount}</p>
+      <div className="grid grid-cols-3 gap-5">
+        <div className="bg-blue-100 border border-blue-300 rounded-md shadow-lg p-4 mb-4">
+          <h2 className="text-lg font-semibold">Total de Mensagens</h2>
+          <p className="text-2xl font-bold">{messageCount}</p>
+        </div>
+        <div className="bg-blue-100 border border-blue-300 rounded-md shadow-lg p-4 mb-4">
+          <h2 className="text-lg font-semibold">Mensagens não lidas</h2>
+          <p className="text-2xl font-bold">{messageCount}</p>
+        </div>
+        <div className="bg-blue-100 border border-blue-300 rounded-md shadow-lg p-4 mb-4">
+          <h2 className="text-lg font-semibold">Mensagens não respondidas</h2>
+          <p className="text-2xl font-bold">{messageCount}</p>
+        </div>
       </div>
-      <div className="grid grid-cols-1 gap-4">
+      <div className="grid grid-cols-2 gap-4">
         {messages.map((message) => (
           <>
             <Link key={message.id} href={`/dashboard/mensagens/${message.id}`}>
