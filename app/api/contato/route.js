@@ -12,7 +12,6 @@ export async function POST(req) {
       fullname,
       email,
       message,
-      isRead: false,
       contacted: false,
     });
 

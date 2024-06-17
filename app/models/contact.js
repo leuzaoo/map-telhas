@@ -24,10 +24,6 @@ const contactSchema = new Schema({
     type: Date,
     default: Date.now,
   },
-  isRead: {
-    type: Boolean,
-    default: false,
-  },
   contacted: {
     type: Boolean,
     default: false,

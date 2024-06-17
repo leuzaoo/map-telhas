@@ -1,5 +1,6 @@
 import { fetchMessages } from "@/app/api/mensagens/route";
 import formatDate from "@/app/lib/formatDate";
+import { Check, X } from "lucide-react";
 import Link from "next/link";
 
 export default async function AdminMessagesPage() {
@@ -7,13 +8,9 @@ export default async function AdminMessagesPage() {
 
   return (
     <div>
-      <div className="grid grid-cols-3 gap-5">
+      <div className="grid grid-cols-2 gap-4">
         <div className="bg-blue-100 border border-blue-300 rounded-md shadow-lg p-4 mb-4">
           <h2 className="text-lg font-semibold">Total de Mensagens</h2>
-          <p className="text-2xl font-bold">{messageCount}</p>
-        </div>
-        <div className="bg-blue-100 border border-blue-300 rounded-md shadow-lg p-4 mb-4">
-          <h2 className="text-lg font-semibold">Mensagens não lidas</h2>
           <p className="text-2xl font-bold">{messageCount}</p>
         </div>
         <div className="bg-blue-100 border border-blue-300 rounded-md shadow-lg p-4 mb-4">
@@ -39,13 +36,13 @@ export default async function AdminMessagesPage() {
                   <li>
                     <strong>Data:</strong> {formatDate(message.date)}
                   </li>
-                  <li>
-                    <strong>Status:</strong>{" "}
-                    {message.isRead ? "Lido" : "Não Lido"}
-                  </li>
-                  <li>
-                    <strong>Respondido:</strong>{" "}
-                    {message.contacted ? "Sim" : "Não"}
+                  <li className="flex items-center gap-1">
+                    <strong>Respondido: </strong>{" "}
+                    {message.contacted ? (
+                      <Check color="green" />
+                    ) : (
+                      <X color="red" />
+                    )}
                   </li>
                 </ul>
               </div>

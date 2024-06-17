@@ -28,20 +28,34 @@ export const fetchSingleMessage = async (id) => {
 };
 
 export const updateMessage = async (formData) => {
-  const { id, isRead } = Object.fromEntries(formData);
+  const { id, contacted } = Object.fromEntries(formData);
 
   try {
     connectDB();
     const updatedFields = {
-      isRead,
+      contacted,
     };
 
     await Contact.findByIdAndUpdate(id, updatedFields);
   } catch (err) {
     console.log(err);
-    throw new Error("Falha ao atualizar a campanha.");
+    throw new Error("Falha ao atualizar a mensagem.");
   }
 
   revalidatePath("/dashboard/mensagens");
   redirect("/dashboard/mensagens");
+};
+
+export const deleteMessage = async (formData) => {
+  const { id } = Object.fromEntries(formData);
+
+  try {
+    connectDB();
+    await Contact.findByIdAndDelete(id);
+  } catch (err) {
+    console.log(err);
+    throw new Error("Falha ao deletar a mensagem.");
+  }
+
+  revalidatePath("/dashboard/mensagens");
 };
