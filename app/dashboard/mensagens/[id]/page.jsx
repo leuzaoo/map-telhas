@@ -1,6 +1,11 @@
-import { Clock, MessageCircleReply } from "lucide-react";
-import { fetchSingleMessage, updateMessage } from "@/app/api/mensagens/route";
+import { ArrowLeft, Clock, MessageCircleReply, Trash2Icon } from "lucide-react";
+import {
+  deleteMessage,
+  fetchSingleMessage,
+  updateMessage,
+} from "@/app/api/mensagens/route";
 import formatDate from "@/app/lib/formatDate";
+import Link from "next/link";
 
 export default async function SingleMessagePage({ params }) {
   const { id } = params;
@@ -8,7 +13,24 @@ export default async function SingleMessagePage({ params }) {
 
   return (
     <div className="max-w-7xl mx-auto p-6 space-y-6">
-      <form action={updateMessage} className="w-full">
+      <div className="w-full flex justify-between">
+        <Link
+          href="/dashboard/mensagens"
+          className="flex items-center gap-2 text-neutral-600 underline underline-offset-2 hover:text-blue-500"
+        >
+          <ArrowLeft size="20" /> Voltar
+        </Link>
+        <form action={deleteMessage}>
+          <input type="hidden" name="id" value={message.id} />
+          <button className="bg-red-600 text-white max-w-max px-4 py-2 text-xl rounded-md">
+            <Trash2Icon />
+          </button>
+        </form>
+      </div>
+      <form
+        action={updateMessage}
+        className="w-full bg-neutral-100 px-7 py-4 rounded-xl shadow-md"
+      >
         <input type="hidden" name="id" value={message.id} />
         <div className="text-lg flex flex-col md:flex-row items-center justify-between gap-4">
           <div>
@@ -62,12 +84,14 @@ export default async function SingleMessagePage({ params }) {
             </p>
           </div>
         </div>
-        <button
-          className="bg-blue-600 text-white max-w-max px-4 py-2 text-xl rounded-md text-right"
-          type="submit"
-        >
-          Atualizar
-        </button>
+        <div className="w-full flex items-end mt-10">
+          <button
+            className="bg-blue-600 text-white max-w-max px-4 py-2 text-xl rounded-md"
+            type="submit"
+          >
+            Atualizar
+          </button>
+        </div>
       </form>
     </div>
   );

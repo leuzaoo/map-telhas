@@ -43,7 +43,6 @@ export const updateMessage = async (formData) => {
   }
 
   revalidatePath("/dashboard/mensagens");
-  redirect("/dashboard/mensagens");
 };
 
 export const deleteMessage = async (formData) => {
@@ -57,5 +56,5 @@ export const deleteMessage = async (formData) => {
     throw new Error("Falha ao deletar a mensagem.");
   }
 
-  revalidatePath("/dashboard/mensagens");
+  redirect("/dashboard/mensagens");
 };
