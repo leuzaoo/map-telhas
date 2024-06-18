@@ -24,6 +24,10 @@ const contactSchema = new Schema({
     type: Date,
     default: Date.now,
   },
+  contacted: {
+    type: Boolean,
+    default: false,
+  },
 });
 
 const Contact =

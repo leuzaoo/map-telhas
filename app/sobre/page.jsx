@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function AboutPage() {
   return (
     <Center>
-      <div className="mt-10 py-10">
+      <div className="pt-44 pb-5">
         <section>
           <div className="lg:hidden">
             <h1 className="hidden">Sobre nós</h1>

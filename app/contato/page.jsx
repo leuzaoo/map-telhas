@@ -1,11 +1,12 @@
 "use client";
 import { Headset, Map, MapPin } from "lucide-react";
 import Center from "../ui/center";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Link from "next/link";
 
 const List = [
   {
+    id: 0,
     icon: <MapPin />,
     title: "Onde estamos",
     desc: (
@@ -15,6 +16,7 @@ const List = [
     ),
   },
   {
+    id: 1,
     icon: <Headset />,
     title: "Telefones",
     desc: (
@@ -24,6 +26,7 @@ const List = [
     ),
   },
   {
+    id: 2,
     icon: <Map />,
     title: "Localização",
     desc: (
@@ -89,7 +92,7 @@ export default function ContactPage() {
 
   return (
     <>
-      <div className="mt-10 py-10">
+      <div className="pt-44 pb-5">
         <Center>
           <h1 className="text-title uppercase font-bold text-primaryRed">
             Entre em Contato
@@ -99,7 +102,7 @@ export default function ContactPage() {
           <section className="pt-5">
             <ul className="flex flex-col gap-5">
               {List.map((item) => (
-                <li className="flex flex-col gap-2" key={item.title}>
+                <li className="flex flex-col gap-2" key={item.id}>
                   <div className="flex items-center gap-2">
                     <span className="bg-primaryRed p-2 rounded-full text-white">
                       {item.icon}
@@ -167,7 +170,7 @@ export default function ContactPage() {
             <div className="bg-slate-100 flex flex-col rounded-md border-slate-300 border shadow-md">
               {error &&
                 error.map((e) => (
-                  <div key={e} className="text-red-600 px-5 py-2">
+                  <div key={e.id} className="text-red-600 px-5 py-2">
                     {e}
                   </div>
                 ))}

@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function ProductsPage() {
   return (
-    <div className="mt-10 px-5 py-10 text-xl font-medium">
+    <div className="pt-44 pb-10 px-5 text-xl font-medium">
       <Center>
         <h1 className="leading-10 uppercase font-bold text-title text-primaryRed">
           Nossos Produtos
