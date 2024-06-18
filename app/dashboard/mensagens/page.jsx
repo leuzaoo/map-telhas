@@ -15,7 +15,7 @@ export default async function AdminMessagesPage() {
         </div>
         <div className="bg-blue-100 border border-blue-300 rounded-md shadow-lg p-4 mb-4">
           <h2 className="text-lg font-semibold">Mensagens não respondidas</h2>
-          <p className="text-2xl font-bold">{messageCount}</p>
+          <p className="text-2xl font-bold">Em manutenção</p>
         </div>
       </div>
       <div className="grid grid-cols-2 gap-4">

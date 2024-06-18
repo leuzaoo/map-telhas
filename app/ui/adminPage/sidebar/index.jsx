@@ -27,11 +27,8 @@ export default function Sidebar() {
     <aside className="h-screen p-5 min-w-[320px] bg-neutral-50">
       <div className="h-full flex flex-col justify-between">
         <div>
-          <div className="text-black p-3 rounded-lg">
-            <p className="text-xl">
-              Bem vindo,{" "}
-              <span className="font-semibold">{session?.user?.name}</span>.
-            </p>
+          <div className="text-black p-3 rounded-lg font-semibold">
+            <p className="text-xl">{session?.user?.name}</p>
           </div>
           <div className="flex flex-col gap-2 mt-5">
             {navItems.map((link) => (
@@ -39,9 +36,7 @@ export default function Sidebar() {
                 <Link key={link.id} href={link.link}>
                   <div
                     className={`p-2 rounded-lg text-lg flex items-center gap-2 ${
-                      pathname === link.link
-                        ? "bg-softDark text-white"
-                        : ""
+                      pathname === link.link ? "bg-softDark text-white" : ""
                     }`}
                   >
                     <span>{link.icon}</span>
