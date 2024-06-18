@@ -1,10 +1,20 @@
+import Head from "next/head";
 import { fetchMessages } from "../api/mensagens/route";
+
+export const metadata = {
+  title: "Painel de Mensagens",
+  description: "Gerencie os conteúdos e configurações da MAP Telhas Metálicas.",
+};
 
 export default async function DashboardPage() {
   const { messages, messageCount } = await fetchMessages();
 
   return (
     <>
+      <Head>
+        <title>{metadata.title}</title>
+        <meta name="description" content={metadata.description} />
+      </Head>
       <div className="bg-blue-100 border border-blue-300 rounded-md shadow-lg p-4 mb-4">
         <h2 className="text-lg font-semibold">Total de Mensagens</h2>
         <p className="text-2xl font-bold">{messageCount}</p>

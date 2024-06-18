@@ -3,6 +3,8 @@ import { Headset, Map, MapPin } from "lucide-react";
 import Center from "../ui/center";
 import { useState } from "react";
 import Link from "next/link";
+import Navbar from "../ui/navbar";
+import Footer from "../ui/footer";
 
 const List = [
   {
@@ -92,6 +94,9 @@ export default function ContactPage() {
 
   return (
     <>
+      <header>
+        <Navbar />
+      </header>
       <div className="pt-44 pb-5">
         <Center>
           <h1 className="text-title uppercase font-bold text-primaryRed">
@@ -187,6 +192,9 @@ export default function ContactPage() {
           <p className="text-green-700">{notification}</p>
         </div>
       )}
+      <footer>
+        <Footer />
+      </footer>
     </>
   );
 }

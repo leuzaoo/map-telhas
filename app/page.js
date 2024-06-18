@@ -1,3 +1,5 @@
+import Footer from "./ui/footer";
+import Navbar from "./ui/navbar";
 import Homepage from "./ui/pages/homepage";
 import Head from "next/head";
 
@@ -15,7 +17,13 @@ export default function Home() {
         />
       </Head>
       <main>
+        <header>
+          <Navbar />
+        </header>
         <Homepage />
+        <footer>
+          <Footer />
+        </footer>
       </main>
     </>
   );

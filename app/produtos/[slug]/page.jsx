@@ -1,6 +1,8 @@
 import { produtos } from "@/app/data/produtos";
 import MyButton from "@/app/ui/button";
 import Center from "@/app/ui/center";
+import Footer from "@/app/ui/footer";
+import Navbar from "@/app/ui/navbar";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -14,6 +16,9 @@ export default async function ProductPage({ params }) {
 
   return (
     <>
+      <header>
+        <Navbar />
+      </header>
       <div className="pt-44">
         <Center>
           <h1 className="mb-5 text-3xl lg:text-title font-bold text-primaryRed uppercase">
@@ -128,6 +133,9 @@ export default async function ProductPage({ params }) {
           </footer>
         </Center>
       </div>
+      <footer>
+        <Footer />
+      </footer>
     </>
   );
 }

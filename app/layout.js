@@ -1,14 +1,8 @@
-"use client";
-import { usePathname } from "next/navigation";
 import { Poppins } from "next/font/google";
-import Navbar from "./ui/navbar";
-import Footer from "./ui/footer";
-import Head from "next/head";
-
-import "./globals.css";
-
 import Script from "next/script";
 import Image from "next/image";
+import Head from "next/head";
+import "./globals.css";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -22,10 +16,6 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-  const router = usePathname();
-  const adminRoute = router.includes("/admin");
-  const dashboardRoute = router.includes("/dashboard");
-  
   return (
     <>
       <Head>
@@ -33,6 +23,7 @@ export default function RootLayout({ children }) {
         <title>{metadata.title}</title>
         <meta name="description" content={metadata.description} />
       </Head>
+
       <Script id="gtm" strategy="afterInteractive">
         {`
             (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -82,9 +73,7 @@ export default function RootLayout({ children }) {
           <h1 className="hidden">
             Map Telhas Metálicas e Pintura Eletrostática
           </h1>
-          <header>{adminRoute || dashboardRoute ? "" : <Navbar />}</header>
           <main>{children}</main>
-          <footer>{adminRoute || dashboardRoute ? "" : <Footer />}</footer>
         </body>
       </html>
     </>
