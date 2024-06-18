@@ -16,7 +16,7 @@ export default function KnowAboutUs() {
             </h1>
             <p className="text-2xl text-strongDark">
               Somos uma empresa especializada há{" "}
-              <span className="font-bold">28 anos</span> na fabricação de telhas
+              <span className="font-bold">26 anos</span> na fabricação de telhas
               metálicas, bobina slitada, cumeeiras e pintura eletrostática.
             </p>
             <p className="text-2xl text-strongDark">

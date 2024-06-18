@@ -13,7 +13,7 @@ const SectionContent = ({ title, image, desc, link, buttonText }) => {
           height={3000}
           alt={title}
         />
-        <h1 className="text-primaryRed text-4xl lg:text-5xl uppercase font-bold text-left pl-5 pt-5">
+        <h1 className="text-strongDark text-4xl lg:text-5xl uppercase font-bold text-left pl-5 pt-5">
           {title}
         </h1>
         <p className="mb-5 mt-5 text-xl text-left px-5">{desc}</p>

@@ -1,5 +1,26 @@
 export const produtos = [
   {
+    id: 0,
+    slug: "telha-amadeirada",
+    name: "Telha Sanduíche Tipo Forro Amadeirada",
+    model: "Trapézio 40/980",
+    description:
+      "A telha metálica TP 40 sanduíche tipo forro amadeirado possui uma estrutura composta por duas camadas metálicas externas e um núcleo isolante interno, proporcionando isolamento térmico e acústico.",
+    material: (
+      <div className="flex flex-col">
+        <p>Superior: Galvanizado, galvalume e colorido.</p>
+        <p>Inferior: Galvanizada amadeirada.</p>
+      </div>
+    ),
+    application:
+      "A telha forro amadeirado é frequentemente utilizada em aplicações residenciais e comerciais. Além disso, devido ao seu acabamento amadeirado, também pode ser empregada em projetos que buscam um visual mais rústico ou natural.",
+    image: "/original/telha-sanduiche-amadeirada.png",
+    maintenance:
+      "Geralmente, telhas metálicas requerem pouca manutenção, principalmente quando fabricadas com materiais como galvanizado ou galvalume, que são resistentes à corrosão. Limpezas periódicas podem ser necessárias para garantir a durabilidade e a estética da telha.",
+    personalization:
+      "A personalização dessa telha pode variar de acordo com as necessidades do cliente e as especificações do projeto. Opções de personalização podem incluir diferentes cores e acabamentos para se adequar ao design arquitetônico desejado.",
+  },
+  {
     id: 1,
     slug: "telha-simples",
     name: "Telha Simples",
