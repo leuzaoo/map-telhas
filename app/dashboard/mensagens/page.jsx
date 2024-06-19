@@ -10,7 +10,16 @@ export const metadata = {
 };
 
 export default async function AdminMessagesPage() {
-  const { messages, messageCount } = await fetchMessages();
+  let messages = [];
+  let messageCount = 0;
+
+  try {
+    const data = await fetchMessages();
+    messages = data.messages;
+    messageCount = data.messageCount;
+  } catch (error) {
+    console.error("Failed to fetch messages:", error);
+  }
 
   return (
     <div>

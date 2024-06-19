@@ -1,8 +1,9 @@
 "use server";
-import connectDB from "@/app/lib/mongodb";
-import Contact from "@/app/models/contact";
+
 import { revalidatePath } from "next/cache";
+import Contact from "@/app/models/contact";
 import { redirect } from "next/navigation";
+import connectDB from "@/app/lib/mongodb";
 
 export const fetchMessages = async () => {
   await connectDB();
