@@ -1,32 +1,47 @@
+"use client";
+import { useEffect, useState } from "react";
 import { fetchMessages } from "@/app/api/mensagens/route";
 import formatDate from "@/app/lib/formatDate";
-import { Check, X } from "lucide-react";
-import Head from "next/head";
+import { Check, LoaderCircle, X } from "lucide-react";
 import Link from "next/link";
 
-export const metadata = {
-  title: "Painel de Mensagens",
-  description: "Gerencie os conteúdos e configurações da MAP Telhas Metálicas.",
-};
+export default function AdminMessagesPage() {
+  const [loading, setLoading] = useState(true);
+  const [messages, setMessages] = useState([]);
+  const [messageCount, setMessageCount] = useState(0);
 
-export default async function AdminMessagesPage() {
-  let messages = [];
-  let messageCount = 0;
+  useEffect(() => {
+    const loadDataWithDelay = async () => {
+      try {
+        await new Promise((resolve) => setTimeout(resolve, 1100));
 
-  try {
-    const data = await fetchMessages();
-    messages = data.messages;
-    messageCount = data.messageCount;
-  } catch (error) {
-    console.error("Failed to fetch messages:", error);
+        const data = await fetchMessages();
+        setMessages(data.messages);
+        setMessageCount(data.messageCount);
+      } catch (error) {
+        console.error("Failed to fetch messages:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    loadDataWithDelay();
+  }, []);
+
+  if (loading) {
+    return (
+      <div>
+        <div className="flex items-center justify-center h-screen">
+          <p className="text-lg font-medium flex items-center gap-2">
+            <LoaderCircle className="animate-spin" /> Carregando...
+          </p>
+        </div>
+      </div>
+    );
   }
 
   return (
     <div>
-      <Head>
-        <title>{metadata.title}</title>
-        <meta name="description" content={metadata.description} />
-      </Head>
       <div className="grid grid-cols-2 gap-4">
         <div className="bg-blue-100 border border-blue-300 rounded-md shadow-lg p-4 mb-4">
           <h2 className="text-lg font-semibold">Total de Mensagens</h2>
@@ -68,5 +83,3 @@ export default async function AdminMessagesPage() {
     </div>
   );
 }
-
-export const revalidate = 1;
