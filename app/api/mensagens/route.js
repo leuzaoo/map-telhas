@@ -6,7 +6,7 @@ import { redirect } from "next/navigation";
 
 export const fetchMessages = async () => {
   try {
-    connectDB();
+    await connectDB();
     const messages = await Contact.find();
     const messageCount = await Contact.countDocuments();
     return { messages, messageCount };
@@ -18,7 +18,7 @@ export const fetchMessages = async () => {
 
 export const fetchSingleMessage = async (id) => {
   try {
-    connectDB();
+    await connectDB();
     const singleMessage = await Contact.findById(id);
     return singleMessage;
   } catch (error) {
@@ -31,7 +31,7 @@ export const updateMessage = async (formData) => {
   const { id, contacted } = Object.fromEntries(formData);
 
   try {
-    connectDB();
+    await connectDB();
     const updatedFields = {
       contacted,
     };
@@ -49,7 +49,7 @@ export const deleteMessage = async (formData) => {
   const { id } = Object.fromEntries(formData);
 
   try {
-    connectDB();
+    await connectDB();
     await Contact.findByIdAndDelete(id);
   } catch (err) {
     console.log(err);
