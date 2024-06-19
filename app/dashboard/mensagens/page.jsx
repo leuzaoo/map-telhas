@@ -30,34 +30,30 @@ export default async function AdminMessagesPage() {
       </div>
       <div className="grid grid-cols-2 gap-4">
         {messages.map((message) => (
-          <>
-            <Link key={message.id} href={`/dashboard/mensagens/${message.id}`}>
-              <div className="bg-white border border-gray-300 rounded-md shadow-md p-4 hover:bg-gray-100 transition-all duration-300">
-                <h2 className="text-xl font-semibold mb-2">
-                  {message.fullname}
-                </h2>
-                <ul className="text-gray-700 space-y-1">
-                  <li>
-                    <strong>Mensagem:</strong> {message.message}
-                  </li>
-                  <li>
-                    <strong>Email:</strong> {message.email}
-                  </li>
-                  <li>
-                    <strong>Data:</strong> {formatDate(message.date)}
-                  </li>
-                  <li className="flex items-center gap-1">
-                    <strong>Respondido: </strong>{" "}
-                    {message.contacted ? (
-                      <Check color="green" />
-                    ) : (
-                      <X color="red" />
-                    )}
-                  </li>
-                </ul>
-              </div>
-            </Link>
-          </>
+          <Link key={message._id} href={`/dashboard/mensagens/${message._id}`}>
+            <div className="bg-white border border-gray-300 rounded-md shadow-md p-4 hover:bg-gray-100 transition-all duration-300">
+              <h2 className="text-xl font-semibold mb-2">{message.fullname}</h2>
+              <ul className="text-gray-700 space-y-1">
+                <li>
+                  <strong>Mensagem:</strong> {message.message}
+                </li>
+                <li>
+                  <strong>Email:</strong> {message.email}
+                </li>
+                <li>
+                  <strong>Data:</strong> {formatDate(message.date)}
+                </li>
+                <li className="flex items-center gap-1">
+                  <strong>Respondido: </strong>{" "}
+                  {message.contacted ? (
+                    <Check color="green" />
+                  ) : (
+                    <X color="red" />
+                  )}
+                </li>
+              </ul>
+            </div>
+          </Link>
         ))}
       </div>
     </div>

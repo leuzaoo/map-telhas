@@ -5,8 +5,9 @@ import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 
 export const fetchMessages = async () => {
+  await connectDB();
+
   try {
-    await connectDB();
     const messages = await Contact.find();
     const messageCount = await Contact.countDocuments();
     return { messages, messageCount };
@@ -17,8 +18,9 @@ export const fetchMessages = async () => {
 };
 
 export const fetchSingleMessage = async (id) => {
+  await connectDB();
+
   try {
-    await connectDB();
     const singleMessage = await Contact.findById(id);
     return singleMessage;
   } catch (error) {
@@ -30,8 +32,9 @@ export const fetchSingleMessage = async (id) => {
 export const updateMessage = async (formData) => {
   const { id, contacted } = Object.fromEntries(formData);
 
+  await connectDB();
+
   try {
-    await connectDB();
     const updatedFields = {
       contacted,
     };
@@ -48,8 +51,9 @@ export const updateMessage = async (formData) => {
 export const deleteMessage = async (formData) => {
   const { id } = Object.fromEntries(formData);
 
+  await connectDB();
+
   try {
-    await connectDB();
     await Contact.findByIdAndDelete(id);
   } catch (err) {
     console.log(err);
