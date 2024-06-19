@@ -68,3 +68,5 @@ export default async function AdminMessagesPage() {
     </div>
   );
 }
+
+export const revalidate = 10;
