@@ -1,6 +1,7 @@
-import moment from "moment";
+import moment from "moment-timezone";
 import "moment/locale/pt-br";
 
 export default function formatDate(date) {
-  return moment(date).locale("pt-br").format("LLL");
+  const brasiliaTimezone = "America/Sao_Paulo";
+  return moment(date).tz(brasiliaTimezone).locale("pt-br").format("LLL");
 }

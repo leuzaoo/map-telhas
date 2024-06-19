@@ -50,7 +50,7 @@ export default async function AdminMessagesPage() {
                   <strong>Email:</strong> {message.email}
                 </li>
                 <li>
-                  <strong>Data:</strong> {formatDate(message.date)}
+                  <strong>Data:</strong> {formatDate(message.createdAt)}
                 </li>
                 <li className="flex items-center gap-1">
                   <strong>Respondido: </strong>{" "}
