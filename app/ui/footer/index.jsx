@@ -1,4 +1,4 @@
-import { Facebook, Headset, Instagram, MapPin, Phone } from "lucide-react";
+import { Facebook, Instagram, MapPin } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -6,7 +6,7 @@ import React from "react";
 export default function Footer() {
   return (
     <>
-      <div className="bg-strongDark p-5 w-screen">
+      <div className="bg-strongDark p-5 w-full overflow-x-hidden">
         <Image
           className="mx-auto"
           src="/logo.svg"
