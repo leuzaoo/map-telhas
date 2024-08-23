@@ -16,14 +16,17 @@ export default function Home() {
           key="desc"
         />
       </Head>
+
       <main>
         <header>
           <Navbar />
         </header>
+
         <section>
           <h1 className="hidden">Conteúdo</h1>
           <Homepage />
         </section>
+
         <footer>
           <Footer />
         </footer>
