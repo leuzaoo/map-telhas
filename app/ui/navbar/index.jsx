@@ -95,7 +95,7 @@ export default function Navbar() {
   return (
     <>
       <div className="fixed w-full text-sm z-50">
-        <div className="bg-strongDark text-white w-full lg:flex h-16">
+        <div className="bg-strongDark text-white lg:flex h-16">
           <div className="max-w-screen-lg mx-auto h-full w-full flex items-center py-2 justify-between">
             <div className="hidden w-full lg:flex items-center gap-2">
               <MapPin size={20} />
@@ -129,9 +129,10 @@ export default function Navbar() {
           </div>
         </div>
 
-        <header className="px-5 flex w-full justify-center items-center h-20 bg-white shadow-xl">
-          <div className="max-w-screen-lg w-full flex justify-between items-center">
+        <header className="flex w-full justify-center items-center h-20 bg-white shadow-xl">
+          <div className="px-5 max-w-screen-lg w-full flex justify-between items-center">
             <DeviceNavBar open={open} setOpen={setOpen} />
+
             <Link href="/">
               <Image
                 src="/original/logo.svg"

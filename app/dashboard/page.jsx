@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { fetchMessages } from "../api/mensagens/route";
+// import { fetchMessages } from "../api/mensagens/route";
 
 export const metadata = {
   title: "Painel de Mensagens",
@@ -7,7 +7,7 @@ export const metadata = {
 };
 
 export default async function DashboardPage() {
-  const { messages, messageCount } = await fetchMessages();
+  // const { messages, messageCount } = await fetchMessages();
 
   return (
     <>
